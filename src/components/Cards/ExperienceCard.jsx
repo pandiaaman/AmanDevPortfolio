@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { WorkButton } from "../HeroSection/HeroStyle";
 
 const Document = styled.img`
   display: none;
@@ -167,9 +168,9 @@ const ExperienceCard = ({ experience }) => {
         )}
       </Description>
       {experience.doc && (
-        <a href={experience.doc} target="new">
-          <Document src={experience.doc} />
-        </a>
+        <WorkButton href={experience.doc} target="display">
+          Official Work Experience letter
+        </WorkButton>
       )}
     </Card>
   );
