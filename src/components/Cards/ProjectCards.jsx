@@ -132,6 +132,8 @@ const ProjectCards = ({ project, setOpenModal }) => {
       <Details>
         <Title>{project.title}</Title>
         <Date>{project.date}</Date>
+        {project.role && <Date>Role: {project?.role}</Date>}
+        {project.teamsize && <Date>Team size: {project?.teamsize}</Date>}
         <Description>{project.description}</Description>
       </Details>
       <Members>

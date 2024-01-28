@@ -211,7 +211,7 @@ export const WorkButton = styled.a`
     appearance: button;
     text-decoration: none;
     width: 95%;
-    max-width: 150px;
+    max-width: 220px;
     text-align: center;
     padding: 10px 0;
     margin-right:20px;
@@ -219,7 +219,7 @@ export const WorkButton = styled.a`
     color:${({ theme }) => theme.white};
     border-radius: 20px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     transition: all 0.2s ease-in-out !important;
     background: hsla(271, 100%, 50%, 1);
