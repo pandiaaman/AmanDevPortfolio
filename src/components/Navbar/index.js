@@ -86,12 +86,28 @@ const Navbar = () => {
               Experience
             </MobileLink>
             <MobileLink
+              href="#patents"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
+              Patents
+            </MobileLink>
+            <MobileLink
               href="#projects"
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
             >
               Projects
+            </MobileLink>
+            <MobileLink
+              href="#research"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
+              Research
             </MobileLink>
             <MobileLink
               href="#education"

@@ -101,19 +101,42 @@ function Footer() {
           <SocialMediaIcon href={Bio.github} target="display">
             <GitHubIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.portfoliodoc} target="display">
+          <SocialMediaIcon
+            href={Bio.portfoliodoc}
+            target="display"
+            title="portfolio document"
+          >
             <AccountCircleIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.linkedin} target="display">
+          <SocialMediaIcon
+            href={Bio.linkedin}
+            target="display"
+            title="linkedIn profile"
+          >
             <LinkedInIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.resume} target="display">
+          <SocialMediaIcon href={Bio.resume} target="display" title="resume">
             <DocumentScannerIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.personalhistory} target="display">
+          <SocialMediaIcon
+            href={Bio.personalhistory}
+            target="display"
+            title="personal history document"
+          >
             <HistoryEduIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.communityinvolvement} target="display">
+          <SocialMediaIcon
+            href={Bio.communityinvolvement}
+            target="display"
+            title="community involvement document"
+          >
+            <PeopleIcon />
+          </SocialMediaIcon>
+          <SocialMediaIcon
+            href={Bio.leadershipdoc}
+            target="display"
+            title="leadership document"
+          >
             <PeopleIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>
