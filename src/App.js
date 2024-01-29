@@ -17,7 +17,6 @@ import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 import TextFlow from "./components/TextFlow/index.js";
-import SideBar from "./SideBar/index.js";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
