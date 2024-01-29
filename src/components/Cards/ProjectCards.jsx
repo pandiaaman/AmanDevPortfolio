@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Button = styled.button`
   display: none;
@@ -16,7 +17,7 @@ const Button = styled.button`
 `;
 const Card = styled.div`
   width: 330px;
-  height: 490px;
+  height: 600px;
   background-color: ${({ theme }) => theme.card};
   cursor: pointer;
   border-radius: 10px;
@@ -120,6 +121,19 @@ const Avatar = styled.img`
   border: 3px solid ${({ theme }) => theme.card};
 `;
 
+const SocialMediaIcon = styled.a`
+  position: relative;
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #854ce6;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: white;
+  }
+`;
+
 const ProjectCards = ({ project, setOpenModal }) => {
   return (
     <Card onClick={() => setOpenModal({ state: true, project: project })}>
@@ -142,6 +156,9 @@ const ProjectCards = ({ project, setOpenModal }) => {
         ))}
       </Members>
       {/* <Button>View Project</Button> */}
+      <SocialMediaIcon>
+        <ExpandMoreIcon />
+      </SocialMediaIcon>
     </Card>
   );
 };

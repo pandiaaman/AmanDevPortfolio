@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 import "./TextFlowStyle.css";
 
@@ -55,6 +54,148 @@ const TextFlow = () => {
     <div>
       <div className="scroll">
         <div>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>ReactJS</span>
+          <span>TailwindCSS</span>
+          <span>PostCSS</span>
+          <span>WebPack</span>
+          <span>Frontend System Design</span>
+          <span>UI/UX</span>
+          <span>Figma</span>
+          <span>Illustrator</span>
+          <span>Photoshop</span>
+          <span>Java</span>
+          <span>Spring</span>
+          <span>MVC</span>
+          <span>SpringBoot</span>
+          <span>PHP</span>
+          <span>CodeIgniter</span>
+          <span>Hibernate</span>
+          <span>OOPS & AOP</span>
+          <span>SOLID principles</span>
+          <span>System Design</span>
+          <span>Software Architecture</span>
+          <span>Python</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>ReactJS</span>
+          <span>TailwindCSS</span>
+          <span>PostCSS</span>
+          <span>WebPack</span>
+          <span>Frontend System Design</span>
+          <span>UI/UX</span>
+          <span>Figma</span>
+          <span>Illustrator</span>
+          <span>Photoshop</span>
+          <span>Java</span>
+          <span>Spring</span>
+          <span>MVC</span>
+          <span>SpringBoot</span>
+          <span>PHP</span>
+          <span>CodeIgniter</span>
+          <span>Hibernate</span>
+          <span>OOPS & AOP</span>
+          <span>SOLID principles</span>
+          <span>System Design</span>
+          <span>Software Architecture</span>
+          <span>Python</span>
+          <span>Spring</span>
+          <span>MVC</span>
+          <span>SpringBoot</span>
+          <span>PHP</span>
+          <span>CodeIgniter</span>
+          <span>Hibernate</span>
+          <span>OOPS & AOP</span>
+          <span>SOLID principles</span>
+          <span>System Design</span>
+          <span>Software Architecture</span>
+          <span>Python</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>ReactJS</span>
+          <span>TailwindCSS</span>
+          <span>PostCSS</span>
+          <span>WebPack</span>
+          <span>Frontend System Design</span>
+          <span>UI/UX</span>
+          <span>Figma</span>
+          <span>Illustrator</span>
+          <span>Photoshop</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>ReactJS</span>
+          <span>TailwindCSS</span>
+          <span>PostCSS</span>
+          <span>WebPack</span>
+          <span>Frontend System Design</span>
+          <span>UI/UX</span>
+          <span>Figma</span>
+          <span>Illustrator</span>
+          <span>Photoshop</span>
+          <span>Java</span>
+          <span>Spring</span>
+          <span>MVC</span>
+          <span>SpringBoot</span>
+          <span>PHP</span>
+          <span>CodeIgniter</span>
+          <span>Hibernate</span>
+          <span>OOPS & AOP</span>
+          <span>SOLID principles</span>
+          <span>System Design</span>
+          <span>Software Architecture</span>
+          <span>Python</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>ReactJS</span>
+          <span>TailwindCSS</span>
+          <span>PostCSS</span>
+          <span>WebPack</span>
+          <span>Frontend System Design</span>
+          <span>UI/UX</span>
+          <span>Figma</span>
+          <span>Illustrator</span>
+          <span>Photoshop</span>
+          <span>Java</span>
+          <span>Spring</span>
+          <span>MVC</span>
+          <span>SpringBoot</span>
+          <span>PHP</span>
+          <span>CodeIgniter</span>
+          <span>Hibernate</span>
+          <span>OOPS & AOP</span>
+          <span>SOLID principles</span>
+          <span>System Design</span>
+          <span>Software Architecture</span>
+          <span>Python</span>
+          <span>Spring</span>
+          <span>MVC</span>
+          <span>SpringBoot</span>
+          <span>PHP</span>
+          <span>CodeIgniter</span>
+          <span>Hibernate</span>
+          <span>OOPS & AOP</span>
+          <span>SOLID principles</span>
+          <span>System Design</span>
+          <span>Software Architecture</span>
+          <span>Python</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>ReactJS</span>
+          <span>TailwindCSS</span>
+          <span>PostCSS</span>
+          <span>WebPack</span>
+          <span>Frontend System Design</span>
+          <span>UI/UX</span>
+          <span>Figma</span>
+          <span>Illustrator</span>
+          <span>Photoshop</span>
           <span>HTML</span>
           <span>CSS</span>
           <span>JavaScript</span>
