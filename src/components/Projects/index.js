@@ -102,24 +102,6 @@ const Projects = ({ openModal, setOpenModal }) => {
               Data Science & ML
             </ToggleButton>
           )}
-
-          <Divider />
-          {toggle === "machine learning" ? (
-            <ToggleButton
-              active
-              value="machine learning"
-              onClick={() => setToggle("machine learning")}
-            >
-              MACHINE LEARNING
-            </ToggleButton>
-          ) : (
-            <ToggleButton
-              value="machine learning"
-              onClick={() => setToggle("machine learning")}
-            >
-              MACHINE LEARNING
-            </ToggleButton>
-          )}
         </ToggleButtonGroup>
         <CardContainer>
           {toggle === "all" &&

@@ -5,6 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 import PeopleIcon from "@mui/icons-material/People";
+import CoPresentIcon from "@mui/icons-material/CoPresent";
 import { Bio } from "../../data/constants";
 
 const FooterContainer = styled.div`
@@ -86,6 +87,7 @@ const Copyright = styled.p`
 `;
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -98,7 +100,7 @@ function Footer() {
           <NavLink href="#education">Education</NavLink>
         </Nav>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.github} target="display">
+          <SocialMediaIcon href={Bio.github} target="display" title="github">
             <GitHubIcon />
           </SocialMediaIcon>
           <SocialMediaIcon
@@ -137,10 +139,12 @@ function Footer() {
             target="display"
             title="leadership document"
           >
-            <PeopleIcon />
+            <CoPresentIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>&copy; 2023 Aman Pandia. All rights reserved.</Copyright>
+        <Copyright>
+          &copy; {currentYear} Aman Pandia. All rights reserved.
+        </Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
