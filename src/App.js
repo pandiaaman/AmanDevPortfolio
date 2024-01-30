@@ -17,6 +17,8 @@ import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 import TextFlow from "./components/TextFlow/index.js";
+import Certifications from "./components/Certifications";
+import Recommendations from "./components/Recommendations";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -61,7 +63,9 @@ function App() {
           <Projects openModal={openModal} setOpenModal={setOpenModal} />
           <Research openModal={openModal} setOpenModal={setOpenModal} />
           <Wrapper>
+            <Certifications />
             <Education />
+            <Recommendations />
             <Contact />
           </Wrapper>
           <Footer />
