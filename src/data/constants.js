@@ -10,6 +10,7 @@ import iotvigilant from "../images/iotvigilant.png";
 import notes from "../images/notes.png";
 import omnifood from "../images/omnifood.png";
 import patent from "../images/patent.png";
+import drivingpatent from "../images/drivingpatent.png";
 import tinder from "../images/tinder.png";
 import tryon from "../images/tryon.png";
 import solarwind from "../images/solarwind.png";
@@ -363,6 +364,125 @@ export const skills = [
   },
 ];
 
+export const recommendations = [
+  {
+    id: 0,
+    image:
+      "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
+    role: "Senior Associate (Team Lead)",
+    company: "State Street Services Corportate Private Limited",
+    date: "Feb 2023 - current",
+    desc: "• Orchastrated a team of 4 members in a critical JAVA microservices project, rebuilding the legacy systems overall while implementing event driven architecture using Kafka and Jenkins for automated deployment with docker and kubernetes. Updated Frontend UI/UX using React JS based on business requirements of the onshore banking teams. ",
+  },
+  {
+    id: 1,
+    img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
+    role: "Senior Associate (Team Lead)",
+    company: "State Street Services Corportate Private Limited",
+    date: "Feb 2023 - current",
+    desc: "• Orchastrated a team of 4 members in a critical JAVA microservices project, rebuilding the legacy systems overall while implementing event driven architecture using Kafka and Jenkins for automated deployment with docker and kubernetes. Updated Frontend UI/UX using React JS based on business requirements of the onshore banking teams. ",
+  },
+  {
+    id: 2,
+    img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
+    role: "Senior Associate (Team Lead)",
+    company: "State Street Services Corportate Private Limited",
+    date: "Feb 2023 - current",
+    desc: "• Orchastrated a team of 4 members in a critical JAVA microservices project, rebuilding the legacy systems overall while implementing event driven architecture using Kafka and Jenkins for automated deployment with docker and kubernetes. Updated Frontend UI/UX using React JS based on business requirements of the onshore banking teams. ",
+  },
+  {
+    id: 3,
+    img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
+    role: "Senior Associate (Team Lead)",
+    company: "State Street Services Corportate Private Limited",
+    date: "Feb 2023 - current",
+    desc: "• Orchastrated a team of 4 members in a critical JAVA microservices project, rebuilding the legacy systems overall while implementing event driven architecture using Kafka and Jenkins for automated deployment with docker and kubernetes. Updated Frontend UI/UX using React JS based on business requirements of the onshore banking teams. ",
+  },
+];
+
+export const certifications = [
+  {
+    id: 0,
+    img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
+    role: "Senior Associate (Team Lead)",
+    company: "State Street Services Corportate Private Limited",
+    date: "Feb 2023 - current",
+    desc: "• Orchastrated a team of 4 members in a critical JAVA microservices project, rebuilding the legacy systems overall while implementing event driven architecture using Kafka and Jenkins for automated deployment with docker and kubernetes. Updated Frontend UI/UX using React JS based on business requirements of the onshore banking teams. ",
+    skills: [
+      "JAVA microservices",
+      "Kafkaa+a",
+      "Jenkins",
+      "Docker",
+      "Kubernetes",
+      "React JS",
+      "AWS",
+      "IBM MQ",
+      "JavaScript 0 ",
+    ],
+    doc: "https://drive.google.com/file/d/1ovFZE1jSkyYnLPy9njQ_QqrmpbbXbKk1/view?usp=sharing",
+  },
+  {
+    id: 1,
+    img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
+    role: "Senior Associate (Team Lead)",
+    company: "State Street Services Corportate Private Limited",
+    date: "Feb 2023 - current",
+    desc: "• Orchastrated a team of 4 members in a critical JAVA microservices project, rebuilding the legacy systems overall while implementing event driven architecture using Kafka and Jenkins for automated deployment with docker and kubernetes. Updated Frontend UI/UX using React JS based on business requirements of the onshore banking teams. ",
+    skills: [
+      "JAVA microservices",
+      "Kafkaa+a",
+      "Jenkins",
+      "Docker",
+      "Kubernetes",
+      "React JS",
+      "AWS",
+      "IBM MQ",
+      "JavaScript1 ",
+    ],
+    doc: "https://drive.google.com/file/d/1ovFZE1jSkyYnLPy9njQ_QqrmpbbXbKk1/view?usp=sharing",
+  },
+  {
+    id: 2,
+    img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
+    role: "Senior Associate (Team Lead)",
+    company: "State Street Services Corportate Private Limited",
+    date: "Feb 2023 - current",
+    desc: "• Orchastrated a team of 4 members in a critical JAVA microservices project, rebuilding the legacy systems overall while implementing event driven architecture using Kafka and Jenkins for automated deployment with docker and kubernetes. Updated Frontend UI/UX using React JS based on business requirements of the onshore banking teams. ",
+    skills: [
+      "JAVA microservices",
+      "Kafkaa+a",
+      "Jenkins",
+      "Docker",
+      "Kubernetes",
+      "React JS",
+      "AWS",
+      "IBM MQ",
+      "JavaScript 2",
+    ],
+    doc: "https://drive.google.com/file/d/1ovFZE1jSkyYnLPy9njQ_QqrmpbbXbKk1/view?usp=sharing",
+  },
+  {
+    id: 3,
+    img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
+    role: "Senior Associate (Team Lead)",
+    company: "State Street Services Corportate Private Limited",
+    date: "Feb 2023 - current",
+    desc: "• hile implementing event driven architecture using Kafka and Jenkins for automated deployment with docker and kubernetes. Updated Frontend UI/UX using React JS based on business requirements of the onshore banking teams. ",
+    skills: [
+      "JAVA microservices",
+      "Kafkaa+a",
+      "Jenkins",
+      "Docker",
+      "Kubernetes",
+      "React JS",
+      "AWS",
+      "IBM MQ",
+      "JavaScript 3",
+    ],
+    doc: "https://drive.google.com/file/d/1ovFZE1jSkyYnLPy9njQ_QqrmpbbXbKk1/view?usp=sharing",
+  },
+];
+
 export const experiences = [
   {
     id: 0,
@@ -565,7 +685,7 @@ export const patents = [
   },
   {
     id: 1,
-    image: patent,
+    image: drivingpatent,
     title: "Driving Evaluation and Assessment System",
     role: "Team Lead",
     date: "March, 2020",
