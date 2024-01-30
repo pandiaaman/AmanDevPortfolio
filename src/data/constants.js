@@ -12,6 +12,8 @@ import omnifood from "../images/omnifood.png";
 import patent from "../images/patent.png";
 import tinder from "../images/tinder.png";
 import tryon from "../images/tryon.png";
+import solarwind from "../images/solarwind.png";
+import carparking from "../images/carparking.png";
 export const Bio = {
   name: "Aman Pandia",
   roles: [
@@ -873,8 +875,7 @@ export const research = [
     date: "15 May, 2018",
     description:
       "As the number of cars is increasing it is leading to a number of problems such as the area is becoming more congested leading to the immense traffic on road and even lesser space for parking the vehicles. Hence emerges the main problem which includes finding space for parking or manoeuvring the car in the parking space which becomes very difficult because of the congestion. The Parking alert system will make sure that no other vehicle comes and parks in vicinity to the car in a way that it becomes difficult for the driver to get in the car or it gets difficult for the driver to manoeuvre the vehicle later out of the parking space. We aim to create the system that turns on as the vehicles gets parked and alerts the driver of the other vehicle to park at a distance in order to give the vehicle passage for manoeuvring. In the system a microcontroller will be installed along with four ultrasonic sensors on all four sides of the vehicle and an alarm that acts as an actuator. The system actuates only when a certain condition arises which are coded according to the algorithm used in the microcontroller. ",
-    image:
-      "https://media.istockphoto.com/id/519196006/photo/aerial-view-of-parking-lot.jpg?s=612x612&w=0&k=20&c=nYTYkMoNRpOujZLJLFLX-8LPKjjnSi5ub9Yd5Ls_YKw=",
+    image: carparking,
     tags: [
       "machine learning",
       "computer vision",
@@ -895,8 +896,7 @@ export const research = [
     date: "3 May, 2018",
     description:
       "Development, promotion and application of renewable energy resources has certainly become the need of the hour. With exponential increment in demand and usage of non-renewable energy resources, we all are aware that the time isn’t very far for complete extinction of these resources, leaving us vulnerable. Nations competing with each other for socio economic development are highly dependent on their energy resources and the source of this energy. Over the past few decades, inclination towards the renewable resources has been continuous, giving scope to a much cleaner source of energy, be it due to global warming or depletion of fossil fuels. This paper concentrates on studying the provision of reliable electric system using solar-wind hybrid power systems that harnesses the renewable energy in sun and wind to generate electricity, taking into account maximum power point tracking. Hybrid nature of the system brings redundancy with it, increasing reliability and reducing the dependency on the single source. Measurement and analysis of the preferred site has been done in order to check availability of the resources. Since the capacity factor of the power systems running on renewable resources is more of a question of availability of wind or sun, as they are random in speed, direction and time, and are mostly affected by weather, hence combining both as a hybrid, to harness power can be much more reliable and realistic power source.",
-    image:
-      "https://media.istockphoto.com/id/1288129103/photo/three-wind-turbines-at-sunrise.jpg?s=612x612&w=0&k=20&c=lgWEd7DUgurs62S6HsjL1KDrnF-EYKlwJVNewIB-inU=",
+    image: solarwind,
     tags: [
       "Sustainability",
       "renewable energy",
