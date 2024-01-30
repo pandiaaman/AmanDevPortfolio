@@ -56,7 +56,7 @@ const index = () => {
     slidesToScroll: 1,
   };
   return (
-    <Container id="experience">
+    <Container id="recommendations">
       <Wrapper>
         <Title>Recommendations</Title>
 

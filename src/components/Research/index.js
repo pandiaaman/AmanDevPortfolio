@@ -16,7 +16,7 @@ import { research } from "../../data/constants";
 const Research = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");
   return (
-    <Container id="projects">
+    <Container id="research">
       <Wrapper>
         <Title>Research</Title>
         <Desc>

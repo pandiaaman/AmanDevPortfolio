@@ -16,7 +16,7 @@ import { patents } from "../../data/constants";
 const Patents = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");
   return (
-    <Container id="projects">
+    <Container id="patents">
       <Wrapper>
         <Title>Patents</Title>
         <Desc>

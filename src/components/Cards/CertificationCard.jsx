@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { WorkExperienceButton } from "../HeroSection/HeroStyle";
+import { CertificationButton } from "../HeroSection/HeroStyle";
 
 const Document = styled.img`
   display: none;
@@ -169,9 +169,9 @@ const CertificationCard = ({ certificate }) => {
         )}
       </Description>
       {certificate.doc && (
-        <WorkExperienceButton Button href={certificate.doc} target="display">
-          Work Experience letter
-        </WorkExperienceButton>
+        <CertificationButton Button href={certificate.doc} target="display">
+          View Certification
+        </CertificationButton>
       )}
     </Card>
   );
