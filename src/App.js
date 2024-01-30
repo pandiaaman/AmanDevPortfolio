@@ -1,5 +1,5 @@
 import { ThemeProvider } from "styled-components";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { darkTheme, lightTheme } from "./utils/Themes.js";
 import Navbar from "./components/Navbar";
 import "./App.css";
@@ -19,6 +19,8 @@ import styled from "styled-components";
 import TextFlow from "./components/TextFlow/index.js";
 import Certifications from "./components/Certifications";
 import Recommendations from "./components/Recommendations";
+import React, { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -41,37 +43,59 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 function App() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
   useEffect(() => {
     document.title = "Aman Pandia|Portfolio";
-  }, []);
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
 
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   console.log(openModal);
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router>
         <Navbar />
         <Body>
-          <HeroSection />
-          <TextFlow />
-          <Wrapper>
-            <Skills />
-            <Experience />
-          </Wrapper>
-          <Patents openModal={openModal} setOpenModal={setOpenModal} />
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Research openModal={openModal} setOpenModal={setOpenModal} />
-          <Wrapper>
-            <Certifications />
-            <Education />
-            <Recommendations />
-            <Contact />
-          </Wrapper>
-          <Footer />
-          {openModal.state && (
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          )}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.5, delay: 0.25 }}
+          >
+            <HeroSection />
+            <TextFlow />
+            <Wrapper>
+              <Skills />
+              <Experience />
+            </Wrapper>
+            <Patents openModal={openModal} setOpenModal={setOpenModal} />
+            <Projects openModal={openModal} setOpenModal={setOpenModal} />
+            <Research openModal={openModal} setOpenModal={setOpenModal} />
+            <Wrapper>
+              <Certifications />
+              <Education />
+              <Recommendations />
+              <Contact />
+            </Wrapper>
+            <Footer />
+            {openModal.state && (
+              <ProjectDetails
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+              />
+            )}
+          </motion.div>
         </Body>
       </Router>
     </ThemeProvider>
