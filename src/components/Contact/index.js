@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
 import { Snackbar } from "@mui/material";
 
 const Container = styled.div`

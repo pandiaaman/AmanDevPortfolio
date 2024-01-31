@@ -10,23 +10,55 @@ import {
   ButtonContainer,
   MobileIcon,
   MobileMenu,
-  MobileNavLogo,
   MobileLink,
 } from "./NavbarStyledComponent";
 import { DiCssdeck } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/constants";
-import { Close, CloseRounded } from "@mui/icons-material";
 import { useTheme } from "styled-components";
 
+import styled from "styled-components";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
+import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
+import PeopleIcon from "@mui/icons-material/People";
+import CoPresentIcon from "@mui/icons-material/CoPresent";
+
+const SocialMediaIcons = styled.div`
+  display: flex;
+  margin-top: 1rem;
+`;
+
+const SocialMediaIcon = styled.a`
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: ${({ theme }) => theme.text_primary};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+`;
+
+const Copyright = styled.p`
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+`;
+
 const Navbar = () => {
+  const currentYear = new Date().getFullYear();
+
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme();
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo to="/">
-          <a
+          <div
             style={{
               display: "flex",
               alignItems: "center",
@@ -36,7 +68,7 @@ const Navbar = () => {
             }}
           >
             <DiCssdeck size="3rem" /> <Span>Aman's Portfolio</Span>
-          </a>
+          </div>
         </NavLogo>
         <MobileIcon>
           <FaBars
@@ -134,6 +166,61 @@ const Navbar = () => {
             >
               Github Profile
             </GitHubButton>
+
+            <SocialMediaIcons>
+              <SocialMediaIcon
+                href={Bio.github}
+                target="display"
+                title="github"
+              >
+                <GitHubIcon />
+              </SocialMediaIcon>
+              <SocialMediaIcon
+                href={Bio.portfoliodoc}
+                target="display"
+                title="portfolio document"
+              >
+                <AccountCircleIcon />
+              </SocialMediaIcon>
+              <SocialMediaIcon
+                href={Bio.linkedin}
+                target="display"
+                title="linkedIn profile"
+              >
+                <LinkedInIcon />
+              </SocialMediaIcon>
+              <SocialMediaIcon
+                href={Bio.resume}
+                target="display"
+                title="resume"
+              >
+                <DocumentScannerIcon />
+              </SocialMediaIcon>
+              <SocialMediaIcon
+                href={Bio.personalhistory}
+                target="display"
+                title="personal history document"
+              >
+                <HistoryEduIcon />
+              </SocialMediaIcon>
+              <SocialMediaIcon
+                href={Bio.communityinvolvement}
+                target="display"
+                title="community involvement document"
+              >
+                <PeopleIcon />
+              </SocialMediaIcon>
+              <SocialMediaIcon
+                href={Bio.leadershipdoc}
+                target="display"
+                title="leadership document"
+              >
+                <CoPresentIcon />
+              </SocialMediaIcon>
+            </SocialMediaIcons>
+            <Copyright>
+              &copy; {currentYear} Aman Pandia. All rights reserved.
+            </Copyright>
           </MobileMenu>
         )}
       </NavbarContainer>
