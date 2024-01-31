@@ -39,14 +39,25 @@ const Wrapper = styled.div`
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
+
+// export const updateTheme = () => {
+//   return useContext(ThemeContext);
+// };
+
 function App() {
   useEffect(() => {
     document.title = "Aman Pandia|Portfolio";
   }, []);
 
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
+
   console.log(openModal);
+
+  const updateTheme = () => {
+    return setDarkMode((prevMode) => !prevMode);
+  };
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router>
