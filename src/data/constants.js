@@ -993,7 +993,7 @@ export const research = [
       "IMU & Gyroscopes",
     ],
     category: "all",
-    paperlink: "https://www.ijarbest.com/journal/v4i5/1650",
+    paperlink: "https://ijarbest.com/journal/v4i5/1650",
   },
   {
     id: 1,
@@ -1012,7 +1012,7 @@ export const research = [
       "calculus",
     ],
     category: "all",
-    paperlink: "https://www.ijarbest.com/journal/v4i5/1648",
+    paperlink: "https://ijarbest.com/journal/v4i5/1648",
   },
 ];
 
