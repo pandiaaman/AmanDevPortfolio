@@ -49,7 +49,7 @@ function App() {
     document.title = "Aman Pandia|Portfolio";
   }, []);
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
 
   console.log(openModal);
@@ -61,7 +61,7 @@ function App() {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router>
-        <Navbar />
+        <Navbar theme={darkMode} />
         <Body>
           <HeroSection />
           <TextFlow />

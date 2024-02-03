@@ -54,10 +54,14 @@ const Navbar = () => {
   const currentYear = new Date().getFullYear();
 
   const [isOpen, setIsOpen] = React.useState(false);
+
+  const [darkMode, setDarkMode] = useState(true);
+
   const theme = useTheme();
   return (
     <Nav>
       <NavbarContainer>
+        <GitHubButton>change theme</GitHubButton>
         <NavLogo to="/">
           <div
             style={{
