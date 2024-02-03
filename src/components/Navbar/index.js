@@ -12,7 +12,7 @@ import {
   MobileMenu,
   MobileLink,
 } from "./NavbarStyledComponent";
-import { DiCssdeck } from "react-icons/di";
+import { IoPartlySunnySharp, IoSunny } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/constants";
 import { useTheme } from "styled-components";
@@ -45,19 +45,25 @@ const SocialMediaIcon = styled.a`
 const Copyright = styled.p`
   margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: white;
+  color: ${({ theme }) => theme.Copyright};
   text-align: center;
 `;
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
+  // const { toggleDarkMode } = updateTheme();
   const currentYear = new Date().getFullYear();
 
   const [isOpen, setIsOpen] = React.useState(false);
+
   const theme = useTheme();
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">
+        <NavLogo
+          onClick={() => {
+            setDarkMode(!darkMode);
+          }}
+        >
           <div
             style={{
               display: "flex",
@@ -67,7 +73,7 @@ const Navbar = () => {
               cursor: "pointer",
             }}
           >
-            <DiCssdeck size="3rem" /> <Span>Aman's Portfolio</Span>
+            <IoPartlySunnySharp size="3rem" /> <Span>Aman's Portfolio</Span>
           </div>
         </NavLogo>
         <MobileIcon>
