@@ -49,20 +49,21 @@ const Copyright = styled.p`
   text-align: center;
 `;
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   // const { toggleDarkMode } = updateTheme();
   const currentYear = new Date().getFullYear();
 
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const [darkMode, setDarkMode] = useState(true);
-
   const theme = useTheme();
   return (
     <Nav>
       <NavbarContainer>
-        <GitHubButton>change theme</GitHubButton>
-        <NavLogo to="/">
+        <NavLogo
+          onClick={() => {
+            setDarkMode(!darkMode);
+          }}
+        >
           <div
             style={{
               display: "flex",
