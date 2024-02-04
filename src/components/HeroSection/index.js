@@ -9,10 +9,9 @@ import {
   HeroInnerContainer,
   TextLoop,
   Title,
+  Iframe,
   Span,
   SubTitle,
-  SocialMediaIcons,
-  SocialMediaIcon,
   ResumeButton,
 } from "./HeroStyle";
 import HeroImg from "../../images/HeroImage.jpg";
@@ -53,7 +52,10 @@ const HeroSection = () => {
           </HeroLeftContainer>
 
           <HeroRightContainer id="Right">
-            <Img src={HeroImg} alt="hero-image" />
+            <Iframe
+              src="https://www.youtube.com/embed/W_3zTbsNWtY?si=OqX5sBO883WkU7xq"
+              alt="hero-image"
+            />
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>
