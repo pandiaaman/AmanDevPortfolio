@@ -190,7 +190,7 @@ const AchievementCard = ({ achievement }) => {
       )}
       {achievement.ngo && (
         <CertificationButton Button href={achievement.ngo} target="display">
-          StepUp India NGO
+          YouthForSeva NGO
         </CertificationButton>
       )}
       {achievement.ssemp && (
