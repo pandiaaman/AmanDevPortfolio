@@ -1044,7 +1044,7 @@ export const achievements = [
     date: "2018-current",
     desc: "Worked with multiple NGOs dedicated to improving the education, medical and economic conditions of lower classes in India.",
     img: ngo,
-    ngo: "https://mcptnc.microsoft.com/certificate?AttemptMsaSilentAuth=true&wa=wsignin1.0",
+    ngo: "https://drive.google.com/file/d/1l-AUJgNkzE1b2XDYb5YxTSRNtNDrybf9/view?usp=sharing",
   },
 ];
 
