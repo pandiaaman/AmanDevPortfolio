@@ -7,8 +7,11 @@ import got from "../images/got.png";
 import hotelrating from "../images/hotelrating.png";
 import restimage from "../images/restimage.png";
 import iotvigilant from "../images/iotvigilant.png";
+import ngo from "../images/ngo.jpg";
 import notes from "../images/notes.png";
+import airforce from "../images/airforce.jpg";
 import omnifood from "../images/omnifood.png";
+import ielts from "../images/ielts.png";
 import patent from "../images/patent.png";
 import drivingpatent from "../images/drivingpatent.png";
 import tinder from "../images/tinder.png";
@@ -489,7 +492,7 @@ export const experiences = [
       "IBM MQ",
       "JavaScript",
     ],
-    doc: "https://drive.google.com/file/d/1ovFZE1jSkyYnLPy9njQ_QqrmpbbXbKk1/view?usp=sharing",
+    doc: "https://drive.google.com/file/d/14-lJmZdif7a7tneuX29d0SD0aMYb8OM0/view?usp=sharing",
   },
   {
     id: 1,
@@ -1019,23 +1022,29 @@ export const research = [
 export const achievements = [
   {
     id: 0,
-    title: "DecisionHub",
-    date: "Jan 2024 - Dec 2023",
-    description:
-      "A Rule Builder application “Decision Hub” that empowers Business Analysts to create, save, and visualize decision strategies. Provide a no-code rule writing experience and visual representation to test these rules in real-time and observe the calculations at each step.",
-    image:
-      "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
-    tags: [
-      "React Js",
-      "PostgressSQL",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "React Flow",
-    ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/DecisionHub",
-    webapp: "https://decisionhub.netlify.app/",
+    name: "AirForce Pilot Recommendation",
+    date: "Jan 2021",
+    desc: "I was recommended/selected by the Indian AirForce for the position of Officer as a Pilot in the force.",
+    img: airforce,
+    airforce:
+      "https://drive.google.com/file/d/1RiFP3cemo0exyndMoGmLxRg4we5Hav6x/view?usp=sharing",
+  },
+  {
+    id: 1,
+    name: "IELTS ScoreCard",
+    date: "Dec 2023",
+    desc: "Received a band 8 in IELTS general exam, gaining 8.5 in listening and reading both and a 7.5 score in speaking.",
+    img: ielts,
+    ielts:
+      "https://drive.google.com/file/d/1k_8WQH_acaTDKlmrcJpJWscYDejxBPec/view?usp=sharing",
+  },
+  {
+    id: 2,
+    name: "NGO Community service",
+    date: "2018-current",
+    desc: "Worked with multiple NGOs dedicated to improving the education, medical and economic conditions of lower classes in India.",
+    img: ngo,
+    ngo: "https://mcptnc.microsoft.com/certificate?AttemptMsaSilentAuth=true&wa=wsignin1.0",
   },
 ];
 
