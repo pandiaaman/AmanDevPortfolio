@@ -12,6 +12,7 @@ import Research from "./components/Research";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
+import Achievements from "./components/Achievements";
 import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
@@ -68,6 +69,7 @@ function App() {
           <Wrapper>
             <Skills />
             <Experience />
+            <Achievements />
           </Wrapper>
           <Patents openModal={openModal} setOpenModal={setOpenModal} />
           <Projects openModal={openModal} setOpenModal={setOpenModal} />
