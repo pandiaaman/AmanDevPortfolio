@@ -387,7 +387,7 @@ export const recommendations = [
   },
   {
     id: 2,
-    img: "https://media.licdn.com/dms/image/D5635AQEpZmpyrzRvvA/profile-framedphoto-shrink_100_100/0/1644487416983?e=1707264000&v=beta&t=CpuZayRxLQ4mCO5FurFET7Yui0Ky7lO4ZRTAdOX8Ygw",
+    img: "https://media.licdn.com/dms/image/D5635AQEpZmpyrzRvvA/profile-framedphoto-shrink_100_100/0/1644487416983?e=1708012800&v=beta&t=CZUysk-8tlt63LsDB1MVFbZHcP6bVGXFkvAvdyBkmkc",
     role: "Ganesh Malasetty",
     company: "Java Full Stack Developer, StateStreet",
     date: "Colleague",
