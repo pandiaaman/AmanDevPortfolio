@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { WorkExperienceButton } from "../HeroSection/HeroStyle";
+import { CertificationButton } from "../HeroSection/HeroStyle";
 
 const Document = styled.img`
   display: none;
@@ -36,12 +36,12 @@ const Span = styled.span`
 `;
 
 const Card = styled.div`
-  width: 650px;
+  max-width: 600px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 12px 16px;
   justify-content: space-between;
-  position: relative;
+  margin: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -141,26 +141,26 @@ const Skill = styled.div`
   }
 `;
 
-const ExperienceCard = ({ experience }) => {
+const CertificationCard = ({ certificate }) => {
   return (
     <Card>
       <Top>
-        <Image src={experience.img} />
+        <Image src={certificate.img} />
         <Body>
-          <Role>{experience.role}</Role>
-          <Company>{experience.company}</Company>
-          <Date>{experience.date}</Date>
+          <Role>{certificate.role}</Role>
+          <Company>{certificate.company}</Company>
+          <Date>{certificate.date}</Date>
         </Body>
       </Top>
       <Description>
-        {experience?.desc && <Span>{experience?.desc}</Span>}
-        {experience?.skills && (
+        {certificate?.desc && <Span>{certificate?.desc}</Span>}
+        {certificate?.skills && (
           <>
             <br />
             <Skills>
               <b>Skills:</b>
               <ItemWrapper>
-                {experience?.skills?.map((skill, index) => (
+                {certificate?.skills?.map((skill, index) => (
                   <Skill>• {skill}</Skill>
                 ))}
               </ItemWrapper>
@@ -168,13 +168,13 @@ const ExperienceCard = ({ experience }) => {
           </>
         )}
       </Description>
-      {experience.doc && (
-        <WorkExperienceButton Button href={experience.doc} target="display">
-          Work Experience letter
-        </WorkExperienceButton>
+      {certificate.doc && (
+        <CertificationButton Button href={certificate.doc} target="display">
+          View Certification
+        </CertificationButton>
       )}
     </Card>
   );
 };
 
-export default ExperienceCard;
+export default CertificationCard;

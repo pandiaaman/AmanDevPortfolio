@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { WorkButton } from "../HeroSection/HeroStyle";
 
 const Document = styled.img`
   display: none;
@@ -142,6 +143,21 @@ const EducationCard = ({ education }) => {
       <Description>
         <Span>{education.desc}</Span>
       </Description>
+      {education.degreedoc && (
+        <WorkButton href={education.degreedoc} target="display">
+          See Degree
+        </WorkButton>
+      )}
+      {education.transcripts && (
+        <WorkButton href={education.transcripts} target="display">
+          See Transcripts
+        </WorkButton>
+      )}
+      {education.scholarogrades && (
+        <WorkButton href={education.scholarogrades} target="display">
+          See Converted Scholaro Grades
+        </WorkButton>
+      )}
     </Card>
   );
 };

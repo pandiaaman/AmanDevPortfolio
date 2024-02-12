@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import { WorkExperienceButton } from "../HeroSection/HeroStyle";
-
 const Document = styled.img`
   display: none;
   height: 70px;
@@ -36,12 +34,12 @@ const Span = styled.span`
 `;
 
 const Card = styled.div`
-  width: 650px;
+  max-width: 600px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 12px 16px;
   justify-content: space-between;
-  position: relative;
+  margin: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -119,62 +117,22 @@ const Date = styled.div`
   }
 `;
 
-const Skills = styled.div`
-  width: 100%;
-  display: flex;
-  gap: 12px;
-  margin-top: -10px;
-`;
-
-const ItemWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-`;
-
-const Skill = styled.div`
-  font-size: 15px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-
-const ExperienceCard = ({ experience }) => {
+const RecommendationCard = ({ recommendation }) => {
   return (
     <Card>
       <Top>
-        <Image src={experience.img} />
+        <Image src={recommendation.img} />
         <Body>
-          <Role>{experience.role}</Role>
-          <Company>{experience.company}</Company>
-          <Date>{experience.date}</Date>
+          <Role>{recommendation.role}</Role>
+          <Company>{recommendation.company}</Company>
+          <Date>{recommendation.date}</Date>
         </Body>
       </Top>
       <Description>
-        {experience?.desc && <Span>{experience?.desc}</Span>}
-        {experience?.skills && (
-          <>
-            <br />
-            <Skills>
-              <b>Skills:</b>
-              <ItemWrapper>
-                {experience?.skills?.map((skill, index) => (
-                  <Skill>• {skill}</Skill>
-                ))}
-              </ItemWrapper>
-            </Skills>
-          </>
-        )}
+        {recommendation?.desc && <Span>{recommendation?.desc}</Span>}
       </Description>
-      {experience.doc && (
-        <WorkExperienceButton Button href={experience.doc} target="display">
-          Work Experience letter
-        </WorkExperienceButton>
-      )}
     </Card>
   );
 };
 
-export default ExperienceCard;
+export default RecommendationCard;

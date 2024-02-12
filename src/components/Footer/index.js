@@ -5,6 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 import PeopleIcon from "@mui/icons-material/People";
+import CoPresentIcon from "@mui/icons-material/CoPresent";
 import { Bio } from "../../data/constants";
 
 const FooterContainer = styled.div`
@@ -86,6 +87,7 @@ const Copyright = styled.p`
 `;
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -94,30 +96,58 @@ function Footer() {
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#experience">Experience</NavLink>
+          <NavLink href="#patents">Patents</NavLink>
           <NavLink href="#projects">Projects</NavLink>
+          <NavLink href="#certifications">Certifications</NavLink>
           <NavLink href="#education">Education</NavLink>
+          <NavLink href="#recommendations">Recommendations</NavLink>
         </Nav>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.github} target="display">
+          <SocialMediaIcon href={Bio.github} target="display" title="github">
             <GitHubIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.portfoliodoc} target="display">
+          <SocialMediaIcon
+            href={Bio.portfoliodoc}
+            target="display"
+            title="portfolio document"
+          >
             <AccountCircleIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.linkedin} target="display">
+          <SocialMediaIcon
+            href={Bio.linkedin}
+            target="display"
+            title="linkedIn profile"
+          >
             <LinkedInIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.resume} target="display">
+          <SocialMediaIcon href={Bio.resume} target="display" title="resume">
             <DocumentScannerIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.personalhistory} target="display">
+          <SocialMediaIcon
+            href={Bio.personalhistory}
+            target="display"
+            title="personal history document"
+          >
             <HistoryEduIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.communityinvolvement} target="display">
+          <SocialMediaIcon
+            href={Bio.communityinvolvement}
+            target="display"
+            title="community involvement document"
+          >
             <PeopleIcon />
           </SocialMediaIcon>
+          <SocialMediaIcon
+            href={Bio.leadershipdoc}
+            target="display"
+            title="leadership document"
+          >
+            <CoPresentIcon />
+          </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>&copy; 2023 Aman Pandia. All rights reserved.</Copyright>
+        <Copyright>
+          &copy; {currentYear} Aman Pandia. All rights reserved.
+        </Copyright>
       </FooterWrapper>
     </FooterContainer>
   );

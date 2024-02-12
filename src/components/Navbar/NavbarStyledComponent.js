@@ -1,9 +1,8 @@
 import { Link as LinkR } from "react-router-dom";
 import styled from "styled-components";
-import _default from "../../themes/default";
 
 export const Nav = styled.div`
-  background-color: ${({ theme }) => theme.card_light};
+  background-color: ${({ theme }) => theme.navbar};
   height: 80px;
   display: flex;
   align-items: center;
@@ -52,7 +51,7 @@ export const NavItems = styled.ul`
   padding: 0 6px;
   list-style: none;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     display: none;
   }
 `;
@@ -90,7 +89,7 @@ export const GitHubButton = styled.a`
     background: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.white};
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     font-size: 14px;
   }
 `;
@@ -102,14 +101,14 @@ export const ButtonContainer = styled.div`
   justify-content: end;
   align-items: center;
   padding: 0 6px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     display: none;
   }
 `;
 
 export const MobileIcon = styled.div`
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     display: block;
     position: absolute;
     top: 0;
@@ -132,7 +131,7 @@ export const MobileMenu = styled.div`
   width: 100%;
   padding: 12px 40px 24px 40px;
   background: ${({ theme }) => theme.card_light + 99};
-  transition: all 0.6s ease-in-out;
+  transition: all 0.9s ease-in-out;
   transform: ${({ isOpen }) =>
     isOpen ? "translateY(0)" : "translateY(-100%)"};
   border-radius: 0 0 20px 20px;

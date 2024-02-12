@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { WorkExperienceButton } from "../HeroSection/HeroStyle";
+import { CertificationButton } from "../HeroSection/HeroStyle";
 
 const Document = styled.img`
   display: none;
@@ -36,12 +36,12 @@ const Span = styled.span`
 `;
 
 const Card = styled.div`
-  width: 650px;
+  max-width: 600px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 12px 16px;
   justify-content: space-between;
-  position: relative;
+  margin: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -77,7 +77,7 @@ const Top = styled.div`
 `;
 
 const Image = styled.img`
-  height: 50px;
+  height: 150px;
   background-color: #000;
   border-radius: 10px;
   margin-top: 4px;
@@ -141,40 +141,65 @@ const Skill = styled.div`
   }
 `;
 
-const ExperienceCard = ({ experience }) => {
+const AchievementCard = ({ achievement }) => {
   return (
     <Card>
       <Top>
-        <Image src={experience.img} />
+        <Image src={achievement.img} />
         <Body>
-          <Role>{experience.role}</Role>
-          <Company>{experience.company}</Company>
-          <Date>{experience.date}</Date>
+          <Role>{achievement.name}</Role>
+          <Date>{achievement.date}</Date>
+
+          <Description>
+            {achievement?.desc && <Span>{achievement?.desc}</Span>}
+            {achievement?.skills && (
+              <>
+                <br />
+                <Skills>
+                  <b>Skills:</b>
+                  <ItemWrapper>
+                    {achievement?.skills?.map((skill, index) => (
+                      <Skill>• {skill}</Skill>
+                    ))}
+                  </ItemWrapper>
+                </Skills>
+              </>
+            )}
+          </Description>
         </Body>
       </Top>
-      <Description>
-        {experience?.desc && <Span>{experience?.desc}</Span>}
-        {experience?.skills && (
-          <>
-            <br />
-            <Skills>
-              <b>Skills:</b>
-              <ItemWrapper>
-                {experience?.skills?.map((skill, index) => (
-                  <Skill>• {skill}</Skill>
-                ))}
-              </ItemWrapper>
-            </Skills>
-          </>
-        )}
-      </Description>
-      {experience.doc && (
-        <WorkExperienceButton Button href={experience.doc} target="display">
-          Work Experience letter
-        </WorkExperienceButton>
+
+      {achievement.doc && (
+        <CertificationButton Button href={achievement.doc} target="display">
+          View Certification
+        </CertificationButton>
+      )}
+      {achievement.airforce && (
+        <CertificationButton
+          Button
+          href={achievement.airforce}
+          target="display"
+        >
+          AirForce Recommendation
+        </CertificationButton>
+      )}
+      {achievement.ielts && (
+        <CertificationButton Button href={achievement.ielts} target="display">
+          View Scorecard
+        </CertificationButton>
+      )}
+      {achievement.ngo && (
+        <CertificationButton Button href={achievement.ngo} target="display">
+          YouthForSeva NGO
+        </CertificationButton>
+      )}
+      {achievement.ssemp && (
+        <CertificationButton Button href={achievement.ssemp} target="display">
+          Employee Recognition
+        </CertificationButton>
       )}
     </Card>
   );
 };
 
-export default ExperienceCard;
+export default AchievementCard;
