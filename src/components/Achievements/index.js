@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { recommendations } from "../../data/constants";
+import { achievements } from "../../data/constants";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import RecommendationCard from "../Cards/RecommendationCard";
+import AchievementCard from "../Cards/AchievementCard";
 
 const Container = styled.div`
   display: flex;
@@ -56,14 +56,14 @@ const index = () => {
     slidesToScroll: 1,
   };
   return (
-    <Container id="recommendations">
+    <Container id="achievements">
       <Wrapper>
-        <Title>Recommendations</Title>
+        <Title>Achievements</Title>
 
         <DivWithBlockDisplay>
           <Slider {...settings}>
-            {recommendations.map((recommendation, index) => (
-              <RecommendationCard recommendation={recommendation} />
+            {achievements.map((achievement, index) => (
+              <AchievementCard achievement={achievement} />
             ))}
           </Slider>
         </DivWithBlockDisplay>

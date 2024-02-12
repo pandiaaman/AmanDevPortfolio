@@ -77,7 +77,7 @@ const Top = styled.div`
 `;
 
 const Image = styled.img`
-  height: 50px;
+  height: 150px;
   background-color: #000;
   border-radius: 10px;
   margin-top: 4px;
@@ -141,40 +141,65 @@ const Skill = styled.div`
   }
 `;
 
-const CertificationCard = ({ certificate }) => {
+const AchievementCard = ({ achievement }) => {
   return (
     <Card>
       <Top>
-        <Image src={certificate.img} />
+        <Image src={achievement.img} />
         <Body>
-          <Role>{certificate.role}</Role>
-          <Company>{certificate.company}</Company>
-          <Date>{certificate.date}</Date>
+          <Role>{achievement.name}</Role>
+          <Date>{achievement.date}</Date>
+
+          <Description>
+            {achievement?.desc && <Span>{achievement?.desc}</Span>}
+            {achievement?.skills && (
+              <>
+                <br />
+                <Skills>
+                  <b>Skills:</b>
+                  <ItemWrapper>
+                    {achievement?.skills?.map((skill, index) => (
+                      <Skill>• {skill}</Skill>
+                    ))}
+                  </ItemWrapper>
+                </Skills>
+              </>
+            )}
+          </Description>
         </Body>
       </Top>
-      <Description>
-        {certificate?.desc && <Span>{certificate?.desc}</Span>}
-        {certificate?.skills && (
-          <>
-            <br />
-            <Skills>
-              <b>Skills:</b>
-              <ItemWrapper>
-                {certificate?.skills?.map((skill, index) => (
-                  <Skill>• {skill}</Skill>
-                ))}
-              </ItemWrapper>
-            </Skills>
-          </>
-        )}
-      </Description>
-      {certificate.doc && (
-        <CertificationButton Button href={certificate.doc} target="display">
+
+      {achievement.doc && (
+        <CertificationButton Button href={achievement.doc} target="display">
           View Certification
+        </CertificationButton>
+      )}
+      {achievement.airforce && (
+        <CertificationButton
+          Button
+          href={achievement.airforce}
+          target="display"
+        >
+          AirForce Recommendation
+        </CertificationButton>
+      )}
+      {achievement.ielts && (
+        <CertificationButton Button href={achievement.ielts} target="display">
+          View Scorecard
+        </CertificationButton>
+      )}
+      {achievement.ngo && (
+        <CertificationButton Button href={achievement.ngo} target="display">
+          YouthForSeva NGO
+        </CertificationButton>
+      )}
+      {achievement.ssemp && (
+        <CertificationButton Button href={achievement.ssemp} target="display">
+          Employee Recognition
         </CertificationButton>
       )}
     </Card>
   );
 };
 
-export default CertificationCard;
+export default AchievementCard;
