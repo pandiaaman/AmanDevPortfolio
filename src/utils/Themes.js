@@ -11,6 +11,8 @@ export const darkTheme = {
   black: "#000000",
   copyright: "#FFFFFF",
   navbar: "#191924",
+  logo: "#854CE6",
+  navitems: "#FFFFFF",
 };
 
 export const lightTheme = {
@@ -25,5 +27,7 @@ export const lightTheme = {
   white: "#FFFFFF",
   black: "#000000",
   copyright: "#000000",
-  navbar: "#e3b3eb",
+  navbar: "#F2F2F2",
+  logo: "#be1adb",
+  navitems: "#be1adb",
 };

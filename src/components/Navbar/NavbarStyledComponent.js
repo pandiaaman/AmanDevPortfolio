@@ -27,12 +27,16 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
+  color: ${({ theme }) => theme.text_primary};
   width: 60%;
   padding: 0 6px;
   display: flex;
   justify-content: start;
   align-items: center;
   text-decoration: none;
+              alignItems: center,
+              marginBottom: 20,
+              cursor: pointer,
   @media (max-width: 640px) {
     padding: 0 0px;
   }
@@ -40,7 +44,14 @@ export const NavLogo = styled(LinkR)`
 export const Span = styled.div`
   padding: 0 4px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
+`;
+
+export const LogoText = styled.div`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: ${({ theme }) => theme.logo};
 `;
 export const NavItems = styled.ul`
   width: 100%;
@@ -57,7 +68,7 @@ export const NavItems = styled.ul`
 `;
 
 export const NavLink = styled.a`
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.navitems};
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
