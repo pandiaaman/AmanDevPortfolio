@@ -73,6 +73,9 @@ const ContactTitle = styled.div`
   color: ${({ theme }) => theme.text_primary};
 `;
 
+const Mail = styled.a`
+  color: ${({ theme }) => theme.logo};
+`;
 const ContactInput = styled.input`
   flex: 1;
   background-color: transparent;
@@ -136,8 +139,10 @@ const Contact = () => {
   const form = useRef();
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     window.confirm("sent!");
     console.log("submitted " + e);
+    window.location.reload();
     // e.preventDefault();
     // emailjs
     //   .sendForm(
@@ -163,6 +168,13 @@ const Contact = () => {
         <Title>Contact</Title>
         <Desc>
           Feel free to reach out to me for any queries or opportunities!
+          Directly mail me by clicking here:&nbsp;{" "}
+          <Mail
+            href="mailto:pandiaaman16@gmail.com"
+            style={{ textDecoration: "none" }}
+          >
+            <strong> pandiaaman16@gmail.com</strong>
+          </Mail>
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
