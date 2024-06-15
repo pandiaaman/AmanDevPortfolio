@@ -65,219 +65,32 @@ const TextFlow = () => {
     <div>
       <div className="scroll">
         <div>
-          <SpanFlowItem>HTML</SpanFlowItem>
-          <SpanFlowItem>CSS</SpanFlowItem>
-          <SpanFlowItem>JavaScript</SpanFlowItem>
-          <SpanFlowItem>ReactJS</SpanFlowItem>
-          <SpanFlowItem>TailwindCSS</SpanFlowItem>
-          <SpanFlowItem>PostCSS</SpanFlowItem>
-          <SpanFlowItem>WebPack</SpanFlowItem>
-          <SpanFlowItem>Frontend System Design</SpanFlowItem>
-          <SpanFlowItem>UI/UX</SpanFlowItem>
-          <SpanFlowItem>Figma</SpanFlowItem>
-          <SpanFlowItem>Illustrator</SpanFlowItem>
-          <SpanFlowItem>Photoshop</SpanFlowItem>
-          <SpanFlowItem>Java</SpanFlowItem>
-          <SpanFlowItem>Spring</SpanFlowItem>
-          <SpanFlowItem>MVC</SpanFlowItem>
-          <SpanFlowItem>SpringBoot</SpanFlowItem>
-          <SpanFlowItem>PHP</SpanFlowItem>
-          <SpanFlowItem>CodeIgniter</SpanFlowItem>
-          <SpanFlowItem>Hibernate</SpanFlowItem>
-          <SpanFlowItem>OOPS & AOP</SpanFlowItem>
-          <SpanFlowItem>SOLID principles</SpanFlowItem>
-          <SpanFlowItem>System Design</SpanFlowItem>
-          <SpanFlowItem>Software Architecture</SpanFlowItem>
-          <SpanFlowItem>Python</SpanFlowItem>
-          <SpanFlowItem>HTML</SpanFlowItem>
-          <SpanFlowItem>CSS</SpanFlowItem>
-          <SpanFlowItem>JavaScript</SpanFlowItem>
-          <SpanFlowItem>ReactJS</SpanFlowItem>
-          <SpanFlowItem>TailwindCSS</SpanFlowItem>
-          <SpanFlowItem>PostCSS</SpanFlowItem>
-          <SpanFlowItem>WebPack</SpanFlowItem>
-          <SpanFlowItem>Frontend System Design</SpanFlowItem>
-          <SpanFlowItem>UI/UX</SpanFlowItem>
-          <SpanFlowItem>Figma</SpanFlowItem>
-          <SpanFlowItem>Illustrator</SpanFlowItem>
-          <SpanFlowItem>Photoshop</SpanFlowItem>
-          <SpanFlowItem>Java</SpanFlowItem>
-          <SpanFlowItem>Spring</SpanFlowItem>
-          <SpanFlowItem>MVC</SpanFlowItem>
-          <SpanFlowItem>SpringBoot</SpanFlowItem>
-          <SpanFlowItem>PHP</SpanFlowItem>
-          <SpanFlowItem>CodeIgniter</SpanFlowItem>
-          <SpanFlowItem>Hibernate</SpanFlowItem>
-          <SpanFlowItem>OOPS & AOP</SpanFlowItem>
-          <SpanFlowItem>SOLID principles</SpanFlowItem>
-          <SpanFlowItem>System Design</SpanFlowItem>
-          <SpanFlowItem>Software Architecture</SpanFlowItem>
-          <SpanFlowItem>Python</SpanFlowItem>
-          <SpanFlowItem>Spring</SpanFlowItem>
-          <SpanFlowItem>MVC</SpanFlowItem>
-          <SpanFlowItem>SpringBoot</SpanFlowItem>
-          <SpanFlowItem>PHP</SpanFlowItem>
-          <SpanFlowItem>CodeIgniter</SpanFlowItem>
-          <SpanFlowItem>Hibernate</SpanFlowItem>
-          <SpanFlowItem>OOPS & AOP</SpanFlowItem>
-          <SpanFlowItem>SOLID principles</SpanFlowItem>
-          <SpanFlowItem>System Design</SpanFlowItem>
-          <SpanFlowItem>Software Architecture</SpanFlowItem>
-          <SpanFlowItem>Python</SpanFlowItem>
-          <SpanFlowItem>HTML</SpanFlowItem>
-          <SpanFlowItem>CSS</SpanFlowItem>
-          <SpanFlowItem>JavaScript</SpanFlowItem>
-          <SpanFlowItem>ReactJS</SpanFlowItem>
-          <SpanFlowItem>TailwindCSS</SpanFlowItem>
-          <SpanFlowItem>PostCSS</SpanFlowItem>
-          <SpanFlowItem>WebPack</SpanFlowItem>
-          <SpanFlowItem>Frontend System Design</SpanFlowItem>
-          <SpanFlowItem>UI/UX</SpanFlowItem>
-          <SpanFlowItem>Figma</SpanFlowItem>
-          <SpanFlowItem>Illustrator</SpanFlowItem>
-          <SpanFlowItem>Photoshop</SpanFlowItem>
-          <SpanFlowItem>HTML</SpanFlowItem>
-          <SpanFlowItem>CSS</SpanFlowItem>
-          <SpanFlowItem>JavaScript</SpanFlowItem>
-          <SpanFlowItem>ReactJS</SpanFlowItem>
-          <SpanFlowItem>TailwindCSS</SpanFlowItem>
-          <SpanFlowItem>PostCSS</SpanFlowItem>
-          <SpanFlowItem>WebPack</SpanFlowItem>
-          <SpanFlowItem>Frontend System Design</SpanFlowItem>
-          <SpanFlowItem>UI/UX</SpanFlowItem>
-          <SpanFlowItem>Figma</SpanFlowItem>
-          <SpanFlowItem>Illustrator</SpanFlowItem>
-          <SpanFlowItem>Photoshop</SpanFlowItem>
-          <SpanFlowItem>Java</SpanFlowItem>
-          <SpanFlowItem>Spring</SpanFlowItem>
-          <SpanFlowItem>MVC</SpanFlowItem>
-          <SpanFlowItem>SpringBoot</SpanFlowItem>
-          <SpanFlowItem>PHP</SpanFlowItem>
-          <SpanFlowItem>CodeIgniter</SpanFlowItem>
-          <SpanFlowItem>Hibernate</SpanFlowItem>
-          <SpanFlowItem>OOPS & AOP</SpanFlowItem>
-          <SpanFlowItem>SOLID principles</SpanFlowItem>
-          <SpanFlowItem>System Design</SpanFlowItem>
-          <SpanFlowItem>Software Architecture</SpanFlowItem>
-          <SpanFlowItem>Python</SpanFlowItem>
-          <SpanFlowItem>HTML</SpanFlowItem>
-          <SpanFlowItem>CSS</SpanFlowItem>
-          <SpanFlowItem>JavaScript</SpanFlowItem>
-          <SpanFlowItem>ReactJS</SpanFlowItem>
-          <SpanFlowItem>TailwindCSS</SpanFlowItem>
-          <SpanFlowItem>PostCSS</SpanFlowItem>
-          <SpanFlowItem>WebPack</SpanFlowItem>
-          <SpanFlowItem>Frontend System Design</SpanFlowItem>
-          <SpanFlowItem>UI/UX</SpanFlowItem>
-          <SpanFlowItem>Figma</SpanFlowItem>
-          <SpanFlowItem>Illustrator</SpanFlowItem>
-          <SpanFlowItem>Photoshop</SpanFlowItem>
-          <SpanFlowItem>Java</SpanFlowItem>
-          <SpanFlowItem>Spring</SpanFlowItem>
-          <SpanFlowItem>MVC</SpanFlowItem>
-          <SpanFlowItem>SpringBoot</SpanFlowItem>
-          <SpanFlowItem>PHP</SpanFlowItem>
-          <SpanFlowItem>CodeIgniter</SpanFlowItem>
-          <SpanFlowItem>Hibernate</SpanFlowItem>
-          <SpanFlowItem>OOPS & AOP</SpanFlowItem>
-          <SpanFlowItem>SOLID principles</SpanFlowItem>
-          <SpanFlowItem>System Design</SpanFlowItem>
-          <SpanFlowItem>Software Architecture</SpanFlowItem>
-          <SpanFlowItem>Python</SpanFlowItem>
-          <SpanFlowItem>Spring</SpanFlowItem>
-          <SpanFlowItem>MVC</SpanFlowItem>
-          <SpanFlowItem>SpringBoot</SpanFlowItem>
-          <SpanFlowItem>PHP</SpanFlowItem>
-          <SpanFlowItem>CodeIgniter</SpanFlowItem>
-          <SpanFlowItem>Hibernate</SpanFlowItem>
-          <SpanFlowItem>OOPS & AOP</SpanFlowItem>
-          <SpanFlowItem>SOLID principles</SpanFlowItem>
-          <SpanFlowItem>System Design</SpanFlowItem>
-          <SpanFlowItem>Software Architecture</SpanFlowItem>
-          <SpanFlowItem>Python</SpanFlowItem>
-          <SpanFlowItem>HTML</SpanFlowItem>
-          <SpanFlowItem>CSS</SpanFlowItem>
-          <SpanFlowItem>JavaScript</SpanFlowItem>
-          <SpanFlowItem>ReactJS</SpanFlowItem>
-          <SpanFlowItem>TailwindCSS</SpanFlowItem>
-          <SpanFlowItem>PostCSS</SpanFlowItem>
-          <SpanFlowItem>WebPack</SpanFlowItem>
-          <SpanFlowItem>Frontend System Design</SpanFlowItem>
-          <SpanFlowItem>UI/UX</SpanFlowItem>
-          <SpanFlowItem>Figma</SpanFlowItem>
-          <SpanFlowItem>Illustrator</SpanFlowItem>
-          <SpanFlowItem>Photoshop</SpanFlowItem>
-          <SpanFlowItem>HTML</SpanFlowItem>
-          <SpanFlowItem>CSS</SpanFlowItem>
-          <SpanFlowItem>JavaScript</SpanFlowItem>
-          <SpanFlowItem>ReactJS</SpanFlowItem>
-          <SpanFlowItem>TailwindCSS</SpanFlowItem>
-          <SpanFlowItem>PostCSS</SpanFlowItem>
-          <SpanFlowItem>WebPack</SpanFlowItem>
-          <SpanFlowItem>Frontend System Design</SpanFlowItem>
-          <SpanFlowItem>UI/UX</SpanFlowItem>
-          <SpanFlowItem>Figma</SpanFlowItem>
-          <SpanFlowItem>Illustrator</SpanFlowItem>
-          <SpanFlowItem>Photoshop</SpanFlowItem>
-          <SpanFlowItem>Java</SpanFlowItem>
-          <SpanFlowItem>Spring</SpanFlowItem>
-          <SpanFlowItem>MVC</SpanFlowItem>
-          <SpanFlowItem>SpringBoot</SpanFlowItem>
-          <SpanFlowItem>PHP</SpanFlowItem>
-          <SpanFlowItem>CodeIgniter</SpanFlowItem>
-          <SpanFlowItem>Hibernate</SpanFlowItem>
-          <SpanFlowItem>OOPS & AOP</SpanFlowItem>
-          <SpanFlowItem>SOLID principles</SpanFlowItem>
-          <SpanFlowItem>System Design</SpanFlowItem>
-          <SpanFlowItem>Software Architecture</SpanFlowItem>
-          <SpanFlowItem>Python</SpanFlowItem>
-          <SpanFlowItem>HTML</SpanFlowItem>
-          <SpanFlowItem>CSS</SpanFlowItem>
-          <SpanFlowItem>JavaScript</SpanFlowItem>
-          <SpanFlowItem>ReactJS</SpanFlowItem>
-          <SpanFlowItem>TailwindCSS</SpanFlowItem>
-          <SpanFlowItem>PostCSS</SpanFlowItem>
-          <SpanFlowItem>WebPack</SpanFlowItem>
-          <SpanFlowItem>Frontend System Design</SpanFlowItem>
-          <SpanFlowItem>UI/UX</SpanFlowItem>
-          <SpanFlowItem>Figma</SpanFlowItem>
-          <SpanFlowItem>Illustrator</SpanFlowItem>
-          <SpanFlowItem>Photoshop</SpanFlowItem>
-          <SpanFlowItem>Java</SpanFlowItem>
-          <SpanFlowItem>Spring</SpanFlowItem>
-          <SpanFlowItem>MVC</SpanFlowItem>
-          <SpanFlowItem>SpringBoot</SpanFlowItem>
-          <SpanFlowItem>PHP</SpanFlowItem>
-          <SpanFlowItem>CodeIgniter</SpanFlowItem>
-          <SpanFlowItem>Hibernate</SpanFlowItem>
-          <SpanFlowItem>OOPS & AOP</SpanFlowItem>
-          <SpanFlowItem>SOLID principles</SpanFlowItem>
-          <SpanFlowItem>System Design</SpanFlowItem>
-          <SpanFlowItem>Software Architecture</SpanFlowItem>
-          <SpanFlowItem>Python</SpanFlowItem>
-          <SpanFlowItem>Spring</SpanFlowItem>
-          <SpanFlowItem>MVC</SpanFlowItem>
-          <SpanFlowItem>SpringBoot</SpanFlowItem>
-          <SpanFlowItem>PHP</SpanFlowItem>
-          <SpanFlowItem>CodeIgniter</SpanFlowItem>
-          <SpanFlowItem>Hibernate</SpanFlowItem>
-          <SpanFlowItem>OOPS & AOP</SpanFlowItem>
-          <SpanFlowItem>SOLID principles</SpanFlowItem>
-          <SpanFlowItem>System Design</SpanFlowItem>
-          <SpanFlowItem>Software Architecture</SpanFlowItem>
-          <SpanFlowItem>Python</SpanFlowItem>
-          <SpanFlowItem>HTML</SpanFlowItem>
-          <SpanFlowItem>CSS</SpanFlowItem>
-          <SpanFlowItem>JavaScript</SpanFlowItem>
-          <SpanFlowItem>ReactJS</SpanFlowItem>
-          <SpanFlowItem>TailwindCSS</SpanFlowItem>
-          <SpanFlowItem>PostCSS</SpanFlowItem>
-          <SpanFlowItem>WebPack</SpanFlowItem>
-          <SpanFlowItem>Frontend System Design</SpanFlowItem>
-          <SpanFlowItem>UI/UX</SpanFlowItem>
-          <SpanFlowItem>Figma</SpanFlowItem>
-          <SpanFlowItem>Illustrator</SpanFlowItem>
-          <SpanFlowItem>Photoshop</SpanFlowItem>
+          <marquee scrollamount="20">
+            <SpanFlowItem>HTML</SpanFlowItem>
+            <SpanFlowItem>CSS</SpanFlowItem>
+            <SpanFlowItem>JavaScript</SpanFlowItem>
+            <SpanFlowItem>ReactJS</SpanFlowItem>
+            <SpanFlowItem>TailwindCSS</SpanFlowItem>
+            <SpanFlowItem>PostCSS</SpanFlowItem>
+            <SpanFlowItem>WebPack</SpanFlowItem>
+            <SpanFlowItem>Frontend System Design</SpanFlowItem>
+            <SpanFlowItem>UI/UX</SpanFlowItem>
+            <SpanFlowItem>Figma</SpanFlowItem>
+            <SpanFlowItem>Illustrator</SpanFlowItem>
+            <SpanFlowItem>Photoshop</SpanFlowItem>
+            <SpanFlowItem>Java</SpanFlowItem>
+            <SpanFlowItem>Spring</SpanFlowItem>
+            <SpanFlowItem>MVC</SpanFlowItem>
+            <SpanFlowItem>SpringBoot</SpanFlowItem>
+            <SpanFlowItem>PHP</SpanFlowItem>
+            <SpanFlowItem>CodeIgniter</SpanFlowItem>
+            <SpanFlowItem>Hibernate</SpanFlowItem>
+            <SpanFlowItem>OOPS & AOP</SpanFlowItem>
+            <SpanFlowItem>SOLID principles</SpanFlowItem>
+            <SpanFlowItem>System Design</SpanFlowItem>
+            <SpanFlowItem>Software Architecture</SpanFlowItem>
+            <SpanFlowItem>Python</SpanFlowItem>
+          </marquee>
         </div>
       </div>
     </div>

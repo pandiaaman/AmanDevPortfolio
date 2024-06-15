@@ -4,6 +4,7 @@ import {
   NavLink,
   NavbarContainer,
   Span,
+  LogoText,
   NavLogo,
   NavItems,
   GitHubButton,
@@ -12,7 +13,7 @@ import {
   MobileMenu,
   MobileLink,
 } from "./NavbarStyledComponent";
-import { IoPartlySunnySharp, IoSunny } from "react-icons/io5";
+import { IoPartlySunnySharp } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/constants";
 import { useTheme } from "styled-components";
@@ -64,17 +65,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             setDarkMode(!darkMode);
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              color: "white",
-              marginBottom: "20;",
-              cursor: "pointer",
-            }}
-          >
-            <IoPartlySunnySharp size="3rem" /> <Span>Aman's Portfolio</Span>
-          </div>
+          <LogoText>
+            <IoPartlySunnySharp size="3rem" /> <Span>Aman's Portfolio</Span>{" "}
+          </LogoText>
         </NavLogo>
         <MobileIcon>
           <FaBars

@@ -6,7 +6,7 @@ import cycle from "../images/cycle.png";
 import got from "../images/got.png";
 import hotelrating from "../images/hotelrating.png";
 import restimage from "../images/restimage.png";
-import iotvigilant from "../images/iotvigilant.png";
+// import iotvigilant from "../images/iotvigilant.png";
 import ngo from "../images/ngo.jpg";
 import notes from "../images/notes.png";
 import airforce from "../images/airforce.jpg";
@@ -1069,7 +1069,7 @@ export const achievements = [
     id: 1,
     name: "State Street Employee Recognition Award",
     date: "March 1, 2024",
-    desc: "Worked with multiple NGOs dedicated to improving the education, medical and economic conditions of lower classes in India.",
+    desc: "Recognized by the CEO of State Street, for my involvement in microservice application as a software architect and developer.",
     img: bravo2,
     ssemp:
       "https://drive.google.com/file/d/1anXXeEXg_nKq9KeNK5m3rcUodo1NM9Lt/view?usp=sharing",
@@ -1096,7 +1096,7 @@ export const achievements = [
     id: 4,
     name: "StateStreet Employee Of the Month",
     date: "April 20, 2023",
-    desc: "Worked with multiple NGOs dedicated to improving the education, medical and economic conditions of lower classes in India.",
+    desc: "Recognized by my then manager, Anandha Prabhu, for my conitnuous efforts in managing a middleware service application solely.",
     img: bravo1,
     ssemp:
       "https://drive.google.com/file/d/1BG2zv62mgjOGohmJ3uZPcQRidA9EykwT/view?usp=sharing",

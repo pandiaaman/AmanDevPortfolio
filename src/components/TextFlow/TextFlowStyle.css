@@ -1,11 +1,11 @@
 .scroll {
   position: relative;
   display: flex;
-  width: auto;
+  max-width: auto;
   overflow: hidden;
 }
 
-.scroll div {
+/* .scroll div {
   white-space: nowrap;
   animation-name: scroll;
   animation-iteration-count: infinite;
@@ -21,4 +21,4 @@
   100% {
     transform: translateX(-20%);
   }
-}
+} */
