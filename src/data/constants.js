@@ -18,6 +18,14 @@ import tinder from "../images/tinder.png";
 import tryon from "../images/tryon.png";
 import solarwind from "../images/solarwind.png";
 import carparking from "../images/carparking.png";
+import raj from "../images/recommend_raj.jpeg";
+import puhazoli from "../images/recommend_puhazoli.jpeg";
+import nawin from "../images/recommend_nawin.jpeg";
+import ganesh from "../images/recommend_ganesh.jpeg";
+import vadivu from "../images/recommend_vadivu.jpg";
+import srinivas from "../images/recommend_srinivas.jpg";
+import bravo1 from "../images/bravo1.png";
+import bravo2 from "../images/bravo2.png";
 export const Bio = {
   name: "Aman Pandia",
   roles: [
@@ -370,7 +378,7 @@ export const skills = [
 export const recommendations = [
   {
     id: 0,
-    img: "https://media.licdn.com/dms/image/C4D03AQGYL_2etapYgw/profile-displayphoto-shrink_100_100/0/1516235847913?e=1712188800&v=beta&t=b_taKrC43sEcHGQLcug4Ik1x8Xp-KFV35PAmpzJAITY",
+    img: raj,
     role: "Arunachalam Rajalingam",
     company:
       "Sr. Solutions Architect at The Hanover Insurance (Ex-VP State Street)",
@@ -379,34 +387,50 @@ export const recommendations = [
   },
   {
     id: 1,
-    img: "https://media.licdn.com/dms/image/C5603AQHyuMXH_Kcl7g/profile-displayphoto-shrink_100_100/0/1600802246397?e=1712188800&v=beta&t=tH2HM8w9ERznnU27_EhmdgsReAxVbukJmTQBHNZ7meQ",
+    img: puhazoli,
     role: "Puhazoli Saravanan",
     company: "Research Scholar (Ex-Professor, SRM IST)",
     date: "Mentor in multiple research projects",
     desc: "Aman has been one of the brightest students I have known and is as diligent and hard working. His advanced skills and passion for any or all technologies and his aptitude for coding makes him an asset to have. I was a guide to Aman and his team for their pre final and final year projects in college, and I am elated to see how Aman put in all his hard work to get patents for both the ideas and managed the team with his amazing leadership skills. His personal strengths are as impressive as his intellectual achievements. It always has been one of the best experience teaching and working with Aman and observing his success in the field as well as his impeccable growth. Aman has my highest recommendation and support",
   },
   {
-    id: 2,
-    img: "https://media.licdn.com/dms/image/D5635AQEpZmpyrzRvvA/profile-framedphoto-shrink_100_100/0/1644487416983?e=1708012800&v=beta&t=CZUysk-8tlt63LsDB1MVFbZHcP6bVGXFkvAvdyBkmkc",
+    id: 3,
+    img: ganesh,
     role: "Ganesh Malasetty",
     company: "Java Full Stack Developer, StateStreet",
     date: "Colleague",
     desc: "I started my journey in State Street with Aman solely working on the project, he helped me understand the company’s internal process and introduced me to the application and its critical details. His work ethics are immaculate, and he is easily adjustable to a given situation. He is willing to put that extra help whenever you need it and always takes the time to support anyone is his network. It was an amazing experience working with such proactive, self motivated and intelligent team player. I highly recommend him.",
   },
   {
-    id: 3,
-    img: "https://media.licdn.com/dms/image/D5603AQG0THYiwM3NTg/profile-displayphoto-shrink_100_100/0/1700315451870?e=1712188800&v=beta&t=GDrpL_OefbDixfpbP_HM-PzdKIt08JhPjMnuLC3CgmE",
+    id: 2,
+    img: nawin,
     role: "Nawin Subbu Saravanakumar",
     company: "Senior Associate at StateStreet | IIMK",
     date: "Team Senior",
     desc: "When I switched domains to become a developer, even though I was ahead on years of experience as a professional I was still a novice in this domain. Aman helped me grasp the concepts swiftly. He helped me understand complex ideas and methods with ease. Truly remarkable person to work with and have in our team.",
+  },
+  {
+    id: 4,
+    img: vadivu,
+    role: "Dr. Vadivu G",
+    company: "H.O.D., IT Dept., SRM IST, Chennai",
+    date: "Mentor and Professor",
+    desc: "Academically, Aman consistently achieved remarkable results, always exceeding our expectations. What particularly impressed me were his team management and leadership skills. I have personally observed his technical acumen and his keenness to apply his knowledge to real-world projects to the fullest extent. Aman's final-year project, 'Vigilant Stick' for visually impaired individuals. Aman is an exceptional candidate who has demonstrated notable commitment, innovation, and problem-solving skills ",
+  },
+  {
+    id: 5,
+    img: srinivas,
+    role: "Dr. L.N.B. Srinivas",
+    company: "Professor, Data Science Dept., SRM IST, Chennai",
+    date: "Professor",
+    desc: "Aman's 'learning by teaching' approach was a noteworthy aspect of his participation in my class. His earnest enthusiasm for teaching others had not only expanded his understanding of different subjects but also ignited a curiosity for acquiring new skills and knowledge. His problem-solving skills, along with his firm commitment to applying acquired knowledge to real-world projects, have always confounded me.",
   },
 ];
 
 export const certifications = [
   {
     id: 0,
-    img: "https://media.licdn.com/dms/image/C560BAQE88xCsONDULQ/company-logo_100_100/0/1630652622688/microsoft_logo?e=1714608000&v=beta&t=tVqC4Ig_nzz01dUR4r1EY1U4ZjJIfCIO61kr5AoNmX8",
+    img: "https://www.loffler.com/hubfs/Microsoft%20Azure%20Blog.jpg",
     role: "Microsoft certified Azure AI Fundamentals",
     company: "Microsoft",
     date: "Issued Jun 2021",
@@ -423,7 +447,7 @@ export const certifications = [
   },
   {
     id: 1,
-    img: "https://media.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_100_100/0/1631311446380?e=1714608000&v=beta&t=dLTuBaVU_UusnRJNFMbzlCs17b9-sjVLUBXzgfYf8l8",
+    img: "https://images.credly.com/images/7562bf68-c3a6-4d79-9154-00ee605b9492/UX.png",
     role: "Foundations of User Experience (UX) Design",
     company: "Google",
     date: "Issued Jan 2023",
@@ -456,7 +480,7 @@ export const certifications = [
   },
   {
     id: 3,
-    img: "https://media.licdn.com/dms/image/C560BAQE88xCsONDULQ/company-logo_100_100/0/1630652622688/microsoft_logo?e=1714608000&v=beta&t=tVqC4Ig_nzz01dUR4r1EY1U4ZjJIfCIO61kr5AoNmX8",
+    img: "https://www.loffler.com/hubfs/Microsoft%20Azure%20Blog.jpg",
     role: "Microsoft certified Azure Data Fundamentals",
     company: "Microsoft",
     date: "Issued Jun 2021",
@@ -613,6 +637,18 @@ export const experiences = [
 export const education = [
   {
     id: 0,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMwlmND_JZRV7PfYxpCHMEB7JgUCImn1NZVQ&s",
+    school: "BITS Pilani",
+    date: "Jun 2023 - July 2025",
+    grade: "92%",
+    desc: "Pursuing Masters of technology in Software Engineering, to further my understanding and learning towards this wide domain. Keeping up with my enthusiasm and dedication to always keep learning and evolving, I look forward to gain vital knowledge in the field by gaining hands on experience in DevOps, AWS, SpringBoot, React, High and low level designing and other critical tools and technologies.",
+    degree: "M. Tech., Software Engineering (Full stack Specialization)",
+
+    transcripts:
+      "https://drive.google.com/file/d/1f_ruI5dHhtD9TXB_sM-4FscQusB-ZYW5/view?usp=sharing",
+  },
+  {
+    id: 1,
     img: "https://vectorlogoseek.com/wp-content/uploads/2019/03/srm-institute-of-science-and-technology-vector-logo.png",
     school: "SRM Institute of Science and Technology, Kattankulathur, Chennai",
     date: "June 2015 - May 2019",
@@ -627,7 +663,7 @@ export const education = [
       "https://drive.google.com/file/d/1WgpdZ17W4mOvpT_3vSxhMXPHCtjbD0mR/view?usp=sharing",
   },
   {
-    id: 1,
+    id: 2,
     img: "https://p.kindpng.com/picc/s/358-3586770_great-lakes-logo-great-lakes-institute-of-management.png",
     school: "Great Lakes Institute, Chennai",
     date: "Dec 2019 - July 2019",
@@ -1031,12 +1067,12 @@ export const achievements = [
   },
   {
     id: 1,
-    name: "IELTS ScoreCard",
-    date: "Dec 2023",
-    desc: "Received a band 8 in IELTS general exam, gaining 8.5 in listening and reading both and a 7.5 score in speaking.",
-    img: ielts,
-    ielts:
-      "https://drive.google.com/file/d/1k_8WQH_acaTDKlmrcJpJWscYDejxBPec/view?usp=sharing",
+    name: "State Street Employee Recognition Award",
+    date: "March 1, 2024",
+    desc: "Worked with multiple NGOs dedicated to improving the education, medical and economic conditions of lower classes in India.",
+    img: bravo2,
+    ssemp:
+      "https://drive.google.com/file/d/1anXXeEXg_nKq9KeNK5m3rcUodo1NM9Lt/view?usp=sharing",
   },
   {
     id: 2,
@@ -1045,6 +1081,25 @@ export const achievements = [
     desc: "Worked with multiple NGOs dedicated to improving the education, medical and economic conditions of lower classes in India.",
     img: ngo,
     ngo: "https://drive.google.com/file/d/1l-AUJgNkzE1b2XDYb5YxTSRNtNDrybf9/view?usp=sharing",
+  },
+  {
+    id: 3,
+    name: "IELTS ScoreCard",
+    date: "Dec 2023",
+    desc: "Received a band 8 in IELTS general exam, gaining 8.5 in listening and reading both and a 7.5 score in speaking.",
+    img: ielts,
+    ielts:
+      "https://drive.google.com/file/d/1k_8WQH_acaTDKlmrcJpJWscYDejxBPec/view?usp=sharing",
+  },
+
+  {
+    id: 4,
+    name: "StateStreet Employee Of the Month",
+    date: "April 20, 2023",
+    desc: "Worked with multiple NGOs dedicated to improving the education, medical and economic conditions of lower classes in India.",
+    img: bravo1,
+    ssemp:
+      "https://drive.google.com/file/d/1BG2zv62mgjOGohmJ3uZPcQRidA9EykwT/view?usp=sharing",
   },
 ];
 
