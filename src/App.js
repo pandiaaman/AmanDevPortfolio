@@ -50,6 +50,7 @@ import vadivu from "./images/recommend_vadivu.jpg";
 import srinivas from "./images/recommend_srinivas.jpg";
 import bravo1 from "./images/bravo1.png";
 import bravo2 from "./images/bravo2.png";
+import heroimage from "./images/HeroImage.jpg";
 //
 
 const Body = styled.div`
@@ -87,6 +88,7 @@ function App() {
   useEffect(() => {
     //below are images that we want to load before the page comes up in front of the user
     const imageUrls = [
+      heroimage,
       restapi,
       junit,
       blender,
@@ -135,7 +137,7 @@ function App() {
       "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-ar21.svg",
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
       "https://toppng.com/uploads/preview/jenkins-logo-11609365847mufysaivph.png",
-
+/*
       "https://download.logo.wine/logo/Nginx/Nginx-Logo.wine.png",
       "https://upload.wikimedia.org/wikipedia/commons/0/00/Kubernetes_%28container_engine%29.png",
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
@@ -149,7 +151,7 @@ function App() {
       "https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1086px-R_logo.svg.png",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png",
-
+*/
       "https://www.vectorlogo.zone/logos/numpy/numpy-ar21.svg",
       // "https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667",
 
@@ -172,7 +174,7 @@ function App() {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Collaboration_logo_V2.svg/607px-Collaboration_logo_V2.svg.png",
 
       "https://cdn.iconscout.com/icon/premium/png-256-thumb/dance-27-1132079.png?f=webp",
-
+/*
       "https://freesvg.org/img/papapishu_guitar_5.png",
       "https://cdn.iconscout.com/icon/premium/png-256-thumb/drum-kit-4095415-3391610.png",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Olympic_pictogram_Athletics_-_colored.svg/2048px-Olympic_pictogram_Athletics_-_colored.svg.png",
@@ -189,6 +191,7 @@ function App() {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTBFNH0KmAm4Vub-S5TOlh7mZzvtz-vUhsCYhkceNANg&s",
       "https://www.equitybulls.com/equitybullsadmin/uploads/Mangalam%20Cement%20Limited%204.jpg",
       // Add all your image URLs here
+      */
     ];
 
     let loadedImages = 0;
