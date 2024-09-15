@@ -1,6 +1,31 @@
 import restapi from "../images/restapi.svg";
 import junit from "../images/JUnit.svg";
 import blender from "../images/blender.svg";
+import cardio from "../images/cardio.png";
+import cycle from "../images/cycle.png";
+import got from "../images/got.png";
+import hotelrating from "../images/hotelrating.png";
+import restimage from "../images/restimage.png";
+// import iotvigilant from "../images/iotvigilant.png";
+import ngo from "../images/ngo.jpg";
+import notes from "../images/notes.png";
+import airforce from "../images/airforce.jpg";
+import omnifood from "../images/omnifood.png";
+import ielts from "../images/ielts.png";
+import patent from "../images/patent.png";
+import drivingpatent from "../images/drivingpatent.png";
+import tinder from "../images/tinder.png";
+import tryon from "../images/tryon.png";
+import solarwind from "../images/solarwind.png";
+import carparking from "../images/carparking.png";
+import raj from "../images/recommend_raj.jpeg";
+import puhazoli from "../images/recommend_puhazoli.jpeg";
+import nawin from "../images/recommend_nawin.jpeg";
+import ganesh from "../images/recommend_ganesh.jpeg";
+import vadivu from "../images/recommend_vadivu.jpg";
+import srinivas from "../images/recommend_srinivas.jpg";
+import bravo1 from "../images/bravo1.png";
+import bravo2 from "../images/bravo2.png";
 export const Bio = {
   name: "Aman Pandia",
   roles: [
@@ -18,9 +43,12 @@ export const Bio = {
   linkedin: "https://www.linkedin.com/in/pandiaaman",
   portfoliodoc:
     "https://docs.google.com/document/d/1cmHeQjSr5JPBQjHwRyMNxeSVVXPj2hVxWZezl2zPZIM/edit?usp=sharing",
-  personalhistory: "",
-  communityinvolvement: "",
-  leadershipdoc: "",
+  personalhistory:
+    "https://docs.google.com/document/d/1Tj29-I9HADkYlBtFx__WbhfzXeJLx9Cvo_yT3RfsI6Y/edit?usp=sharing",
+  communityinvolvement:
+    "https://docs.google.com/document/d/1ZB5MGIR5pvgulVR4kEJM2weGmURw1dN42VtMU2Wzbrk/edit?usp=sharing",
+  leadershipdoc:
+    "https://docs.google.com/document/d/17FXoyAlBP8ulhqENlJF67H3FbEg0poFpxOxRH2CgW64/edit?usp=sharing",
 };
 
 export const skills = [
@@ -347,10 +375,132 @@ export const skills = [
   },
 ];
 
+export const recommendations = [
+  {
+    id: 0,
+    img: raj,
+    role: "Arunachalam Rajalingam",
+    company:
+      "Sr. Solutions Architect at The Hanover Insurance (Ex-VP State Street)",
+    date: "Managed Aman directly",
+    desc: "Aman began his professional career as an application developer in State Street under me. I mentored him with his JAVA application development skills and have observed his impeccable learning curve and swift growth in the field since then. He is a valuable addition to the team and has immaculate ethics and teamwork abilities. He has proven his potential to work around complex and diverse situations. He shows constructive engagement with every project and task assigned to him, making him a proactive coworker and a polished professional. He has shown tremendous progress in his coding and development expertise by showing consistent motivation and delivering timely results. I look forward for him to achieve greater heights in his career.",
+  },
+  {
+    id: 1,
+    img: puhazoli,
+    role: "Puhazoli Saravanan",
+    company: "Research Scholar (Ex-Professor, SRM IST)",
+    date: "Mentor in multiple research projects",
+    desc: "Aman has been one of the brightest students I have known and is as diligent and hard working. His advanced skills and passion for any or all technologies and his aptitude for coding makes him an asset to have. I was a guide to Aman and his team for their pre final and final year projects in college, and I am elated to see how Aman put in all his hard work to get patents for both the ideas and managed the team with his amazing leadership skills. His personal strengths are as impressive as his intellectual achievements. It always has been one of the best experience teaching and working with Aman and observing his success in the field as well as his impeccable growth. Aman has my highest recommendation and support",
+  },
+  {
+    id: 3,
+    img: ganesh,
+    role: "Ganesh Malasetty",
+    company: "Java Full Stack Developer, StateStreet",
+    date: "Colleague",
+    desc: "I started my journey in State Street with Aman solely working on the project, he helped me understand the company’s internal process and introduced me to the application and its critical details. His work ethics are immaculate, and he is easily adjustable to a given situation. He is willing to put that extra help whenever you need it and always takes the time to support anyone is his network. It was an amazing experience working with such proactive, self motivated and intelligent team player. I highly recommend him.",
+  },
+  {
+    id: 2,
+    img: nawin,
+    role: "Nawin Subbu Saravanakumar",
+    company: "Senior Associate at StateStreet | IIMK",
+    date: "Team Senior",
+    desc: "When I switched domains to become a developer, even though I was ahead on years of experience as a professional I was still a novice in this domain. Aman helped me grasp the concepts swiftly. He helped me understand complex ideas and methods with ease. Truly remarkable person to work with and have in our team.",
+  },
+  {
+    id: 4,
+    img: vadivu,
+    role: "Dr. Vadivu G",
+    company: "H.O.D., IT Dept., SRM IST, Chennai",
+    date: "Mentor and Professor",
+    desc: "Academically, Aman consistently achieved remarkable results, always exceeding our expectations. What particularly impressed me were his team management and leadership skills. I have personally observed his technical acumen and his keenness to apply his knowledge to real-world projects to the fullest extent. Aman's final-year project, 'Vigilant Stick' for visually impaired individuals. Aman is an exceptional candidate who has demonstrated notable commitment, innovation, and problem-solving skills ",
+  },
+  {
+    id: 5,
+    img: srinivas,
+    role: "Dr. L.N.B. Srinivas",
+    company: "Professor, Data Science Dept., SRM IST, Chennai",
+    date: "Professor",
+    desc: "Aman's 'learning by teaching' approach was a noteworthy aspect of his participation in my class. His earnest enthusiasm for teaching others had not only expanded his understanding of different subjects but also ignited a curiosity for acquiring new skills and knowledge. His problem-solving skills, along with his firm commitment to applying acquired knowledge to real-world projects, have always confounded me.",
+  },
+];
+
+export const certifications = [
+  {
+    id: 0,
+    img: "https://www.loffler.com/hubfs/Microsoft%20Azure%20Blog.jpg",
+    role: "Microsoft certified Azure AI Fundamentals",
+    company: "Microsoft",
+    date: "Issued Jun 2021",
+    desc: "• Credential ID H883-9309",
+    skills: [
+      "Azure",
+      "AI",
+      "Data Science",
+      "Machine Learning",
+      "Deployment",
+      "Cloud",
+    ],
+    doc: "https://mcptnc.microsoft.com/certificate?AttemptMsaSilentAuth=true&wa=wsignin1.0",
+  },
+  {
+    id: 1,
+    img: "https://images.credly.com/images/7562bf68-c3a6-4d79-9154-00ee605b9492/UX.png",
+    role: "Foundations of User Experience (UX) Design",
+    company: "Google",
+    date: "Issued Jan 2023",
+    desc: "• Credential ID HSEZ55LEEYJU",
+    skills: [
+      "UI/UX",
+      "Web Development",
+      "Designing",
+      "Story mapping",
+      "user stories",
+      "requirement analysis",
+    ],
+    doc: "https://www.coursera.org/account/accomplishments/verify/HSEZ55LEEYJU",
+  },
+  {
+    id: 2,
+    img: "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/e8/7cc3d09d3f11e698dfff46d35f2da1/Stanford_Coursera_Logo.png?auto=format%2Ccompress&dpr=1&w=80&h=80",
+    role: "Machine Learning",
+    company: "Stanford University",
+    date: "Issued May 2018",
+    desc: "• Credential ID 2NL84GHSRYQH",
+    skills: [
+      "Machine Learning",
+      "Neural Networks",
+      "Regression",
+      "supervised learning",
+      "unsupervised learning",
+    ],
+    doc: "https://www.coursera.org/account/accomplishments/verify/2NL84GHSRYQH",
+  },
+  {
+    id: 3,
+    img: "https://www.loffler.com/hubfs/Microsoft%20Azure%20Blog.jpg",
+    role: "Microsoft certified Azure Data Fundamentals",
+    company: "Microsoft",
+    date: "Issued Jun 2021",
+    desc: "• Credential ID H880-2992",
+    skills: [
+      "Azure",
+      "AI",
+      "Data Science",
+      "Business Analytics",
+      "Deployment",
+      "Cloud",
+    ],
+    doc: "https://mcptnc.microsoft.com/certificate?AttemptMsaSilentAuth=true&wa=wsignin1.0",
+  },
+];
+
 export const experiences = [
   {
     id: 0,
-    img: "https://companieslogo.com/img/orig/STT_BIG-98ee7b9e.png?t=1698467280",
+    img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
     role: "Senior Associate (Team Lead)",
     company: "State Street Services Corportate Private Limited",
     date: "Feb 2023 - current",
@@ -366,11 +516,11 @@ export const experiences = [
       "IBM MQ",
       "JavaScript",
     ],
-    doc: "https://drive.google.com/file/d/1ovFZE1jSkyYnLPy9njQ_QqrmpbbXbKk1/view?usp=sharing",
+    doc: "https://drive.google.com/file/d/14-lJmZdif7a7tneuX29d0SD0aMYb8OM0/view?usp=sharing",
   },
   {
     id: 1,
-    img: "https://companieslogo.com/img/orig/STT_BIG-98ee7b9e.png?t=1698467280s",
+    img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
     role: "Senior Associate (Full Stack Application Development / Maintenance)",
     company: "State Street Services Corportate Private Limited",
     date: "Oct 2021 - Jan 2023",
@@ -390,7 +540,7 @@ export const experiences = [
   },
   {
     id: 2,
-    img: "https://companieslogo.com/img/orig/STT_BIG-98ee7b9e.png?t=1698467280",
+    img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
     role: "Associate-2 (Application Development / Maintenance)",
     company: "State Street Services Corportate Private Limited",
     date: "Jul 2020 - Sep 2021",
@@ -403,11 +553,11 @@ export const experiences = [
       "Restful API",
       "Figma",
     ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/WhatsApp%20Image%202023-05-05%20at%2012.07.39%20AM.jpeg?alt=media&token=9f0e1648-568b-422d-bd0b-1f125f722245",
+    doc: "https://drive.google.com/file/d/1ovFZE1jSkyYnLPy9njQ_QqrmpbbXbKk1/view?usp=sharing68b-422d-bd0b-1f125f722245",
   },
   {
     id: 3,
-    img: "https://companieslogo.com/img/orig/STT_BIG-98ee7b9e.png?t=1698467280",
+    img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
     role: "Associate-1 (Application Development)",
     company: "State Street Services Corportate Private Limited",
     date: "July 2019 - Jun 2020",
@@ -487,22 +637,38 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Kiit.jpeg?alt=media&token=3839d520-c59d-4341-ad8f-0980c98de4dd",
-    school: "SRM Institute of Science and Technology, Kattankulathur, Chennai",
-    date: "June 2015 - May 2019",
-    grade: "90.08%",
-    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Kalinga Institute of Industrial Technology, Bhubaneswar. I have completed 4 semesters and have a CGPA of 8.71. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am also a member of the Google Developers Student Club (GDSC) at KIIT, where I am learning and working on exciting projects with a team of talented developers.",
-    degree: "Bachelor of Technology - BTech, Information Technology",
-    degreedoc: "",
-    transcripts: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMwlmND_JZRV7PfYxpCHMEB7JgUCImn1NZVQ&s",
+    school: "BITS Pilani",
+    date: "Jun 2023 - July 2025",
+    grade: "92%",
+    desc: "Pursuing Masters of technology in Software Engineering, to further my understanding and learning towards this wide domain. Keeping up with my enthusiasm and dedication to always keep learning and evolving, I look forward to gain vital knowledge in the field by gaining hands on experience in DevOps, AWS, SpringBoot, React, High and low level designing and other critical tools and technologies.",
+    degree: "M. Tech., Software Engineering (Full stack Specialization)",
+
+    transcripts:
+      "https://drive.google.com/file/d/1f_ruI5dHhtD9TXB_sM-4FscQusB-ZYW5/view?usp=sharing",
   },
   {
     id: 1,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+    img: "https://vectorlogoseek.com/wp-content/uploads/2019/03/srm-institute-of-science-and-technology-vector-logo.png",
+    school: "SRM Institute of Science and Technology, Kattankulathur, Chennai",
+    date: "June 2015 - May 2019",
+    grade: "90.08%",
+    desc: "Pursuing bachelors in information technology, I completed a fulfilling journey over the span of four years at SRM IST, Chennai. From participating in many extra curricular activities to being a team lead of college's most prestigious club, SRMSAT, my time at SRM has been full of challenges, learnings and growth. The university has supported my innovative ideas and has helped me receive two patents for my work.",
+    degree: "Bachelor of Technology - BTech, Information Technology",
+    degreedoc:
+      "https://drive.google.com/file/d/16M8K66i_F3BnHA8rR-hMEHE210EzmCNk/view?usp=sharing",
+    transcripts:
+      "https://drive.google.com/file/d/1igZj9AOsL3CiMS2Lo-q9S5ho3bfczIXA/view?usp=sharing",
+    scholarogrades:
+      "https://drive.google.com/file/d/1WgpdZ17W4mOvpT_3vSxhMXPHCtjbD0mR/view?usp=sharing",
+  },
+  {
+    id: 2,
+    img: "https://p.kindpng.com/picc/s/358-3586770_great-lakes-logo-great-lakes-institute-of-management.png",
     school: "Great Lakes Institute, Chennai",
     date: "Dec 2019 - July 2019",
     grade: "95%",
-    desc: "I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.",
+    desc: "Looking to expand my knowledge in the filed of data science and machine learning, I pursued a diploma in Business analytics program at Great lakes. From getting training from the best minds in the industry to getting an amazing in-depth knowledge in the subject with practical implementation using many project opportunities, my time at Great Lakes has helped me become a better professional and a developer.",
     degree: "Diploma, Business Analytics Certification Program",
     degreedoc: "https://olympus1.mygreatlearning.com/certificate/JIQXTLUX",
     transcripts: "https://eportfolio.mygreatlearning.com/aman-pandia",
@@ -512,11 +678,16 @@ export const education = [
 export const patents = [
   {
     id: 0,
+    image: patent,
     title: "Vigilant Stick: Intuitive Navigation Guidance",
     role: "Team Lead",
-    date: "April 2019 – June 2019",
+    date: "July, 2018",
+    about:
+      "With Over 15 million blind people in India (according to a survey report in 2019), the project aimed to develop a smart solution for visually impaired individuals to aid them in navigation while keeping their comfort and safety as a priority. The product aims to sense the surroundings of the users for any obstacles or moving vehicles and provide real-time sensory and vocal outputs to the users, providing them with continuous feedback and making their navigation easier.",
     description:
       "Implemented an innovative solution to aid visually impaired in navigation, blending IOT, web development, machine learning, and Android technologies, culminating in a patent awarded in February 2020. Utilized OpenCV with Raspberry Pi camera and sensor fusion in order to provide real-time environmental assessment for users, providing continuous feedback to users using vibration actuator and speech output.",
+    learnings:
+      "Implementation of machine learning algorithms for image analysis, detection, tracking, and prediction helped me understand the value of data in real-world scenarios. Explored multiple use cases of IOT technology and its interconnection with other disciplines such as web development, android development, and machine learning.",
     teamsize: "3",
     tags: [
       "IOT",
@@ -529,32 +700,47 @@ export const patents = [
       "Deep Neural Network",
       "Web development",
     ],
-    category: "IOT-ML",
+    category: "all",
     github: "https://github.com/pandiaaman/VigilantStick",
-    link: "https://www.google.co.in/url?sa=t&source=web&rct=j&url=http://www.ipindia.nic.in/writereaddata/Portal/IPOJournal/1_2631_1/Part-1.pdf&ved=2ahUKEwit5pCx2frcAhURcCsKHdJ2CGEQFjAAegQIABAB&usg=AOvVaw1LXS2jxXEcCW7dtPQlfE1K",
+    patentlink:
+      "https://www.google.co.in/url?sa=t&source=web&rct=j&url=http://www.ipindia.nic.in/writereaddata/Portal/IPOJournal/1_2631_1/Part-1.pdf&ved=2ahUKEwit5pCx2frcAhURcCsKHdJ2CGEQFjAAegQIABAB&usg=AOvVaw1LXS2jxXEcCW7dtPQlfE1K",
+    patentdoc:
+      "https://drive.google.com/file/d/1D7DBeVtWyy3a70MaD6p31qUAGkyfk1oF/view?usp=sharing",
+    reportlink:
+      "https://docs.google.com/document/d/10lOna-BZFWm4fPynibTxmIaYTlLVxjeF/edit?usp=sharing&ouid=114222733943054360696&rtpof=true&sd=true",
   },
   {
     id: 1,
+    image: drivingpatent,
     title: "Driving Evaluation and Assessment System",
     role: "Team Lead",
-    date: "March 2018 – April 2018",
+    date: "March, 2020",
+    about:
+      "The ever-increasing number of road casualties and lack of importance given to safety measures by drivers across the world has become the need of the hour. This project is a step taken towards increasing driver reliability by having proper assessments using continuous input. The system is needed to accurately collect data, process and assess it to make judgments about the driving skills of individuals and compare them with each other.  The system is developed mainly for cab drivers, truck drivers, and drivers in school/college fleets, who are managing transportation and logistics of valuables in their day-to-day lives. ",
     description:
       "Patented an automated, reliable, and robust driving assessment system in July 2018, for comprehensive driving evaluation. Utilized supervised machine learning algorithms like Decision tree for continuous vehicle motion detection and analysis. Led a team of four to develop a system using Arduino controller in conjunction with on-board sensors like gyroscope and AMU (acceleration measurement unit). System stored the recorded data in a data warehouse and implemented OLAP to find trends.",
+    learnings:
+      "Development of IOT code using a diverse range of sensors with the Arduino controller, helped me understand different ways to tackle and analyze real-time data. Web development using PHP to develop a stateful application with detailed session management and login system provided deep insights into the software development process as a whole. ",
     teamsize: "4",
     tags: [
       "Automobile",
       "Machine Learning",
       "Python",
       "Decision Tree",
-      "AMU sensors",
+      "AMU",
       "Sensor programming",
-      "OLAP-data warehousing",
+      "OLAP",
       "SQL",
       "Statistics",
-      "Web development",
     ],
-    category: "Full-stack",
-    link: "https://www.google.co.in/url?sa=t&source=web&rct=j&url=http://www.ipindia.nic.in/writereaddata/Portal/IPOJournal/1_2631_1/Part-1.pdf&ved=2ahUKEwit5pCx2fr",
+    category: "all",
+    github: "https://github.com/pandiaaman/PrecisionDrivingEvaluationSystem",
+    patentlink:
+      "https://www.google.co.in/url?sa=t&source=web&rct=j&url=http://www.ipindia.nic.in/writereaddata/Portal/IPOJournal/1_2631_1/Part-1.pdf&ved=2ahUKEwit5pCx2fr",
+    patentdoc:
+      "https://drive.google.com/file/d/1D7DBeVtWyy3a70MaD6p31qUAGkyfk1oF/view?usp=sharing",
+    reportlink:
+      "https://docs.google.com/document/d/1kVKzg2LHayAJrqbiCTodXpZ5Xqec2CQR/edit?usp=sharing&ouid=114222733943054360696&rtpof=true&sd=true",
   },
 ];
 
@@ -562,258 +748,358 @@ export const projects = [
   {
     id: 0,
     title: "Designing a Bicycle Shopping Mobile App",
-    date: "Jan 2024 - Dec 2023",
+    role: "independent project",
+    date: "Jan 2023",
+    about:
+      "The project aimed at designing a simplistic yet effective UI experience for all shoppers interested in buying bicycles through an Android or iOS app. The product was created for a fictional brand with the motivation to increase the number of returning users and retain first-time buyers as long-term customers.",
     description:
-      "A Rule Builder application “Decision Hub” that empowers Business Analysts to create, save, and visualize decision strategies. Provide a no-code rule writing experience and visual representation to test these rules in real-time and observe the calculations at each step.",
-    image:
-      "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
+      "Being the sole designer of the project, I undertook the roles of UI/UX designer, researcher, and reviewer, undertaking complete user research, creating user personas and user journey maps, developing competitive audits, and conducting usability studies. As a designer, I used Figma and other designing tools and resources available to me for creating multiple paper sketches to select the best options, creating digital wireframes and low-fidelity prototypes, and completing a usability study to utilize further the results of the study in developing mock-ups.",
+    learnings:
+      "This real-world case study of creating a robust and effective design for a bicycle shopping app taught me the importance of serving customers of all demographics as equals and having an easy-to-understand UI along with an enjoyable user experience. I learned the importance of UI and UX design in the world of web development. As a software developer, going through the process of designing UI and UX for users helped me understand the nuances in the field and its interconnection with the development process.",
+    image: cycle,
     tags: [
-      "React Js",
-      "PostgressSQL",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "React Flow",
+      "UI/UX",
+      "Figma",
+      "Adobe Illustrator",
+      "wireframing",
+      "storyboarding",
+
+      "user scenarios",
+      "user stories",
     ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/DecisionHub",
-    webapp: "https://decisionhub.netlify.app/",
-  },
-  {
-    id: 9,
-    title: "Trackify",
-    date: "Jun 2023 - Jul 2023",
-    description:
-      "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
-    image:
-      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
-    tags: [
-      "Docker",
-      "AWS",
-      "DuckDNS",
-      "Eslint",
-      "Husky",
-      "CI/CD",
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-    ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify-management.netlify.app/",
-  },
-  {
-    id: 0,
-    title: "Podstream",
-    date: "Apr 2023 - May 2023",
-    description:
-      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
-    image:
-      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
-    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Podstream",
-    webapp: "https://podstream.netlify.app/",
-    member: [
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
-    ],
+    category: "uiux",
+    github: "",
+    webapp: "",
+    portfolio:
+      "https://docs.google.com/presentation/d/1rSru9H9ImTrB4MUxrQokDVRHM8zTxba796GSv6C9x7I/edit?usp=sharing",
   },
   {
     id: 1,
-    title: "Vexa",
-    date: "Oct 2022 - Jan 2023",
+    title: "Designing Mobile 3D Virtual TryOn Clothing Application",
+    role: "independent project",
+    date: "Oct 2023",
+    about:
+      "This project aims to develop and design an application to make virtual try-ons even more lifelike and customizable. It explores the use of AI algorithms that can suggest clothing items or accessories based on the user's style preferences, current selection, past purchases, and the items they've tried virtually. The project was undertaken as an opportunity to develop an actual product with a team of four members, where I handled the design aspect of the application.",
     description:
-      "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
-    image:
-      "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
+      "To get a better understanding of the product and the market, deep research was carried out to understand the customer segments, the underserved needs of the users by the existing brands, and hence the pain points of the users. A proper customer survey and feedback process was carried out to understand the needs and develop a value proposition using the feedback. Story mapping and startup canvas processes were completed, followed by designing low-fidelity and high-fidelity prototypes and wireframing to bring the ideas to life.",
+    learnings:
+      "Understood the importance of translating solutions into a user-centric experience through wireframe storyboarding, keeping the end user in focus. Understood the value of iterative design processes, continuous feedback, visual consistency, and a user-centered design process to develop a fulfilling and enriching experience for the users.",
+    image: tryon,
     tags: [
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "NodeMailer",
+      "Research",
+      "UI/UX",
+      "Figma",
+      "Adobe Illustrator",
+      "wireframing",
+      "storyboarding",
+      "design testing",
     ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Project-Management-App",
-    webapp: "https://vexa-app.netlify.app/",
+    category: "uiux",
+    github: "",
+    webapp: "",
+    portfolio:
+      "https://docs.google.com/presentation/d/1-cFFJ6wxWp-j9tflGpl2iu0XKU5XR-S-8efGbKUNrNo/edit?usp=sharing",
   },
   {
     id: 2,
-    title: "Brain Tumor Detection",
-    date: "Jan 2023 - Mar 2023",
+    title: "Designing and Developing a Gallery Using API",
+    role: "independent project",
+    date: "April 2022",
+    about:
+      "A front-end project exploring using APIs with a web application developed in React and Tailwind CSS. To fetch the multiple images, we use Pixabay API (Pixabay API documentation). The motive is also to make the page look uniform and have a proper pagination process to make the search results more readable for the user. The styling of the web app is done using Tailwind CSS utility classes to provide a card look and feel to each image that is loaded on the screen and explored using the Tailwind framework with React.",
     description:
-      "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
-    image:
-      "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
-    webapp: "https://brain-tumor.netlify.app/",
-    member: [
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
+      "Using the Post CSS in the application, we import all the required Tailwind CSS features in the React application. The project explores creating Tailwind Cards components, API Keys, and tags to provide better insights into the fetched images for the users. For the image search component, we explore the React States and props management within the application. ",
+    learnings:
+      "The project provided insights into using Tailwind CSS with a React application while adhering to proper design and front-end development patterns and principles. The use of external APIs in the frontend applications is another critical learning out of this project. The gallery application puts the user experience as a priority and informs on how the use of simple colors, designs, and design systems in general can help us to make our web apps look better.",
+    image: restimage,
+    tags: [
+      "Rest API",
+      "ReactJS",
+      "TailwindCSS",
+      "PostCSS",
+      "API Keys",
+      "user scenarios",
+      "user stories",
     ],
+    category: "frontend",
+    github: "https://github.com/pandiaaman/ReactWithTailwindImageSeachAPI",
+    webapp: "https://amanreacttailwindapp.netlify.app/",
+    portfolio: "",
   },
   {
     id: 3,
-    title: "Buckoid",
-    date: "Dec 2021 - Apr 2022",
+    title: "Designing and Developing a Food Delivery App’s Landing Page",
+    role: "independent project",
+    date: "Feb 2023",
+    about:
+      "A responsive landing page for an upcoming fictional food delivery brand, prioritizing healthy food and provision of different meals cooked by professional chefs and delivered to the user at their doorstep. The project involves developing a web app using a core tech stack of HTML, CSS, and JavaScript.",
     description:
-      "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
-    image:
-      "https://camo.githubusercontent.com/3ad28aa710d18525f1fc87de056ed53c706d09979589bfd5a773df36653bad38/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
-    tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
-    category: "android app",
-    github: "https://github.com/rishavchanda/Buckoid-Android-App",
-    webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
-  },
-  {
-    id: 10,
-    title: "Job Finding App",
-    date: "Jun 2023 - Jul 2023",
-    description:
-      "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
-    image:
-      "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
-    tags: ["React Native", "JavaScript", "Axios"],
-    category: "android app",
-    github: "https://github.com/rishavchanda/Job-finder-App",
-    webapp: "https://github.com/rishavchanda/Job-finder-App",
+      "Using core HTML, CSS, and JavaScript, the main focus was to create a responsive landing page with all the design system principles followed. Browser’s DevTools are used to verify the strength of the product, using performance insight tools like LightHouse and others. ",
+    learnings:
+      "I understood the process of requirement gathering before starting any front-end project. The value of developing a proper design system for an app and its key role as the project grows gets clearer. I learned the proper usage of DevTools provided by the browsers and the value of feedback we can receive from multiple tools it has. Utilized the CSS grid and flexbox at multiple places, helping me understand the correct usage of both the tools at our disposal.",
+    image: omnifood,
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "PostCSS",
+      "WebPack",
+      "Frontend System Design",
+      "UI/UX",
+    ],
+    category: "frontend",
+    github: "https://github.com/pandiaaman/OmniFoodWebsiteCore.git",
+    webapp: "https://omnifood-amanpandia.netlify.app/",
+    portfolio: "",
   },
   {
     id: 4,
-    title: "Whatsapp Clone",
-    date: "Jul 2021",
+    title: "Hotel Rating App using Spring Microservice and RestAPI",
+    role: "independent project",
+    date: "Sep 2023",
+    about:
+      "The project “Hotel Rating App” using Spring Boot Microservices and RestAPI is an effort to explore the microservice domain and its related design patterns to implement a functioning robust web application. Using multiple microservices, the app provides various Rest endpoints for the users to rate and book hotel rooms and will be able to check the ratings of other users on a given hotel property. ",
     description:
-      "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
-    tags: ["React Js", "Firebase", "Firestore", "Node JS"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
-    webapp: "https://whatsapp-clone-rishav.web.app",
+      "Exploring the “right” way to develop a microservice backend architecture with RestAPI, the project explores the use of multiple microservices, their connections using Feign client, an API gateway for accepting requests, and a Service Registry to manage all the services along with a config server. By using Spring Security and proper exception handling for the system, the DTOs are designed for resilience and are error-prone, along with having a robust MongoDB database setup with Hibernate. ",
+    learnings:
+      "I learned how to use various microservices design patterns with SQL and NoSQL databases to have an available, maintainable, and consistent system. I understood the use of various microservices concepts like API gateways, and Service Registry, along with implementing Circuit breaking and rate limiting with Resilience 4J. ",
+    image: hotelrating,
+    tags: [
+      "microservices",
+      "JAVA SpringBoot",
+      "Backend",
+      "System Desing",
+      "RestAPI",
+      "GraphQL",
+      "Redis cache",
+      "MongoDB",
+    ],
+    category: "backend",
+    github: "",
+    github1:
+      "https://github.com/pandiaaman/MicorserviceHotelRatingAppAPIGateway/tree/master",
+    github2:
+      "https://github.com/pandiaaman/MicroserviceHotelRatingAppConfigService/tree/master",
+    github3:
+      "https://github.com/pandiaaman/MicorserviceHotelRatingAppServiceRegistry/tree/master",
+    github4:
+      "https://github.com/pandiaaman/MicorserviceHotelRatingAppHotelService/tree/master",
+    github5:
+      "https://github.com/pandiaaman/MicorserviceHotelRatingAppUserService/tree/master",
+    github6:
+      "https://github.com/pandiaaman/MicorserviceHotelRatingAppRatingService/tree/master",
+    webapp: "",
+    portfolio: "",
   },
   {
     id: 5,
-    title: "Todo Web App",
-    date: "Jun 2021",
+    title: "Designing and Architecting the Tinder App",
+    role: "independent project",
+    date: "Mar 2022",
+    about:
+      "The project explores the multiple challenges in architecting an application from scratch. To develop a proper working replica of the Tinder app, which is robust, scalable, available, and secure to use ",
     description:
-      " A Todo Web App made with React JS, Redux, and Material UI. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
-    image:
-      "https://camo.githubusercontent.com/84ac6ab6f378348ef28d8184062b7e9e3511a1252ae3966eaa49e8e998f732a7/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f74253230283938292e706e673f616c743d6d6564696126746f6b656e3d33643335646366322d626666322d343730382d393031632d343232383866383332386633",
-    tags: ["React Js", "Local Storage", "AWS Auth", "Node JS"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Todo-Web-App",
-    webapp: "https://rishav-react-todo.netlify.app/",
+      "Explores the use of the Top-Down approach in the process of architecting web applications. The project develops on the basic understanding of various features of the application, starting from requirement gathering, such as functional and non-functional requirements, to finally selecting the ASRs (Architecturally Significant Requirements). Discusses the many tactics available to apply the discussed ASRs to the application. Draws the value by developing a C&C diagram(Component and Connector), Sequence Diagram, and a Use-Case Diagram, to understand the various architectural patterns that can be used to solve the challenges. ",
+    learnings:
+      "This project helped me understand the flow of decision-making steps that need to be undertaken during the designing and architecting of a web application. The use of various tactics such as client-end and server-end caching, along with horizontal and vertical scaling options, helped me understand the value of understanding the user needs and the needs of the project and their role in decision-making as an architect. I also understood that combinations of architectural patterns are necessary to solve a problem as no single pattern is a “one-size-fits-all” solution.",
+    image: tinder,
+    tags: [
+      "Software Architecture",
+      "OOPS",
+      "GeoLocation",
+      "SOLID",
+      "event driven architecture",
+    ],
+    category: "backend",
+    github: "",
+    webapp: "",
+    portfolio:
+      "https://docs.google.com/presentation/d/1L-Ce_12horacsYJRxGnQlF72hQt46EFAoPKEFUnh66o/edit?usp=sharing",
   },
+
   {
     id: 6,
-    title: "Breaking Bad",
-    date: "Jun 2021",
+    title: "GOT Family Tree Full stack app",
+    role: "independent project",
+    date: "Nov 2022",
+    about:
+      "The project “GOT family tree”, started as a fun side project to explore my interest in the famous TV series, Games Of Thrones. The project was about building a full-stack app using Spring Boot, React, and JavaScript and exploring a React library called React-D3-Tree, used for developing tree-like structures with React components. The project also explores a JSON data file with all the GOT series characters and their various features in the dataset ",
     description:
-      "A simple react app that shows the characters of the famous TV series Breaking Bad. It uses the Breaking Bad API to fetch the data. It also has a search bar to search for a particular character.",
-    image:
-      "https://camo.githubusercontent.com/937774368308a82419f53dd6eeb4a8675780e119636488b4e3cfe5d34859a72a/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f7425323028313534292e706e673f616c743d6d6564696126746f6b656e3d65613439383630632d303435362d343333342d616435372d336239346663303333363263",
-    tags: ["React Js", "API", "Axios", "Node JS"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Breaking-Bad",
-    webapp: "https://breaking-bad-webapp.netlify.app",
+      "The backend with Spring Boot, contains the perfect project structure for a given Java application, with correctly distributed DTOs, Controllers, Models, and Business layers. Proper exception handling with custom exceptions using Spring is also implemented, along with Hibernate to manipulate data present in the PostgreSQL DB. Using React as the frontend library, with React-D3-Tree, proper state management along with routing throughout the application is utilized. ",
+    learnings:
+      "This project helped me explore the Breadth-First traversal quality of trees, to forward data from the backend to the frontend using CORS and RestAPI. Explored the true nature of a full stack web development using proper development, testing, and feedback loop cycles by employing different agile principles. ",
+    image: got,
+    tags: [
+      "React Js",
+      "React-D3-Tree",
+      "SpringBoot",
+      "CORS",
+      "Redux",
+      "React Flow",
+      "MongoDB",
+      "Full-stack",
+    ],
+    category: "fullstack",
+    github1:
+      "https://github.com/pandiaaman/GOTFamilyTreeReactSpringRest/tree/master",
+    github2: "https://github.com/pandiaaman/GOTFamilyTreeWeb",
+    webapp: "",
+    portfolio: "",
+    youtube: "https://youtu.be/W_3zTbsNWtY",
   },
+
   {
     id: 7,
-    title: "Quiz App",
-    date: "Dec 2020 - Jan 2021",
+    title: "Google Notes App Clone with Servlets and Hibernate",
+    role: "independent project",
+    date: "July 2021",
+    about:
+      "Google Keep Notes is a widely used application for note-taking, this project is an efficient approach to recreate the application using Hibernate with Servlet and JSP in Java. The application allows users to sign up, log in, log out, save notes, pin notes, etc, based on the user’s requirements. ",
     description:
-      "A android quiz app made with Java and Firebase. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the quiz categories and can create a new quiz. It has a leaderboard where users can see the top 10 scorers. It has a search bar where users can search for a particular quiz.",
-    image:
-      "https://github-production-user-asset-6210df.s3.amazonaws.com/64485885/239726262-c1b061d1-d9d0-42ef-9f1c-0412d14bc4f6.gif",
-    tags: ["Java", "Android Studio", "Firebase", "Google Auth"],
-    category: "android app",
-    github: "https://github.com/rishavchanda/Quiz-Earn",
-    webapp: "https://github.com/rishavchanda/Quiz-Earn",
+      "Using Java Servlets, JSP, Hibernate, JavaScript, and TailwindCSS for the front end, this project covers all the essentials in the area of complete web application using the core technologies. Exploring the CORS policy (Cross-Origin Resource Sharing), the project also explores the security features that protect users from malicious scripts online. The in-depth usage of servlets with XML (deployment descriptors) in the web application, provides a proper template for usage with frontend technologies like React and core JavaScript. Notes by the users are stored in a SQL database PostgreSQL, for efficient retrieval and saving of the notes using the hibernate library.",
+    learnings:
+      "This project helped me understand the use of core technologies like Servlets, JSP, JavaScript, and CORS efficiently. Session management using Java is done in a way to provides the users with the best experience along with multithreading implementation in the application to process the requests faster. Using SessionFactory in the Hibernate library, to save and fetch the results along with writing the HQL (Hibernate Query Language) to query specific results from the database. Use of proper logging mechanism with Log4J, implementing RollingFile and Loggers to create rolling log files with time. ",
+    image: notes,
+    tags: [
+      "Java servlets",
+      "hibernate",
+      "SQL",
+      "JSP",
+      "CORS",
+      "multi threading",
+      "junit testing",
+      "selenium",
+      "deployment",
+    ],
+    category: "fullstack",
+    github:
+      "https://github.com/pandiaaman/GoogleNotesCloneHibernateServletJsp/tree/master",
+    webapp: "",
+    portfolio: "",
+    youtube: "",
   },
+
   {
     id: 8,
-    title: "Face Recognition",
-    date: "Jan 2021",
+    title: "Analyzing Cardio Fitness Data using R and Machine Learning",
+    role: "independent project",
+    date: "Sep 2019",
+    about:
+      "The objective of the project is to explore the cardio data set (“CardioGoodFitness”) in R and generate insights about the data set. The data CardioGoodFitness shows the data for multiple individuals using various cardio devices of different brands to keep track of their day-to-day activities. ",
     description:
-      "A Face recognition python app made with OpenCV. It uses face_recognition library to detect faces. It uses the webcam to detect faces. It also has a search bar to search for a particular face.",
-    image:
-      "https://dontrepeatyourself.org/media/face-recognition-with-python-dlib-and-deep-learning_cezKZBj.png",
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
-    webapp: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
+      "Holding the responsibility of a data scientist, I performed an in-depth exploratory data analysis, such as variable identification, univariate analysis, bi-variate analysis, feature exploration, and outlier detection, gaining various valuable insights into the data provided. I explored the process of decision-making and using the inferences from data to better use by predicting and understanding the effects of data. ",
+    learnings:
+      "I explored the provided data and various methods to get meaning out of it, by doing this, I delved deeper into the process of data manipulation, trend analysis, and data visualization. I used the R language to implement multiple data exploration methods, helping me to make valuable inferences on each identified variable. The project helped me understand different ways of importing and exporting data from and to different sources in our working directory. I explored using R package libraries like dplyr(for filter and search), caret(for predictive modeling), stats(for statistical analysis), and ggplot2(for data visualization).",
+    image: cardio,
+    tags: [
+      "data science",
+      "machine learning",
+      "R",
+      "Python",
+      "Bid Data",
+      "ANOVA",
+      "Regression",
+      "Exploratory analysis",
+    ],
+    category: "dsml",
+    github: "",
+    webapp: "https://eportfolio.mygreatlearning.com/aman-pandia",
+    portfolio:
+      "https://docs.google.com/document/d/1aetbM4gV9ublzgOXhUmWcNP0yKmeGzzk/edit?usp=sharing&ouid=114222733943054360696&rtpof=true&sd=true",
+    youtube: "",
   },
 ];
 
 export const research = [
   {
-    id: 11,
-    title: "DecisionHub",
-    date: "Jan 2024 - Dec 2023",
+    id: 0,
+    title: "Autonomous Car Parking System",
+    role: "co-researcher",
+    teamsize: "2",
+    publisher: "IJARBEST",
+    date: "15 May, 2018",
     description:
-      "A Rule Builder application “Decision Hub” that empowers Business Analysts to create, save, and visualize decision strategies. Provide a no-code rule writing experience and visual representation to test these rules in real-time and observe the calculations at each step.",
-    image:
-      "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
+      "As the number of cars is increasing it is leading to a number of problems such as the area is becoming more congested leading to the immense traffic on road and even lesser space for parking the vehicles. Hence emerges the main problem which includes finding space for parking or manoeuvring the car in the parking space which becomes very difficult because of the congestion. The Parking alert system will make sure that no other vehicle comes and parks in vicinity to the car in a way that it becomes difficult for the driver to get in the car or it gets difficult for the driver to manoeuvre the vehicle later out of the parking space. We aim to create the system that turns on as the vehicles gets parked and alerts the driver of the other vehicle to park at a distance in order to give the vehicle passage for manoeuvring. In the system a microcontroller will be installed along with four ultrasonic sensors on all four sides of the vehicle and an alarm that acts as an actuator. The system actuates only when a certain condition arises which are coded according to the algorithm used in the microcontroller. ",
+    image: carparking,
     tags: [
-      "React Js",
-      "PostgressSQL",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "React Flow",
+      "machine learning",
+      "computer vision",
+      "algorithms",
+      "car parking",
+      "Python",
+      "sensor programming",
+      "IMU & Gyroscopes",
     ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/DecisionHub",
-    webapp: "https://decisionhub.netlify.app/",
+    category: "all",
+    paperlink: "https://ijarbest.com/journal/v4i5/1650",
+  },
+  {
+    id: 1,
+    title: "Hybrid Solar-Wind Power System",
+    role: "co-researcher",
+    teamsize: "2",
+    date: "3 May, 2018",
+    description:
+      "Development, promotion and application of renewable energy resources has certainly become the need of the hour. With exponential increment in demand and usage of non-renewable energy resources, we all are aware that the time isn’t very far for complete extinction of these resources, leaving us vulnerable. Nations competing with each other for socio economic development are highly dependent on their energy resources and the source of this energy. Over the past few decades, inclination towards the renewable resources has been continuous, giving scope to a much cleaner source of energy, be it due to global warming or depletion of fossil fuels. This paper concentrates on studying the provision of reliable electric system using solar-wind hybrid power systems that harnesses the renewable energy in sun and wind to generate electricity, taking into account maximum power point tracking. Hybrid nature of the system brings redundancy with it, increasing reliability and reducing the dependency on the single source. Measurement and analysis of the preferred site has been done in order to check availability of the resources. Since the capacity factor of the power systems running on renewable resources is more of a question of availability of wind or sun, as they are random in speed, direction and time, and are mostly affected by weather, hence combining both as a hybrid, to harness power can be much more reliable and realistic power source.",
+    image: solarwind,
+    tags: [
+      "Sustainability",
+      "renewable energy",
+      "Sensor programming",
+      "maximum value calculations",
+      "calculus",
+    ],
+    category: "all",
+    paperlink: "https://ijarbest.com/journal/v4i5/1648",
   },
 ];
 
 export const achievements = [
   {
     id: 0,
-    title: "DecisionHub",
-    date: "Jan 2024 - Dec 2023",
-    description:
-      "A Rule Builder application “Decision Hub” that empowers Business Analysts to create, save, and visualize decision strategies. Provide a no-code rule writing experience and visual representation to test these rules in real-time and observe the calculations at each step.",
-    image:
-      "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
-    tags: [
-      "React Js",
-      "PostgressSQL",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "React Flow",
-    ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/DecisionHub",
-    webapp: "https://decisionhub.netlify.app/",
+    name: "AirForce Pilot Recommendation",
+    date: "Jan 2021",
+    desc: "I was recommended/selected by the Indian AirForce for the position of Officer as a Pilot in the force.",
+    img: airforce,
+    airforce:
+      "https://drive.google.com/file/d/1RiFP3cemo0exyndMoGmLxRg4we5Hav6x/view?usp=sharing",
+  },
+  {
+    id: 1,
+    name: "State Street Employee Recognition Award",
+    date: "March 1, 2024",
+    desc: "Recognized by the CEO of State Street, for my involvement in microservice application as a software architect and developer.",
+    img: bravo2,
+    ssemp:
+      "https://drive.google.com/file/d/1anXXeEXg_nKq9KeNK5m3rcUodo1NM9Lt/view?usp=sharing",
+  },
+  {
+    id: 2,
+    name: "NGO Community service",
+    date: "2018-current",
+    desc: "Worked with multiple NGOs dedicated to improving the education, medical and economic conditions of lower classes in India.",
+    img: ngo,
+    ngo: "https://drive.google.com/file/d/1l-AUJgNkzE1b2XDYb5YxTSRNtNDrybf9/view?usp=sharing",
+  },
+  {
+    id: 3,
+    name: "IELTS ScoreCard",
+    date: "Dec 2023",
+    desc: "Received a band 8 in IELTS general exam, gaining 8.5 in listening and reading both and a 7.5 score in speaking.",
+    img: ielts,
+    ielts:
+      "https://drive.google.com/file/d/1k_8WQH_acaTDKlmrcJpJWscYDejxBPec/view?usp=sharing",
+  },
+
+  {
+    id: 4,
+    name: "StateStreet Employee Of the Month",
+    date: "April 20, 2023",
+    desc: "Recognized by my then manager, Anandha Prabhu, for my conitnuous efforts in managing a middleware service application solely.",
+    img: bravo1,
+    ssemp:
+      "https://drive.google.com/file/d/1BG2zv62mgjOGohmJ3uZPcQRidA9EykwT/view?usp=sharing",
   },
 ];
 

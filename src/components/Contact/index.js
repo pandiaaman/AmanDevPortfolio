@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
 import { Snackbar } from "@mui/material";
 
 const Container = styled.div`
@@ -74,6 +73,9 @@ const ContactTitle = styled.div`
   color: ${({ theme }) => theme.text_primary};
 `;
 
+const Mail = styled.a`
+  color: ${({ theme }) => theme.logo};
+`;
 const ContactInput = styled.input`
   flex: 1;
   background-color: transparent;
@@ -138,22 +140,26 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_tox7kqs",
-        "template_nv7k7mj",
-        form.current,
-        "SybVGsYS52j2TfLbi"
-      )
-      .then(
-        (result) => {
-          setOpen(true);
-          form.current.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    window.confirm("sent!");
+    console.log("submitted " + e);
+    window.location.reload();
+    // e.preventDefault();
+    // emailjs
+    //   .sendForm(
+    //     "service_tox7kqs",
+    //     "template_nv7k7mj",
+    //     form.current,
+    //     "SybVGsYS52j2TfLbi"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       setOpen(true);
+    //       form.current.reset();
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
   };
 
   return (
@@ -161,14 +167,31 @@ const Contact = () => {
       <Wrapper>
         <Title>Contact</Title>
         <Desc>
-          Feel free to reach out to me for any questions or opportunities!
+          Feel free to reach out to me for any queries or opportunities!
+          Directly mail me by clicking here:&nbsp;{" "}
+          <Mail
+            href="mailto:pandiaaman16@gmail.com"
+            style={{ textDecoration: "none" }}
+          >
+            <strong> pandiaaman16@gmail.com</strong>
+          </Mail>
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
+          <ContactInput
+            placeholder="Your Email"
+            name="from_email"
+            type="email"
+            required
+          />
+          <ContactInput placeholder="Your Name" name="from_name" required />
+          <ContactInput placeholder="Subject" name="subject" required />
+          <ContactInputMessage
+            placeholder="Message"
+            rows="4"
+            name="message"
+            required
+          />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
         <Snackbar

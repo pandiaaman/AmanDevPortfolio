@@ -42,6 +42,39 @@ const Title = styled.div`
   }
 `;
 
+const AboutTitle = styled.div`
+  font-size: 22px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 8px 6px 0px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 24px;
+    margin: 6px 6px 0px 6px;
+  }
+`;
+
+const DescTitle = styled.div`
+  font-size: 22px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 8px 6px 0px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 24px;
+    margin: 6px 6px 0px 6px;
+  }
+`;
+
+const LearningsTitle = styled.div`
+  font-size: 22px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 8px 6px 0px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 24px;
+    margin: 6px 6px 0px 6px;
+  }
+`;
+
 const Date = styled.div`
   font-size: 16px;
   margin: 2px 6px;
@@ -53,6 +86,28 @@ const Date = styled.div`
 `;
 
 const Desc = styled.div`
+  font-size: 16px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 8px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+    margin: 6px 6px;
+  }
+`;
+
+const About = styled.div`
+  font-size: 16px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 8px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+    margin: 6px 6px;
+  }
+`;
+
+const Learnings = styled.div`
   font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary};
@@ -201,12 +256,19 @@ const index = ({ openModal, setOpenModal }) => {
           <Image src={project?.image} />
           <Title>{project?.title}</Title>
           <Date>{project.date}</Date>
+          {project.role && <Date>Role: {project?.role}</Date>}
+          {project.teamsize && <Date>Team size: {project?.teamsize}</Date>}
           <Tags>
             {project?.tags.map((tag) => (
               <Tag>{tag}</Tag>
             ))}
           </Tags>
+          {project.about && <AboutTitle>About</AboutTitle>}
+          {project.about && <About>{project?.about}</About>}
+          <DescTitle>Description</DescTitle>
           <Desc>{project?.description}</Desc>
+          {project.learnings && <LearningsTitle>Learnings</LearningsTitle>}
+          {project.learnings && <Learnings>{project?.learnings}</Learnings>}
           {project.member && (
             <>
               <Label>Members</Label>
@@ -235,12 +297,76 @@ const index = ({ openModal, setOpenModal }) => {
             </>
           )}
           <ButtonGroup>
-            <Button dull href={project?.github} target="new">
-              View Code
-            </Button>
-            <Button href={project?.webapp} target="new">
-              View Live App
-            </Button>
+            {project.github && (
+              <Button href={project?.github} target="new">
+                View Code
+              </Button>
+            )}
+            {project.github1 && (
+              <Button href={project?.github1} target="new">
+                View Code
+              </Button>
+            )}
+            {project.github2 && (
+              <Button href={project?.github2} target="new">
+                View Code
+              </Button>
+            )}
+            {project.github3 && (
+              <Button href={project?.github3} target="new">
+                View Code
+              </Button>
+            )}
+            {project.github4 && (
+              <Button href={project?.github4} target="new">
+                View Code
+              </Button>
+            )}
+            {project.github5 && (
+              <Button href={project?.github5} target="new">
+                View Code
+              </Button>
+            )}
+            {project.github6 && (
+              <Button href={project?.github6} target="new">
+                View Code
+              </Button>
+            )}
+            {project.webapp && (
+              <Button href={project?.webapp} target="new">
+                View Live App
+              </Button>
+            )}
+            {project.patentlink && (
+              <Button href={project?.patentlink} target="new">
+                Patent Link
+              </Button>
+            )}
+            {project.patentdoc && (
+              <Button href={project?.patentdoc} target="new">
+                Patent Document
+              </Button>
+            )}
+            {project.reportlink && (
+              <Button href={project?.reportlink} target="new">
+                Detailed Report
+              </Button>
+            )}
+            {project.portfolio && (
+              <Button href={project?.portfolio} target="new">
+                Portfolio
+              </Button>
+            )}
+            {project.youtube && (
+              <Button href={project?.youtube} target="new">
+                Youtube
+              </Button>
+            )}
+            {project.paperlink && (
+              <Button href={project?.paperlink} target="new">
+                Paper Link
+              </Button>
+            )}
           </ButtonGroup>
         </Wrapper>
       </Container>

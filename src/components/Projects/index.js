@@ -20,8 +20,9 @@ const Projects = ({ openModal, setOpenModal }) => {
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          I have worked on a wide range of projects. From web apps to android
-          apps. Here are some of my projects.
+          I have worked on a wide range of projects. From designing web apps to
+          building full-stack apps and machine learning projects. Here are some
+          of my projects.
         </Desc>
         <ToggleButtonGroup>
           {toggle === "all" ? (
@@ -34,51 +35,71 @@ const Projects = ({ openModal, setOpenModal }) => {
             </ToggleButton>
           )}
           <Divider />
-          {toggle === "web app" ? (
-            <ToggleButton
-              active
-              value="web app"
-              onClick={() => setToggle("web app")}
-            >
-              WEB APP'S
+          {toggle === "uiux" ? (
+            <ToggleButton active value="uiux" onClick={() => setToggle("uiux")}>
+              UI/UX Design
             </ToggleButton>
           ) : (
-            <ToggleButton value="web app" onClick={() => setToggle("web app")}>
-              WEB APP'S
+            <ToggleButton value="uiux" onClick={() => setToggle("uiux")}>
+              UI/UX Design
             </ToggleButton>
           )}
           <Divider />
-          {toggle === "android app" ? (
+          {toggle === "frontend" ? (
             <ToggleButton
               active
-              value="android app"
-              onClick={() => setToggle("android app")}
+              value="frontend"
+              onClick={() => setToggle("frontend")}
             >
-              ANDROID APP'S
+              FrontEnd
             </ToggleButton>
           ) : (
             <ToggleButton
-              value="android app"
-              onClick={() => setToggle("android app")}
+              value="frontend"
+              onClick={() => setToggle("frontend")}
             >
-              ANDROID APP'S
+              FrontEnd
             </ToggleButton>
           )}
           <Divider />
-          {toggle === "machine learning" ? (
+          {toggle === "backend" ? (
             <ToggleButton
               active
-              value="machine learning"
-              onClick={() => setToggle("machine learning")}
+              value="backend"
+              onClick={() => setToggle("backend")}
             >
-              MACHINE LEARNING
+              Backend
+            </ToggleButton>
+          ) : (
+            <ToggleButton value="backend" onClick={() => setToggle("backend")}>
+              Backend
+            </ToggleButton>
+          )}
+          <Divider />
+          {toggle === "fullstack" ? (
+            <ToggleButton
+              active
+              value="fullstack"
+              onClick={() => setToggle("fullstack")}
+            >
+              Full-Stack
             </ToggleButton>
           ) : (
             <ToggleButton
-              value="machine learning"
-              onClick={() => setToggle("machine learning")}
+              value="fullstack"
+              onClick={() => setToggle("fullstack")}
             >
-              MACHINE LEARNING
+              Full-Stack
+            </ToggleButton>
+          )}
+          <Divider />
+          {toggle === "dsml" ? (
+            <ToggleButton active value="dsml" onClick={() => setToggle("dsml")}>
+              Data Science & ML
+            </ToggleButton>
+          ) : (
+            <ToggleButton value="dsml" onClick={() => setToggle("dsml")}>
+              Data Science & ML
             </ToggleButton>
           )}
         </ToggleButtonGroup>

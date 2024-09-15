@@ -9,14 +9,25 @@ export const darkTheme = {
   button: "#854CE6",
   white: "#FFFFFF",
   black: "#000000",
+  copyright: "#FFFFFF",
+  navbar: "#191924",
+  logo: "#854CE6",
+  navitems: "#FFFFFF",
 };
 
 export const lightTheme = {
-  bg: "#FFFFFF",
+  bg: "#F2F2F2",
   bgLight: "#f0f0f0",
   primary: "#be1adb",
   text_primary: "#111111",
   text_secondary: "#48494a",
-  card: "#FFFFFF",
+  card: "#F4F4F4",
+  card_light: "#F2F2F2",
   button: "#5c5b5b",
+  white: "#FFFFFF",
+  black: "#000000",
+  copyright: "#000000",
+  navbar: "#F2F2F2",
+  logo: "#be1adb",
+  navitems: "#be1adb",
 };
