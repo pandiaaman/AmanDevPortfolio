@@ -39,7 +39,8 @@ export const Bio = {
     "I am a motivated and versatile professional developer with over four years of experience, always eager to take on new challenges. With a positive attitude and a growth mindset, I am working towards making meaningful contributions and achieve great things.",
   github: "https://github.com/pandiaaman",
   resume:
-    "https://docs.google.com/document/d/1PJ2vKrj5HTzy0uIw2_Aa5X0eNgX_Hdv9/edit?usp=sharing&ouid=114222733943054360696&rtpof=true&sd=true",
+    // "https://docs.google.com/document/d/1PJ2vKrj5HTzy0uIw2_Aa5X0eNgX_Hdv9/edit?usp=sharing&ouid=114222733943054360696&rtpof=true&sd=true",
+    "https://docs.google.com/document/d/16Q-GQro7TQoMCcDlSjXn9N3-olgy8vQW/edit?usp=sharing&ouid=114222733943054360696&rtpof=true&sd=true",
   linkedin: "https://www.linkedin.com/in/pandiaaman",
   portfoliodoc:
     "https://docs.google.com/document/d/1cmHeQjSr5JPBQjHwRyMNxeSVVXPj2hVxWZezl2zPZIM/edit?usp=sharing",
@@ -500,6 +501,45 @@ export const certifications = [
 export const experiences = [
   {
     id: 0,
+    img: "https://www.globallogic.com/wp-content/uploads/2021/11/Wordmark-2.png",
+    role: "Senior Software Engineer (Team Lead)",
+    company: "Hitachi GlobalLogic Private Limited",
+    date: "March 2025 - current",
+    desc: "• Built reactive Java Spring Boot and FastAPI microservices leveraging asynchronous WebClient, and deployed them using AWS tools like Fargate, and SQS, resulting in a significant reduction of API response times and developed the CTMS Registry, a key microservice for seamless service discovery and inter-service communication in cloud and on-premises Kubernetes environments of existing customers. ",
+    skills: [
+      "SpringBoot",
+      "JAVA microservices",
+      "System Design",
+      "CI/CD",
+      "Docker",
+      "Kubernetes",
+      "FastAPI-Python",
+      "AWS",
+      "RestAPI",
+      "OpenAPI/Swagger"
+    ],
+    // doc: "https://drive.google.com/file/d/14-lJmZdif7a7tneuX29d0SD0aMYb8OM0/view?usp=sharing",
+  },
+  {
+    id: 1,
+    img: "https://www.globallogic.com/wp-content/uploads/2021/11/Wordmark-2.png",
+    role: "Senior Software Engineer",
+    company: "Hitachi GlobalLogic Private Limited",
+    date: "June 2024 - Feb 2025",
+    desc: "• Extended and enhanced CloudUX Starter Kits with new features and bug fixes, streamlining onboarding and boosting product revenue within one quarter of deployment and led the adoption of standardized OpenAPI guidelines to unify API design across organizational products and services, driving seamless integration and better developer experience with SDKs and customer services. ",
+    skills: [
+      "ReactJS",
+      "TypeScript",
+      "JavaScript",
+      "Docker",
+      "Kubernetes",
+      "NPM",
+      "Python",
+    ],
+    // doc: "https://drive.google.com/file/d/14-lJmZdif7a7tneuX29d0SD0aMYb8OM0/view?usp=sharing",
+  },
+  {
+    id: 2,
     img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
     role: "Senior Associate (Team Lead)",
     company: "State Street Services Corportate Private Limited",
@@ -519,7 +559,7 @@ export const experiences = [
     doc: "https://drive.google.com/file/d/14-lJmZdif7a7tneuX29d0SD0aMYb8OM0/view?usp=sharing",
   },
   {
-    id: 1,
+    id: 3,
     img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
     role: "Senior Associate (Full Stack Application Development / Maintenance)",
     company: "State Street Services Corportate Private Limited",
@@ -539,7 +579,7 @@ export const experiences = [
     doc: "https://drive.google.com/file/d/1ovFZE1jSkyYnLPy9njQ_QqrmpbbXbKk1/view?usp=sharing",
   },
   {
-    id: 2,
+    id: 4,
     img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
     role: "Associate-2 (Application Development / Maintenance)",
     company: "State Street Services Corportate Private Limited",
@@ -556,7 +596,7 @@ export const experiences = [
     doc: "https://drive.google.com/file/d/1ovFZE1jSkyYnLPy9njQ_QqrmpbbXbKk1/view?usp=sharing68b-422d-bd0b-1f125f722245",
   },
   {
-    id: 3,
+    id: 5,
     img: "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
     role: "Associate-1 (Application Development)",
     company: "State Street Services Corportate Private Limited",
@@ -575,7 +615,7 @@ export const experiences = [
     doc: "https://drive.google.com/file/d/1ovFZE1jSkyYnLPy9njQ_QqrmpbbXbKk1/view?usp=sharing",
   },
   {
-    id: 4,
+    id: 6,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTBFNH0KmAm4Vub-S5TOlh7mZzvtz-vUhsCYhkceNANg&s",
     role: "Intern-Application Developer",
     company: "Mercury Digital",
@@ -591,7 +631,7 @@ export const experiences = [
     doc: "https://drive.google.com/file/d/1Tzaai1jNexb3gAg_z4d49Vs3ybvvXQnn/view?usp=sharing",
   },
   {
-    id: 5,
+    id: 7,
     img: "https://www.equitybulls.com/equitybullsadmin/uploads/Mangalam%20Cement%20Limited%204.jpg",
     role: "Intern-Application Developer",
     company: "Birla Uttam Cement Private Limited",
@@ -607,7 +647,7 @@ export const experiences = [
     doc: "https://drive.google.com/file/d/15hIjCjbcalGNZRH1dSspy860xvp5GJZe/view?usp=sharing",
   },
   {
-    id: 6,
+    id: 8,
     img: "https://media.licdn.com/dms/image/C560BAQG84msMWQwyJg/company-logo_200_200/0/1630565255020/team_srmsat_space_systems_laboratory_logo?e=2147483647&v=beta&t=VJrl9tEPWGNQb4qmjvo9n7XPEhiQh0Wa9KmnSM7EgP4",
     role: "Team Lead-Attitude Determination and Control System",
     company: "SRM-SAT",
@@ -625,7 +665,7 @@ export const experiences = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     img: "https://aaruush22-bucket.s3.ap-south-1.amazonaws.com/main/aaruush.png",
     role: "Associate Secretary",
     company: "Operations and Resource Management team-Aarush Festival",
