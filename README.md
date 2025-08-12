@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# Aman Pandia (amanpandia, pandiaaman) - Full Stack Developer & Software Architect Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 👨‍💻 About Me
 
-## Available Scripts
+**Aman Pandia** (also known as amanpandia, pandiaaman) is a Senior Software Engineer and Team Lead with over 4 years of experience in full-stack development, software architecture, and DevOps. Currently working at Hitachi GlobalLogic Private Limited, Aman specializes in Java, React, Spring Boot, AWS, and Machine Learning technologies.
 
-In the project directory, you can run:
+## 🚀 Professional Experience
 
-### `npm start`
+### Current Role
+- **Senior Software Engineer (Team Lead)** at Hitachi GlobalLogic Private Limited
+- **Senior Associate (Team Lead)** at State Street Services Corporate Private Limited
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Key Skills & Technologies
+- **Frontend**: React.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS
+- **Backend**: Java, Spring Boot, Python, FastAPI, Microservices
+- **Cloud & DevOps**: AWS, Docker, Kubernetes, Jenkins, CI/CD
+- **Databases**: MySQL, PostgreSQL, MongoDB, Redis
+- **Machine Learning**: TensorFlow, Keras, OpenCV, Python, R
+- **Tools**: Git, GitHub, VS Code, Postman, JIRA
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🏆 Achievements & Recognition
 
-### `npm test`
+- **2 Patents** awarded for innovative projects
+- **Air Force Pilot Recommendation** from Indian Air Force
+- **Employee Recognition Awards** from State Street
+- **IELTS Band 8** certification
+- **Microsoft Azure AI & Data Fundamentals** certified
+- **Google UX Design** certified
+- **Stanford Machine Learning** certified
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎓 Education
 
-### `npm run build`
+- **M.Tech in Software Engineering** - BITS Pilani (2023-2025)
+- **B.Tech in Information Technology** - SRM IST, Chennai (2015-2019)
+- **Diploma in Business Analytics** - Great Lakes Institute, Chennai
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🔬 Research & Patents
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Vigilant Stick: Intuitive Navigation Guidance
+- **Patent Awarded**: February 2020
+- **Technology**: IoT, Machine Learning, Python, Raspberry Pi, OpenCV
+- **Purpose**: Smart navigation aid for visually impaired individuals
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Driving Evaluation and Assessment System
+- **Patent Awarded**: July 2018
+- **Technology**: Machine Learning, Arduino, Sensor Programming, OLAP
+- **Purpose**: Automated driving assessment system for commercial drivers
 
-### `npm run eject`
+## 📊 Published Research
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Autonomous Car Parking System** - Published in IJARBEST (2018)
+2. **Hybrid Solar-Wind Power System** - Published in IJARBEST (2018)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Notable Projects
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Full Stack Applications
+- **Hotel Rating App** - Spring Microservices with RestAPI
+- **GOT Family Tree** - React + Spring Boot full-stack application
+- **Google Notes Clone** - Java Servlets with Hibernate
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### UI/UX Design Projects
+- **Bicycle Shopping Mobile App** - Complete UX/UI design
+- **3D Virtual Try-On Clothing App** - AI-powered fashion application
+- **Food Delivery Landing Page** - Responsive web design
 
-## Learn More
+### System Architecture
+- **Tinder App Architecture** - Complete system design and architecture
+- **Microservices Design Patterns** - Implementation and best practices
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌟 Key Strengths
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Leadership**: Led teams of 4+ members in critical projects
+- **Innovation**: Developed patented solutions for real-world problems
+- **Technical Excellence**: Expertise across full-stack development
+- **Problem Solving**: Strong analytical and critical thinking skills
+- **Communication**: Excellent presentation and documentation skills
 
-### Code Splitting
+## 📞 Contact Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Portfolio**: [www.pandiaaman.com](https://www.pandiaaman.com)
+- **LinkedIn**: [linkedin.com/in/pandiaaman](https://www.linkedin.com/in/pandiaaman)
+- **GitHub**: [github.com/pandiaaman](https://github.com/pandiaaman)
+- **Email**: aman.pandia@example.com
 
-### Analyzing the Bundle Size
+## 🔍 SEO Keywords
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Aman Pandia, amanpandia, pandiaaman, pandia aman, aman pandia, pandya, full stack developer, software architect, Java developer, React developer, Spring Boot developer, AWS developer, machine learning engineer, microservices expert, DevOps engineer, UI/UX designer, State Street developer, GlobalLogic engineer, BITS Pilani, SRM IST, patents, research, projects, portfolio, experience, skills, certifications, achievements
 
-### Making a Progressive Web App
+## 📈 Career Highlights
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **4+ Years** of professional experience
+- **2 Patents** for innovative solutions
+- **10+ Projects** across various technologies
+- **3 Research Papers** published
+- **5+ Certifications** in emerging technologies
+- **Team Leadership** experience in multiple projects
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+*This portfolio showcases Aman Pandia's journey as a software professional, highlighting his technical expertise, innovative projects, and commitment to continuous learning and development.*
 
-### Deployment
+## 🚀 Quick Start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+# Clone the repository
+git clone https://github.com/pandiaaman/portfolio.git
 
-### `npm run build` fails to minify
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Start development server
+npm start
+
+# Build for production
+npm run build
+```
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).

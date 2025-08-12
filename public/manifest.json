@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Aman Pandia Portfolio",
+  "name": "Aman Pandia - Full Stack Developer & Software Architect Portfolio",
+  "description": "Aman Pandia's professional portfolio showcasing projects, skills, and experience in web development and software architecture.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -11,5 +12,10 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["productivity", "business", "education"],
+  "keywords": ["Aman Pandia", "amanpandia", "pandiaaman", "portfolio", "developer", "software architect"]
 }
