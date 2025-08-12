@@ -1,6 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import { useState, useEffect } from "react";
 import { darkTheme, lightTheme } from "./utils/Themes.js";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -74,145 +75,13 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 
-// export const updateTheme = () => {
-//   return useContext(ThemeContext);
-// };
 
 function App() {
-  // const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    document.title = "Aman Pandia|Portfolio";
+    document.title = "Aman Pandia (amanpandia, pandiaaman) | Full Stack Developer & Software Architect Portfolio";
   }, []);
 
-//   useEffect(() => {
-//     //below are images that we want to load before the page comes up in front of the user
-//     const imageUrls = [
-//       heroimage,
-//       restapi,
-//       junit,
-//       blender,
-//       cardio,
-//       cycle,
-//       got,
-//       hotelrating,
-//       restimage,
-//       ngo,
-//       notes,
-//       omnifood,
-//       airforce,
-//       ielts,
-//       patent,
-//       drivingpatent,
-//       tinder,
-//       tryon,
-//       solarwind,
-//       carparking,
-//       raj,
-//       puhazoli,
-//       nawin,
-//       ganesh,
-//       vadivu,
-//       srinivas,
-//       bravo1,
-//       bravo2,
-//       "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
-//       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
-//       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
-//       "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
-//       "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg",
-//       "https://www.vectorlogo.zone/logos/angular/angular-icon.svg",
-//       "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
-//       "https://www.vectorlogo.zone/logos/java/java-icon.svg",
-//       "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
-//       "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
-//       "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-//       "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
-//       "https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-vertical.svg",
-//       "https://www.vectorlogo.zone/logos/php/php-icon.svg",
-//       "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
-//       "https://www.postgresql.org/media/img/about/press/elephant.png",
-//       "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
-//       "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png",
-//       "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-ar21.svg",
-//       "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
-//       "https://toppng.com/uploads/preview/jenkins-logo-11609365847mufysaivph.png",
-// /*
-//       "https://download.logo.wine/logo/Nginx/Nginx-Logo.wine.png",
-//       "https://upload.wikimedia.org/wikipedia/commons/0/00/Kubernetes_%28container_engine%29.png",
-//       "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-//       "https://www.vectorlogo.zone/logos/hibernate/hibernate-ar21.svg",
-//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMw6_RdwKQ9bDFfnKDX1iwMl4bVJEvd9PP53XuIw&s",
-//       "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
-//       "https://www.vectorlogo.zone/logos/fusion-reactor/fusion-reactor-icon.svg",
-//       "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-//       "https://static-00.iconduck.com/assets.00/tensorflow-icon-1911x2048-1m2s54vn.png",
-//       "https://miro.medium.com/v2/resize:fit:600/1*DKu_54iqz6C-p6ndo7rO3g.png",
-//       "https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg",
-//       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1086px-R_logo.svg.png",
-//       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png",
-// */
-//       "https://www.vectorlogo.zone/logos/numpy/numpy-ar21.svg",
-//       // "https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667",
-
-//       "https://s3-alpha.figma.com/hub/file/1481185752/fa4cd070-6a79-4e1b-b079-8b9b76408595-cover.png",
-//       "https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg",
-//       "https://e7.pngegg.com/pngimages/713/558/png-clipart-computer-icons-pro-git-github-logo-text-logo-thumbnail.png",
-//       "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-//       "https://www.vectorlogo.zone/logos/eclipse/eclipse-icon.svg",
-//       "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
-//       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
-
-//       "https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png",
-
-//       "https://www.vectorlogo.zone/logos/atlassian_jira/atlassian_jira-icon.svg",
-
-//       "https://cdn-icons-png.flaticon.com/512/8745/8745129.png",
-//       "https://cdn-icons-png.flaticon.com/512/10307/10307142.png",
-//       "https://cdn.iconscout.com/icon/premium/png-256-thumb/critical-thinking-4278958-3557318.png",
-//       "https://cdn-icons-png.flaticon.com/512/7626/7626071.png",
-//       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Collaboration_logo_V2.svg/607px-Collaboration_logo_V2.svg.png",
-
-//       "https://cdn.iconscout.com/icon/premium/png-256-thumb/dance-27-1132079.png?f=webp",
-// /*
-//       "https://freesvg.org/img/papapishu_guitar_5.png",
-//       "https://cdn.iconscout.com/icon/premium/png-256-thumb/drum-kit-4095415-3391610.png",
-//       "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Olympic_pictogram_Athletics_-_colored.svg/2048px-Olympic_pictogram_Athletics_-_colored.svg.png",
-
-//       "https://www.loffler.com/hubfs/Microsoft%20Azure%20Blog.jpg",
-//       "https://images.credly.com/images/7562bf68-c3a6-4d79-9154-00ee605b9492/UX.png",
-//       "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/e8/7cc3d09d3f11e698dfff46d35f2da1/Stanford_Coursera_Logo.png?auto=format%2Ccompress&dpr=1&w=80&h=80",
-
-//       "https://www.loffler.com/hubfs/Microsoft%20Azure%20Blog.jpg",
-//       "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
-//       "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
-//       "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
-//       "https://vectorlogoseek.com/wp-content/uploads/2020/02/state-street-vector-logo.png",
-//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTBFNH0KmAm4Vub-S5TOlh7mZzvtz-vUhsCYhkceNANg&s",
-//       "https://www.equitybulls.com/equitybullsadmin/uploads/Mangalam%20Cement%20Limited%204.jpg",
-//       // Add all your image URLs here
-//       */
-//     ];
-
-//     let loadedImages = 0;
-
-//     imageUrls.forEach((url) => {
-//       const img = new Image();
-//       img.src = url;
-//       img.onload = () => {
-//         loadedImages++;
-//         if (loadedImages === imageUrls.length) {
-//           setIsLoading(false);
-//         }
-//       };
-//     });
-//   }, []);
-
-  // console.log(openModal);
-
-  // const updateTheme = () => {
-  //   return setDarkMode((prevMode) => !prevMode);
-  // };
   return (
     <div className="App">{<MainContent />}</div>
   );
@@ -221,35 +90,62 @@ function App() {
 const MainContent = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Router>
-        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Body>
-          <HeroSection />
-          <TextFlow />
-          <Wrapper>
-            <Skills />
-            <Experience />
-            <Achievements />
-          </Wrapper>
-          <Patents openModal={openModal} setOpenModal={setOpenModal} />
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Research openModal={openModal} setOpenModal={setOpenModal} />
-          <Wrapper>
-            <Certifications />
-            <Education />
-            <Recommendations />
-            <Contact />
-          </Wrapper>
-          <Footer />
-          {openModal.state && (
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          )}
-        </Body>
-      </Router>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+        <Helmet>
+          <title>Aman Pandia (amanpandia, pandiaaman) | Full Stack Developer & Software Architect Portfolio</title>
+          <meta name="description" content="Aman Pandia (amanpandia, pandiaaman) - Full Stack Developer, Software Architect, and UI/UX Designer with 4+ years experience. Expert in Java, React, Spring Boot, AWS, and Machine Learning. View portfolio, projects, patents, and professional experience." />
+          <meta name="keywords" content="Aman Pandia, amanpandia, pandiaaman, pandia aman, aman pandia, pandya, Aman, Pandia, portfolio, web developer, full stack developer, software architect, UI/UX designer, Java developer, React developer, Spring Boot, AWS, machine learning, projects, skills, experience, HTML, CSS, JavaScript, TypeScript, Python, microservices, DevOps, State Street, GlobalLogic, patents, research, BITS Pilani, SRM IST" />
+          <link rel="canonical" href="https://www.pandiaaman.com" />
+          
+          {/* Open Graph */}
+          <meta property="og:title" content="Aman Pandia (amanpandia, pandiaaman) | Full Stack Developer & Software Architect Portfolio" />
+          <meta property="og:description" content="Aman Pandia (amanpandia, pandiaaman) - Experienced Full Stack Developer and Software Architect with expertise in Java, React, Spring Boot, AWS, and Machine Learning. View projects, patents, and professional experience." />
+          <meta property="og:url" content="https://www.pandiaaman.com" />
+          <meta property="og:type" content="website" />
+          
+          {/* Twitter */}
+          <meta name="twitter:title" content="Aman Pandia (amanpandia, pandiaaman) | Full Stack Developer & Software Architect" />
+          <meta name="twitter:description" content="Aman Pandia (amanpandia, pandiaaman) - Experienced Full Stack Developer and Software Architect with expertise in Java, React, Spring Boot, AWS, and Machine Learning." />
+          <meta name="twitter:card" content="summary_large_image" />
+        </Helmet>
+        
+        <Router>
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Body>
+            {/* {isLoading ? (
+              <LoadingScreen />
+            ) : ( */}
+            <>
+              <HeroSection />
+              <Wrapper>
+                <Skills />
+                <Experience />
+              </Wrapper>
+              <Projects openModal={openModal} setOpenModal={setOpenModal} />
+              <Wrapper>
+                <Education />
+                <Patents />
+                <Certifications />
+              </Wrapper>
+              <Projects openModal={openModal} setOpenModal={setOpenModal} />
+              <Wrapper>
+                <Research />
+                <Achievements />
+                <Recommendations />
+              </Wrapper>
+              <Contact />
+              <Footer />
+              {openModal.state && (
+                <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+              )}
+            </>
+            {/* )} */}
+          </Body>
+        </Router>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 };
 
