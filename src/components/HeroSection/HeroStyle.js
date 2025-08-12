@@ -248,7 +248,7 @@ export const CertificationButton = styled.a`
     -moz-appearance: button;
     appearance: button;
     text-decoration: none;
-    width: 95%;
+    width: 100%;
     max-width: 220px;
     text-align: center;
     padding: 10px 0;
@@ -272,6 +272,14 @@ export const CertificationButton = styled.a`
     filter: brightness(1);
     }    
     
+    
+    @media (max-width: 768px) {
+        padding: 8px 0;
+        font-size: 12px;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
     
     @media (max-width: 640px) {
         padding: 12px 0;

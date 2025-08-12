@@ -54,7 +54,9 @@ const Card = styled.div`
   @media only screen and (max-width: 768px) {
     padding: 10px;
     gap: 8px;
-    width: 300px;
+    margin: 0.5rem;
+    min-width: 280px;
+    max-width: 100%;
   }
 
   &:hover ${Document} {
@@ -74,6 +76,9 @@ const Top = styled.div`
   width: 100%;
   display: flex;
   gap: 12px;
+  @media only screen and (max-width: 768px) {
+    gap: 8px;
+  }
 `;
 
 const Image = styled.img`
@@ -90,6 +95,8 @@ const Body = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-width: 0;
 `;
 
 const Role = styled.div`
@@ -124,12 +131,20 @@ const Skills = styled.div`
   display: flex;
   gap: 12px;
   margin-top: -10px;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: -5px;
+  }
 `;
 
 const ItemWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  @media only screen and (max-width: 768px) {
+    gap: 4px;
+  }
 `;
 
 const Skill = styled.div`
@@ -161,7 +176,7 @@ const CertificationCard = ({ certificate }) => {
               <b>Skills:</b>
               <ItemWrapper>
                 {certificate?.skills?.map((skill, index) => (
-                  <Skill>• {skill}</Skill>
+                  <Skill key={index}>• {skill}</Skill>
                 ))}
               </ItemWrapper>
             </Skills>
