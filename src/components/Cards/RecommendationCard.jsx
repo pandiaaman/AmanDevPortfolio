@@ -52,7 +52,9 @@ const Card = styled.div`
   @media only screen and (max-width: 768px) {
     padding: 10px;
     gap: 8px;
-    width: 300px;
+    margin: 0.5rem;
+    min-width: 280px;
+    max-width: 100%;
   }
 
   &:hover ${Document} {
@@ -72,6 +74,9 @@ const Top = styled.div`
   width: 100%;
   display: flex;
   gap: 12px;
+  @media only screen and (max-width: 768px) {
+    gap: 8px;
+  }
 `;
 
 const Image = styled.img`
@@ -88,6 +93,8 @@ const Body = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-width: 0;
 `;
 
 const Role = styled.div`

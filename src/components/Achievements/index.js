@@ -54,6 +54,31 @@ const index = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        }
+      }
+    ]
   };
   return (
     <Container id="achievements">
@@ -63,7 +88,7 @@ const index = () => {
         <DivWithBlockDisplay>
           <Slider {...settings}>
             {achievements.map((achievement, index) => (
-              <AchievementCard achievement={achievement} />
+              <AchievementCard key={index} achievement={achievement} />
             ))}
           </Slider>
         </DivWithBlockDisplay>
