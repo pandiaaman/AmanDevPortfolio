@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import OptimizedImage from "../OptimizedImage";
+import FallbackImage from "../FallbackImage";
 
 const Document = styled.img`
   display: none;
@@ -79,13 +81,16 @@ const Top = styled.div`
   }
 `;
 
-const Image = styled.img`
+const ImageContainer = styled.div`
   height: 50px;
+  width: 50px;
   background-color: #000;
   border-radius: 10px;
   margin-top: 4px;
+  overflow: hidden;
   @media only screen and (max-width: 768px) {
     height: 40px;
+    width: 40px;
   }
 `;
 
@@ -125,14 +130,51 @@ const Date = styled.div`
 `;
 
 const RecommendationCard = ({ recommendation }) => {
+  // Defensive programming: handle undefined recommendation
+  if (!recommendation) {
+    return (
+      <Card>
+        <Top>
+          <ImageContainer>
+            <FallbackImage 
+              alt="Recommendation placeholder"
+              width="100%"
+              height="100%"
+              borderRadius="10px"
+            />
+          </ImageContainer>
+          <Body>
+            <Role>Recommendation not available</Role>
+            <Company>Unknown Company</Company>
+            <Date>Date not available</Date>
+          </Body>
+        </Top>
+        <Description>
+          <Span>Recommendation information is not available.</Span>
+        </Description>
+      </Card>
+    );
+  }
+
   return (
     <Card>
       <Top>
-        <Image src={recommendation.img} />
+        <ImageContainer>
+          <OptimizedImage 
+            src={recommendation.img} 
+            alt={`${recommendation.role || 'Person'} at ${recommendation.company || 'Company'}`}
+            width="100%"
+            height="100%"
+            objectFit="cover"
+            styles={{
+              borderRadius: '10px'
+            }}
+          />
+        </ImageContainer>
         <Body>
-          <Role>{recommendation.role}</Role>
-          <Company>{recommendation.company}</Company>
-          <Date>{recommendation.date}</Date>
+          <Role>{recommendation.role || 'Role not specified'}</Role>
+          <Company>{recommendation.company || 'Company not specified'}</Company>
+          <Date>{recommendation.date || 'Date not available'}</Date>
         </Body>
       </Top>
       <Description>

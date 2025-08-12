@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import OptimizedImage from "../OptimizedImage";
 
 const Button = styled.button`
   display: none;
@@ -38,12 +39,13 @@ const Card = styled.div`
   }
 `;
 
-const Image = styled.img`
+const ImageContainer = styled.div`
   width: 100%;
   height: 180px;
   background-color: ${({ theme }) => theme.white};
   border-radius: 10px;
   box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 `;
 
 const Tags = styled.div`
@@ -111,7 +113,8 @@ const Members = styled.div`
   align-items: center;
   padding-left: 10px;
 `;
-const Avatar = styled.img`
+
+const AvatarContainer = styled.div`
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -119,6 +122,7 @@ const Avatar = styled.img`
   background-color: ${({ theme }) => theme.white};
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border: 3px solid ${({ theme }) => theme.card};
+  overflow: hidden;
 `;
 
 const SocialMediaIcon = styled.a`
@@ -135,24 +139,74 @@ const SocialMediaIcon = styled.a`
 `;
 
 const ProjectCards = ({ project, setOpenModal }) => {
+  // Defensive programming: handle undefined project
+  if (!project) {
+    return (
+      <Card onClick={() => setOpenModal({ state: true, project: null })}>
+        <ImageContainer>
+          <OptimizedImage 
+            src="/placeholder-image.jpg" 
+            alt="Project placeholder"
+            width="100%"
+            height="100%"
+            objectFit="cover"
+            styles={{
+              borderRadius: '10px'
+            }}
+          />
+        </ImageContainer>
+        <Tags>
+          <Tag>Project not available</Tag>
+        </Tags>
+        <Details>
+          <Title>Project not available</Title>
+          <Date>N/A</Date>
+          <Description>Project information is not available.</Description>
+        </Details>
+        <SocialMediaIcon>
+          <ExpandMoreIcon />
+        </SocialMediaIcon>
+      </Card>
+    );
+  }
+
   return (
     <Card onClick={() => setOpenModal({ state: true, project: project })}>
-      <Image src={project.image} />
+      <ImageContainer>
+        <OptimizedImage 
+          src={project.image || "/placeholder-image.jpg"} 
+          alt={`${project.title || 'Project'} - Project Preview`}
+          width="100%"
+          height="100%"
+          objectFit="cover"
+          styles={{
+            borderRadius: '10px'
+          }}
+        />
+      </ImageContainer>
       <Tags>
         {project.tags?.map((tag, index) => (
-          <Tag>{tag}</Tag>
-        ))}
+          <Tag key={index}>{tag}</Tag>
+        )) || <Tag>No tags available</Tag>}
       </Tags>
       <Details>
-        <Title>{project.title}</Title>
-        <Date>{project.date}</Date>
+        <Title>{project.title || 'Untitled Project'}</Title>
+        <Date>{project.date || 'Date not available'}</Date>
         {project.role && <Date>Role: {project?.role}</Date>}
         {project.teamsize && <Date>Team size: {project?.teamsize}</Date>}
-        <Description>{project.description}</Description>
+        <Description>{project.description || 'No description available'}</Description>
       </Details>
       <Members>
-        {project.member?.map((member) => (
-          <Avatar src={member.img} />
+        {project.member?.map((member, index) => (
+          <AvatarContainer key={index}>
+            <OptimizedImage 
+              src={member.img || "/placeholder-image.jpg"} 
+              alt={`${member.name || 'Team member'} avatar`}
+              width="100%"
+              height="100%"
+              objectFit="cover"
+            />
+          </AvatarContainer>
         ))}
       </Members>
       {/* <Button>View Project</Button> */}

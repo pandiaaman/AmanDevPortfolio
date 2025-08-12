@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-
+import OptimizedImage from "../OptimizedImage";
 import { WorkExperienceButton } from "../HeroSection/HeroStyle";
+import FallbackImage from "../FallbackImage";
 
 const Document = styled.img`
   display: none;
@@ -76,13 +77,16 @@ const Top = styled.div`
   gap: 12px;
 `;
 
-const Image = styled.img`
+const ImageContainer = styled.div`
   height: 50px;
+  width: 50px;
   background-color: #000;
   border-radius: 10px;
   margin-top: 4px;
+  overflow: hidden;
   @media only screen and (max-width: 768px) {
     height: 40px;
+    width: 40px;
   }
 `;
 
@@ -142,14 +146,51 @@ const Skill = styled.div`
 `;
 
 const ExperienceCard = ({ experience }) => {
+  // Defensive programming: handle undefined experience
+  if (!experience) {
+    return (
+      <Card>
+        <Top>
+          <ImageContainer>
+            <FallbackImage 
+              alt="Experience placeholder"
+              width="100%"
+              height="100%"
+              borderRadius="10px"
+            />
+          </ImageContainer>
+          <Body>
+            <Role>Experience not available</Role>
+            <Company>Unknown Company</Company>
+            <Date>Date not available</Date>
+          </Body>
+        </Top>
+        <Description>
+          <Span>Experience information is not available.</Span>
+        </Description>
+      </Card>
+    );
+  }
+
   return (
     <Card>
       <Top>
-        <Image src={experience.img} />
+        <ImageContainer>
+          <OptimizedImage 
+            src={experience.img} 
+            alt={`${experience.company || 'Company'} logo`}
+            width="100%"
+            height="100%"
+            objectFit="contain"
+            styles={{
+              borderRadius: '10px'
+            }}
+          />
+        </ImageContainer>
         <Body>
-          <Role>{experience.role}</Role>
-          <Company>{experience.company}</Company>
-          <Date>{experience.date}</Date>
+          <Role>{experience.role || 'Role not specified'}</Role>
+          <Company>{experience.company || 'Company not specified'}</Company>
+          <Date>{experience.date || 'Date not available'}</Date>
         </Body>
       </Top>
       <Description>
@@ -161,7 +202,7 @@ const ExperienceCard = ({ experience }) => {
               <b>Skills:</b>
               <ItemWrapper>
                 {experience?.skills?.map((skill, index) => (
-                  <Skill>• {skill}</Skill>
+                  <Skill key={index}>• {skill}</Skill>
                 ))}
               </ItemWrapper>
             </Skills>
@@ -169,7 +210,7 @@ const ExperienceCard = ({ experience }) => {
         )}
       </Description>
       {experience.doc && (
-        <WorkExperienceButton Button href={experience.doc} target="display">
+        <WorkExperienceButton href={experience.doc} target="display">
           Work Experience letter
         </WorkExperienceButton>
       )}

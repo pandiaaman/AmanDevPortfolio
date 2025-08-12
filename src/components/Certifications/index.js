@@ -87,8 +87,8 @@ const index = () => {
 
         <DivWithBlockDisplay>
           <Slider {...settings}>
-            {certifications.map((certificate, index) => (
-              <CertificationCard key={index} certificate={certificate} />
+            {certifications.map((certification, index) => (
+              <CertificationCard key={index} certification={certification} />
             ))}
           </Slider>
         </DivWithBlockDisplay>

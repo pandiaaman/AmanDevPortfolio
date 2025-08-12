@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-
-import { CertificationButton } from "../HeroSection/HeroStyle";
+import OptimizedImage from "../OptimizedImage";
+import { WorkExperienceButton } from "../HeroSection/HeroStyle";
+import FallbackImage from "../FallbackImage";
 
 const Document = styled.img`
   display: none;
@@ -36,12 +37,12 @@ const Span = styled.span`
 `;
 
 const Card = styled.div`
-  max-width: 600px;
+  width: 650px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 12px 16px;
   justify-content: space-between;
-  margin: 1rem;
+  position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -54,9 +55,7 @@ const Card = styled.div`
   @media only screen and (max-width: 768px) {
     padding: 10px;
     gap: 8px;
-    margin: 0.5rem;
-    min-width: 280px;
-    max-width: 100%;
+    width: 300px;
   }
 
   &:hover ${Document} {
@@ -76,18 +75,18 @@ const Top = styled.div`
   width: 100%;
   display: flex;
   gap: 12px;
-  @media only screen and (max-width: 768px) {
-    gap: 8px;
-  }
 `;
 
-const Image = styled.img`
+const ImageContainer = styled.div`
   height: 50px;
+  width: 50px;
   background-color: #000;
   border-radius: 10px;
   margin-top: 4px;
+  overflow: hidden;
   @media only screen and (max-width: 768px) {
     height: 40px;
+    width: 40px;
   }
 `;
 
@@ -95,8 +94,6 @@ const Body = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  min-width: 0;
 `;
 
 const Role = styled.div`
@@ -131,20 +128,12 @@ const Skills = styled.div`
   display: flex;
   gap: 12px;
   margin-top: -10px;
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
-    gap: 8px;
-    margin-top: -5px;
-  }
 `;
 
 const ItemWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  @media only screen and (max-width: 768px) {
-    gap: 4px;
-  }
 `;
 
 const Skill = styled.div`
@@ -156,26 +145,63 @@ const Skill = styled.div`
   }
 `;
 
-const CertificationCard = ({ certificate }) => {
+const CertificationCard = ({ certification }) => {
+  // Defensive programming: handle undefined certification
+  if (!certification) {
+    return (
+      <Card>
+        <Top>
+          <ImageContainer>
+            <FallbackImage 
+              alt="Certification placeholder"
+              width="100%"
+              height="100%"
+              borderRadius="10px"
+            />
+          </ImageContainer>
+          <Body>
+            <Role>Certification not available</Role>
+            <Company>N/A</Company>
+            <Date>N/A</Date>
+          </Body>
+        </Top>
+        <Description>
+          <Span>Certification information is not available.</Span>
+        </Description>
+      </Card>
+    );
+  }
+
   return (
     <Card>
       <Top>
-        <Image src={certificate.img} />
+        <ImageContainer>
+          <OptimizedImage 
+            src={certification.img} 
+            alt={`${certification.role || 'Certification'} from ${certification.company || 'Unknown Company'}`}
+            width="100%"
+            height="100%"
+            objectFit="contain"
+            styles={{
+              borderRadius: '10px'
+            }}
+          />
+        </ImageContainer>
         <Body>
-          <Role>{certificate.role}</Role>
-          <Company>{certificate.company}</Company>
-          <Date>{certificate.date}</Date>
+          <Role>{certification.role || 'Certification'}</Role>
+          <Company>{certification.company || 'Unknown Company'}</Company>
+          <Date>{certification.date || 'Date not available'}</Date>
         </Body>
       </Top>
       <Description>
-        {certificate?.desc && <Span>{certificate?.desc}</Span>}
-        {certificate?.skills && (
+        {certification?.desc && <Span>{certification?.desc}</Span>}
+        {certification?.skills && (
           <>
             <br />
             <Skills>
               <b>Skills:</b>
               <ItemWrapper>
-                {certificate?.skills?.map((skill, index) => (
+                {certification?.skills?.map((skill, index) => (
                   <Skill key={index}>• {skill}</Skill>
                 ))}
               </ItemWrapper>
@@ -183,10 +209,10 @@ const CertificationCard = ({ certificate }) => {
           </>
         )}
       </Description>
-      {certificate.doc && (
-        <CertificationButton Button href={certificate.doc} target="display">
-          View Certification
-        </CertificationButton>
+      {certification.doc && (
+        <WorkExperienceButton href={certification.doc} target="display">
+          View Certificate
+        </WorkExperienceButton>
       )}
     </Card>
   );

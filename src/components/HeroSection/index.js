@@ -16,6 +16,7 @@ import {
 import HeroImg from "../../images/HeroImage.jpg";
 import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/constants";
+import OptimizedImage from "../OptimizedImage";
 
 const HeroSection = () => {
   return (
@@ -51,7 +52,28 @@ const HeroSection = () => {
           </HeroLeftContainer>
 
           <HeroRightContainer id="Right">
-            <Img src={HeroImg} alt="hero-image" />
+            <OptimizedImage 
+              src={HeroImg} 
+              alt="Aman Pandia - Full Stack Developer and Software Architect"
+              width={400}
+              height={400}
+              objectFit="cover"
+              lazy={false}
+              styles={{
+                borderRadius: '50%',
+                border: '2px solid #854CE6',
+                maxWidth: '400px',
+                maxHeight: '400px',
+                '@media (max-width: 768px)': {
+                  maxWidth: '400px',
+                  maxHeight: '400px'
+                },
+                '@media (max-width: 640px)': {
+                  maxWidth: '280px',
+                  maxHeight: '280px'
+                }
+              }}
+            />
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>

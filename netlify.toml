@@ -6,6 +6,52 @@
   NODE_VERSION = "18"
   NPM_VERSION = "9"
 
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+# Image CDN configuration
+[images]
+  remote_images = [
+    "https://i.imgur.com/.*",
+    "https://upload.wikimedia.org/.*",
+    "https://raw.githubusercontent.com/.*",
+    "https://www.vectorlogo.zone/.*",
+    "https://cdn-icons-png.flaticon.com/.*",
+    "https://cdn.iconscout.com/.*",
+    "https://freesvg.org/.*",
+    "https://toppng.com/.*",
+    "https://download.logo.wine/.*",
+    "https://encrypted-tbn0.gstatic.com/.*",
+    "https://d33wubrfki0l68.cloudfront.net/.*",
+    "https://static-00.iconduck.com/.*",
+    "https://www.postgresql.org/.*",
+    "https://www.loffler.com/.*",
+    "https://images.credly.com/.*",
+    "https://d3njjcbhbojbot.cloudfront.net/.*",
+    "https://vectorlogoseek.com/.*",
+    "https://www.equitybulls.com/.*",
+    "https://media.licdn.com/.*",
+    "https://aaruush22-bucket.s3.ap-south-1.amazonaws.com/.*",
+    "https://p.kindpng.com/.*",
+    "https://olympus1.mygreatlearning.com/.*",
+    "https://eportfolio.mygreatlearning.com/.*",
+    "https://miro.medium.com/.*",
+    "https://s3-alpha.figma.com/.*",
+    "https://camo.githubusercontent.com/.*",
+    "https://e7.pngegg.com/.*",
+    "https://github.githubassets.com/.*",
+    "https://seeklogo.com/.*",
+    "https://www.w3.org/.*"
+  ]
+
 # Headers for SEO and performance
 [[headers]]
   for = "/*"
@@ -58,6 +104,37 @@
   for = "/robots.txt"
   [headers.values]
     Content-Type = "text/plain"
+
+# Image CDN redirects for optimized images
+[[redirects]]
+  # Serve full-size optimized images
+  from = "/images/full/:file"
+  to = "/.netlify/images?url=/images/:file"
+  status = 200
+
+[[redirects]]
+  # Serve resized images with width parameter
+  from = "/images/:width/:file"
+  to = "/.netlify/images?url=/images/:file&width=:width"
+  status = 200
+
+[[redirects]]
+  # Serve optimized images with quality parameter
+  from = "/images/optimized/:file"
+  to = "/.netlify/images?url=/images/:file&q=80"
+  status = 200
+
+[[redirects]]
+  # Serve WebP format images
+  from = "/images/webp/:file"
+  to = "/.netlify/images?url=/images/:file&fm=webp"
+  status = 200
+
+[[redirects]]
+  # Serve AVIF format images
+  from = "/images/avif/:file"
+  to = "/.netlify/images?url=/images/:file&fm=avif"
+  status = 200
 
 # Redirects for SEO
 [[redirects]]

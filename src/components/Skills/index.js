@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { skills } from "../../data/constants";
+import { ThumbnailImage } from "../OptimizedImage";
 
 const Container = styled.div`
   display: flex;
@@ -111,9 +112,12 @@ const SkillItem = styled.div`
   }
 `;
 
-const SkillImage = styled.img`
+const SkillImageContainer = styled.div`
   width: 24px;
   height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Skills = () => {
@@ -126,13 +130,22 @@ const Skills = () => {
           last 5 years.
         </Desc>
         <SkillsContainer>
-          {skills.map((skill) => (
-            <Skill>
+          {skills.map((skill, skillIndex) => (
+            <Skill key={skillIndex}>
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image} />
+                {skill.skills.map((item, itemIndex) => (
+                  <SkillItem key={itemIndex}>
+                    <SkillImageContainer>
+                      <ThumbnailImage 
+                        src={item.image} 
+                        alt={`${item.name} icon`}
+                        width={24}
+                        height={24}
+                        objectFit="contain"
+                        quality={70}
+                      />
+                    </SkillImageContainer>
                     {item.name}
                   </SkillItem>
                 ))}

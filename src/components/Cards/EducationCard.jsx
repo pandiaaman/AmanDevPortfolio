@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { WorkButton } from "../HeroSection/HeroStyle";
+import OptimizedImage from "../OptimizedImage";
+import { WorkExperienceButton } from "../HeroSection/HeroStyle";
+import FallbackImage from "../FallbackImage";
 
 const Document = styled.img`
   display: none;
@@ -37,7 +39,7 @@ const Span = styled.span`
 const Card = styled.div`
   width: 650px;
   border-radius: 10px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 12px 16px;
   justify-content: space-between;
   position: relative;
@@ -64,7 +66,9 @@ const Card = styled.div`
     overflow: visible;
     -webkit-line-clamp: unset;
   }
-  border: 0.1px solid #854ce6;
+
+  border: 0.1px solid #306ee8;
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `;
 
 const Top = styled.div`
@@ -73,13 +77,16 @@ const Top = styled.div`
   gap: 12px;
 `;
 
-const Image = styled.img`
+const ImageContainer = styled.div`
   height: 50px;
+  width: 50px;
   background-color: #000;
   border-radius: 10px;
   margin-top: 4px;
+  overflow: hidden;
   @media only screen and (max-width: 768px) {
     height: 40px;
+    width: 40px;
   }
 `;
 
@@ -89,7 +96,7 @@ const Body = styled.div`
   flex-direction: column;
 `;
 
-const Name = styled.div`
+const Role = styled.div`
   font-size: 18px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary + 99};
@@ -98,7 +105,7 @@ const Name = styled.div`
   }
 `;
 
-const Degree = styled.div`
+const Company = styled.div`
   font-size: 14px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_secondary + 99};
@@ -116,47 +123,94 @@ const Date = styled.div`
   }
 `;
 
-const Grade = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
+const Skills = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  margin-top: -10px;
+`;
+
+const ItemWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+`;
+
+const Skill = styled.div`
+  font-size: 15px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary + 99};
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
 `;
 
 const EducationCard = ({ education }) => {
+  // Defensive programming: handle undefined education
+  if (!education) {
+    return (
+      <Card>
+        <Top>
+          <ImageContainer>
+            <FallbackImage 
+              alt="Education placeholder"
+              width="100%"
+              height="100%"
+              borderRadius="10px"
+            />
+          </ImageContainer>
+          <Body>
+            <Role>Education not available</Role>
+            <Company>Unknown Institution</Company>
+            <Date>Date not available</Date>
+          </Body>
+        </Top>
+        <Description>
+          <Span>Education information is not available.</Span>
+        </Description>
+      </Card>
+    );
+  }
+
   return (
     <Card>
       <Top>
-        <Image src={education.img} />
+        <ImageContainer>
+          <OptimizedImage 
+            src={education.img} 
+            alt={`${education.school || 'Institution'} logo`}
+            width="100%"
+            height="100%"
+            objectFit="contain"
+            styles={{
+              borderRadius: '10px'
+            }}
+          />
+        </ImageContainer>
         <Body>
-          <Name>{education.school}</Name>
-          <Degree>{education.degree}</Degree>
-          <Date>{education.date}</Date>
+          <Role>{education.degree || 'Degree not specified'}</Role>
+          <Company>{education.school || 'Institution not specified'}</Company>
+          <Date>{education.date || 'Date not available'}</Date>
         </Body>
       </Top>
-      <Grade>
-        <b>Grade: </b>
-        {education.grade}
-      </Grade>
       <Description>
-        <Span>{education.desc}</Span>
+        {education?.desc && <Span>{education?.desc}</Span>}
+        {education?.grade && (
+          <>
+            <br />
+            <Skills>
+              <b>Grade:</b>
+              <ItemWrapper>
+                <Skill>{education?.grade}</Skill>
+              </ItemWrapper>
+            </Skills>
+          </>
+        )}
       </Description>
       {education.degreedoc && (
-        <WorkButton href={education.degreedoc} target="display">
-          See Degree
-        </WorkButton>
-      )}
-      {education.transcripts && (
-        <WorkButton href={education.transcripts} target="display">
-          See Transcripts
-        </WorkButton>
-      )}
-      {education.scholarogrades && (
-        <WorkButton href={education.scholarogrades} target="display">
-          See Converted Scholaro Grades
-        </WorkButton>
+        <WorkExperienceButton href={education.degreedoc} target="display">
+          Degree Certificate
+        </WorkExperienceButton>
       )}
     </Card>
   );
