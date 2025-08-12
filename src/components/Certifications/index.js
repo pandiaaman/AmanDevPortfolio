@@ -54,6 +54,31 @@ const index = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        }
+      }
+    ]
   };
   return (
     <Container id="certifications">
@@ -63,7 +88,7 @@ const index = () => {
         <DivWithBlockDisplay>
           <Slider {...settings}>
             {certifications.map((certificate, index) => (
-              <CertificationCard certificate={certificate} />
+              <CertificationCard key={index} certificate={certificate} />
             ))}
           </Slider>
         </DivWithBlockDisplay>
