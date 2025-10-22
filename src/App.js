@@ -119,6 +119,7 @@ const MainContent = () => {
             ) : ( */}
             <>
               <HeroSection />
+              <TextFlow />
               <Wrapper>
                 <Skills />
                 <Experience />

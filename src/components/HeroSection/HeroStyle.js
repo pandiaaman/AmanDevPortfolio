@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -168,113 +167,174 @@ export const SubTitle = styled.div`
 `;
 
 export const ResumeButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
     width: 95%;
     max-width: 230px;
     text-align: center;
-    padding: 16px 0;
-    margin-right:40px;
-    margin-bottom:15px;
-    color:${({ theme }) => theme.white};
+    padding: 16px 20px;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    color: ${({ theme }) => theme.white};
     border-radius: 20px;
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
+    font-family: inherit;
+    line-height: 1.2;
+    white-space: nowrap;
+    vertical-align: middle;
     transition: all 0.2s ease-in-out !important;
     background: hsla(271, 100%, 50%, 1);
     background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     
-    -20px -20px 60px #1F2634;
+    /* Firefox specific fixes */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    
     &:hover {
         transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    
-    filter: brightness(1);
+        transition: all 0.4s ease-in-out;
+        filter: brightness(1.1);
     }    
     
+    &:focus {
+        outline: 2px solid ${({ theme }) => theme.primary};
+        outline-offset: 2px;
+    }
+    
+    &:active {
+        transform: scale(0.98);
+    }
     
     @media (max-width: 640px) {
-        padding: 12px 0;
+        padding: 12px 16px;
         font-size: 18px;
+        margin-right: 20px;
+        margin-bottom: 10px;
     } 
-
 `;
 
 export const WorkButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
     width: 95%;
     max-width: 220px;
     text-align: center;
-    padding: 10px 0;
-    margin-right:20px;
-    margin-bottom:10px;
-    color:${({ theme }) => theme.white};
+    padding: 10px 16px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    color: ${({ theme }) => theme.white};
     border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 300;
+    font-family: inherit;
+    line-height: 1.2;
+    white-space: nowrap;
+    vertical-align: middle;
     transition: all 0.2s ease-in-out !important;
     background: hsla(271, 100%, 50%, 1);
     background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  2px 2px 6px #1F2634,
-    -3 -3px 1px #1F2634;
+    box-shadow: 2px 2px 6px #1F2634, -3px -3px 1px #1F2634;
+    
+    /* Firefox specific fixes */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    
     &:hover {
         transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
+        transition: all 0.4s ease-in-out;
+        box-shadow: 20px 20px 60px #1F2634;
+        filter: brightness(1.1);
+    }
     
+    &:focus {
+        outline: 2px solid ${({ theme }) => theme.primary};
+        outline-offset: 2px;
+    }
+    
+    &:active {
+        transform: scale(0.98);
+    }
     
     @media (max-width: 640px) {
-        padding: 12px 0;
+        padding: 12px 16px;
         font-size: 18px;
     } 
-
 `;
 
 export const CertificationButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
     width: 100%;
     max-width: 220px;
     text-align: center;
-    padding: 10px 0;
-    margin-right:20px;
-    margin-bottom:10px;
-    color:${({ theme }) => theme.white};
+    padding: 10px 16px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    color: ${({ theme }) => theme.white};
     border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 300;
+    font-family: inherit;
+    line-height: 1.2;
+    white-space: nowrap;
+    vertical-align: middle;
     transition: all 0.2s ease-in-out !important;
     background: hsla(271, 100%, 50%, 1);
     background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     
+    /* Firefox specific fixes */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    
     &:hover {
         transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
+        transition: all 0.4s ease-in-out;
+        box-shadow: 20px 20px 60px #1F2634;
+        filter: brightness(1.1);
+    }
     
+    &:focus {
+        outline: 2px solid ${({ theme }) => theme.primary};
+        outline-offset: 2px;
+    }
+    
+    &:active {
+        transform: scale(0.98);
+    }
     
     @media (max-width: 768px) {
-        padding: 8px 0;
+        padding: 8px 12px;
         font-size: 12px;
         max-width: 100%;
         margin-right: 0;
@@ -282,45 +342,64 @@ export const CertificationButton = styled.a`
     }
     
     @media (max-width: 640px) {
-        padding: 12px 0;
+        padding: 12px 16px;
         font-size: 18px;
     } 
-
 `;
 
 export const WorkExperienceButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
     width: 95%;
     max-width: 220px;
     text-align: center;
-    padding: 10px 0;
-    margin-right:20px;
-    margin-bottom:10px;
-    color:${({ theme }) => theme.white};
+    padding: 10px 16px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    color: ${({ theme }) => theme.white};
     border-radius: 20px;
     cursor: pointer;
     font-size: 15px;
     font-weight: 400;
+    font-family: inherit;
+    line-height: 1.2;
+    white-space: nowrap;
+    vertical-align: middle;
     transition: all 0.2s ease-in-out !important;
     background: hsla(271, 100%, 50%, 1);
     background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
 
+    /* Firefox specific fixes */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
     &:hover {
         transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
+        transition: all 0.4s ease-in-out;
+        box-shadow: 20px 20px 60px #1F2634;
+        filter: brightness(1.1);
+    }
     
+    &:focus {
+        outline: 2px solid ${({ theme }) => theme.primary};
+        outline-offset: 2px;
+    }
+    
+    &:active {
+        transform: scale(0.98);
+    }
     
     @media (max-width: 640px) {
-        padding: 12px 0;
+        padding: 12px 16px;
         font-size: 12px;
     } 
-
 `;

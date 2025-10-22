@@ -103,17 +103,19 @@ export const LightBulb = styled.div`
   background: ${({ isLight, theme }) => 
     isLight 
       ? `radial-gradient(ellipse at center top, #fff9e6 0%, #ffd700 40%, #ffb347 80%, #ff8c00 100%)`
-      : `radial-gradient(ellipse at center top, #3a3a3a 0%, #2a2a2a 40%, #1a1a1a 80%, #0f0f0f 100%)`
+      : `radial-gradient(ellipse at center top, #4a4a4a 0%, #3a3a3a 40%, #2a2a2a 80%, #1a1a1a 100%)`
   };
   border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
   position: relative;
   margin: 0 auto;
-  border: 1px solid ${({ theme }) => theme.text_secondary}40;
+  border: 1px solid ${({ theme, isLight }) => 
+    isLight ? `${theme.text_secondary}40` : `${theme.text_secondary}80`
+  };
   transition: all 0.3s ease;
   box-shadow: ${({ isLight }) => 
     isLight 
       ? '0 0 15px rgba(255, 215, 0, 0.5), 0 0 25px rgba(255, 215, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.3)'
-      : '0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.1)'
+      : '0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 215, 0, 0.2)'
   };
   
   /* Screw thread at top */
@@ -152,28 +154,53 @@ export const LightBulb = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 12px;
-    height: 8px;
-    opacity: ${({ isLight }) => isLight ? 0.8 : 0.3};
+    width: 14px;
+    height: 10px;
+    opacity: 1;
     
     &::before,
     &::after {
       content: '';
       position: absolute;
-      width: 1px;
-      height: 6px;
-      background: ${({ isLight }) => isLight ? '#ffaa00' : '#666'};
+      width: ${({ isLight }) => isLight ? '1px' : '1.5px'};
+      height: ${({ isLight }) => isLight ? '6px' : '8px'};
+      background: ${({ isLight }) => 
+        isLight 
+          ? '#cc8800' 
+          : '#ffd700'
+      };
       border-radius: 0.5px;
+      box-shadow: ${({ isLight }) => 
+        isLight 
+          ? 'none' 
+          : '0 0 3px rgba(255, 215, 0, 0.6), 0 0 6px rgba(255, 215, 0, 0.4)'
+      };
+      animation: ${({ isLight }) => 
+        isLight 
+          ? 'none' 
+          : 'filamentGlow 2s ease-in-out infinite alternate'
+      };
     }
     
     &::before {
-      left: 3px;
+      left: 4px;
       transform: rotate(15deg);
     }
     
     &::after {
-      right: 3px;
+      right: 4px;
       transform: rotate(-15deg);
+    }
+  }
+  
+  @keyframes filamentGlow {
+    0% { 
+      filter: brightness(1);
+      box-shadow: 0 0 3px rgba(255, 215, 0, 0.6), 0 0 6px rgba(255, 215, 0, 0.4);
+    }
+    100% { 
+      filter: brightness(1.3);
+      box-shadow: 0 0 4px rgba(255, 215, 0, 0.8), 0 0 8px rgba(255, 215, 0, 0.6);
     }
   }
   
@@ -194,6 +221,17 @@ export const LightBulb = styled.div`
     &:after {
       width: 14px;
       height: 3px;
+    }
+    
+    & > div {
+      width: 12px;
+      height: 8px;
+      
+      &::before,
+      &::after {
+        width: ${({ isLight }) => isLight ? '1px' : '1.5px'};
+        height: ${({ isLight }) => isLight ? '5px' : '6px'};
+      }
     }
   }
 `;
