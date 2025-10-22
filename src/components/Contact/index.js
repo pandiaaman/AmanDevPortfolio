@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useRef } from "react";
 import { Snackbar } from "@mui/material";
+import emailjs from '@emailjs/browser';
 
 const Container = styled.div`
   display: flex;
@@ -58,12 +59,33 @@ const ContactForm = styled.form`
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.card};
+  background: ${({ theme }) => theme.card};
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid ${({ theme }) => theme.glass_border};
   padding: 32px;
-  border-radius: 16px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px ${({ theme }) => theme.glass_shadow},
+    inset 0 1px 0 ${({ theme }) => theme.glass_highlight};
   margin-top: 28px;
   gap: 12px;
+  position: relative;
+  
+  /* Glass reflection effect */
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      transparent, 
+      ${({ theme }) => theme.glass_highlight}, 
+      transparent
+    );
+  }
 `;
 
 const ContactTitle = styled.div`
@@ -108,58 +130,112 @@ const ContactButton = styled.input`
   width: 100%;
   text-decoration: none;
   text-align: center;
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
+  background: linear-gradient(135deg, 
+    rgba(133, 76, 230, 0.8) 0%, 
+    rgba(147, 51, 234, 0.9) 100%
   );
-  background: -moz-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  padding: 13px 16px;
-  margin-top: 2px;
-  border-radius: 12px;
-  border: none;
-  color: ${({ theme }) => theme.text_primary};
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid ${({ theme }) => theme.glass_border};
+  padding: 16px 20px;
+  margin-top: 8px;
+  border-radius: 15px;
+  color: ${({ theme }) => theme.white};
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 
+    0 4px 16px rgba(133, 76, 230, 0.3),
+    inset 0 1px 0 ${({ theme }) => theme.glass_highlight};
+  position: relative;
+  overflow: hidden;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.2), 
+      transparent
+    );
+    transition: left 0.5s ease-in-out;
+  }
+  
+  &:hover {
+    transform: translateY(-2px) scale(1.02);
+    background: linear-gradient(135deg, 
+      rgba(133, 76, 230, 0.9) 0%, 
+      rgba(147, 51, 234, 1) 100%
+    );
+    box-shadow: 
+      0 8px 24px rgba(133, 76, 230, 0.4),
+      inset 0 1px 0 ${({ theme }) => theme.glass_highlight};
+      
+    &:before {
+      left: 100%;
+    }
+  }
+  
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
 `;
 
 const Contact = () => {
   //hooks
   const [open, setOpen] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.confirm("sent!");
-    console.log("submitted " + e);
-    window.location.reload();
-    // e.preventDefault();
-    // emailjs
-    //   .sendForm(
-    //     "service_tox7kqs",
-    //     "template_nv7k7mj",
-    //     form.current,
-    //     "SybVGsYS52j2TfLbi"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       setOpen(true);
-    //       form.current.reset();
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    setLoading(true);
+    
+    // EmailJS configuration - Update these with your actual EmailJS credentials
+    const serviceId = 'service_tvnjtjd'; // Replace with your EmailJS service ID
+    const templateId = 'template_d28xlhv'; // Replace with your EmailJS template ID  
+    const publicKey = 'iMT-2HdRykzTA88qr'; // Replace with your EmailJS public key
+    
+    // Get form data for validation
+    const formData = new FormData(form.current);
+    const email = formData.get('from_email');
+    const name = formData.get('from_name');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
+    
+    // Basic validation
+    if (!email || !name || !subject || !message) {
+      alert('Please fill in all fields');
+      setLoading(false);
+      return;
+    }
+    
+    emailjs
+      .sendForm(serviceId, templateId, form.current, publicKey)
+      .then(
+        (result) => {
+          console.log('Email sent successfully:', result.text);
+          setOpen(true);
+          form.current.reset();
+          setLoading(false);
+        },
+        (error) => {
+          console.log('Email sending failed:', error.text);
+          alert('Failed to send email. Please try again or contact directly at pandiaaman16@gmail.com');
+          setLoading(false);
+        }
+      );
   };
 
   return (
@@ -192,7 +268,11 @@ const Contact = () => {
             name="message"
             required
           />
-          <ContactButton type="submit" value="Send" />
+          <ContactButton 
+            type="submit" 
+            value={loading ? "Sending..." : "Send"} 
+            disabled={loading}
+          />
         </ContactForm>
         <Snackbar
           open={open}

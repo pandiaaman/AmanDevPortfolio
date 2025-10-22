@@ -72,7 +72,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo>
+        <NavLogo onClick={handleThemeToggle}>
           <LogoText>
             <Span>Aman's Portfolio</Span>
           </LogoText>
