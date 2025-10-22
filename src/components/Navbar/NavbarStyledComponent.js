@@ -34,11 +34,242 @@ export const NavLogo = styled(LinkR)`
   justify-content: start;
   align-items: center;
   text-decoration: none;
-              alignItems: center,
-              marginBottom: 20,
-              cursor: pointer,
+  cursor: pointer;
   @media (max-width: 640px) {
     padding: 0 0px;
+  }
+`;
+
+export const HangingLightContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 220px;
+  z-index: 15;
+  cursor: pointer;
+  overflow: visible;
+  transform-origin: top center;
+  animation: ${({ isSwinging }) => 
+    isSwinging ? 'containerSwing 3s ease-in-out infinite alternate' : 'none'};
+  
+  @keyframes containerSwing {
+    0% { transform: rotate(-8deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(6deg); }
+    100% { transform: rotate(-8deg); }
+  }
+  
+  @media (max-width: 768px) {
+    left: 200px;
+  }
+  
+  @media (max-width: 640px) {
+    left: 160px;
+  }
+`;
+
+export const Wire = styled.div`
+  width: 1.5px;
+  height: 65px;
+  background: linear-gradient(to bottom, 
+    ${({ theme }) => theme.text_secondary} 0%, 
+    ${({ theme }) => theme.text_secondary}80 50%, 
+    ${({ theme }) => theme.text_secondary} 100%
+  );
+  margin: 0 auto;
+  position: relative;
+  border-radius: 1px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 3px;
+    background: ${({ theme }) => theme.text_secondary};
+    border-radius: 1px;
+  }
+  
+  @media (max-width: 768px) {
+    height: 50px;
+  }
+`;
+
+export const LightBulb = styled.div`
+  width: 28px;
+  height: 36px;
+  background: ${({ isLight, theme }) => 
+    isLight 
+      ? `radial-gradient(ellipse at center top, #fff9e6 0%, #ffd700 40%, #ffb347 80%, #ff8c00 100%)`
+      : `radial-gradient(ellipse at center top, #3a3a3a 0%, #2a2a2a 40%, #1a1a1a 80%, #0f0f0f 100%)`
+  };
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid ${({ theme }) => theme.text_secondary}40;
+  transition: all 0.3s ease;
+  box-shadow: ${({ isLight }) => 
+    isLight 
+      ? '0 0 15px rgba(255, 215, 0, 0.5), 0 0 25px rgba(255, 215, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.3)'
+      : '0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.1)'
+  };
+  
+  /* Screw thread at top */
+  &:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 6px;
+    background: ${({ theme }) => theme.text_secondary};
+    border-radius: 1px;
+    box-shadow: 
+      0 2px 0 ${({ theme }) => theme.text_secondary},
+      0 4px 0 ${({ theme }) => theme.text_secondary};
+  }
+  
+  /* Base contact */
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 4px;
+    background: ${({ theme }) => theme.text_secondary};
+    border-radius: 2px;
+    border: 1px solid ${({ theme }) => theme.text_secondary}60;
+  }
+  
+  /* Filament inside the bulb */
+  & > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 8px;
+    opacity: ${({ isLight }) => isLight ? 0.8 : 0.3};
+    
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 6px;
+      background: ${({ isLight }) => isLight ? '#ffaa00' : '#666'};
+      border-radius: 0.5px;
+    }
+    
+    &::before {
+      left: 3px;
+      transform: rotate(15deg);
+    }
+    
+    &::after {
+      right: 3px;
+      transform: rotate(-15deg);
+    }
+  }
+  
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+  
+  @media (max-width: 768px) {
+    width: 24px;
+    height: 30px;
+    
+    &:before {
+      width: 12px;
+      height: 5px;
+    }
+    
+    &:after {
+      width: 14px;
+      height: 3px;
+    }
+  }
+`;
+
+export const LightRays = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  opacity: ${({ isLight }) => isLight ? 0.7 : 0};
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 12px;
+    background: #ffd700;
+    transform-origin: center;
+    animation: ${({ isLight }) => isLight ? 'rayGlow 2s ease-in-out infinite alternate' : 'none'};
+  }
+  
+  &:before {
+    transform: translate(-50%, -50%) rotate(0deg);
+    box-shadow: 
+      0 0 2px #ffd700,
+      12px 0 0 0 #ffd700,
+      -12px 0 0 0 #ffd700,
+      0 12px 0 0 #ffd700,
+      0 -12px 0 0 #ffd700;
+  }
+  
+  &:after {
+    transform: translate(-50%, -50%) rotate(45deg);
+    box-shadow: 
+      0 0 2px #ffd700,
+      8px 8px 0 0 #ffd700,
+      -8px -8px 0 0 #ffd700,
+      8px -8px 0 0 #ffd700,
+      -8px 8px 0 0 #ffd700;
+  }
+  
+  @keyframes rayGlow {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+  }
+  
+  @media (max-width: 768px) {
+    width: 45px;
+    height: 45px;
+    
+    &:before {
+      height: 10px;
+      box-shadow: 
+        0 0 2px #ffd700,
+        10px 0 0 0 #ffd700,
+        -10px 0 0 0 #ffd700,
+        0 10px 0 0 #ffd700,
+        0 -10px 0 0 #ffd700;
+    }
+    
+    &:after {
+      height: 10px;
+      box-shadow: 
+        0 0 2px #ffd700,
+        7px 7px 0 0 #ffd700,
+        -7px -7px 0 0 #ffd700,
+        7px -7px 0 0 #ffd700,
+        -7px 7px 0 0 #ffd700;
+    }
   }
 `;
 export const Span = styled.div`

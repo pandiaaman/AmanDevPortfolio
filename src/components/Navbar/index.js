@@ -12,8 +12,11 @@ import {
   MobileIcon,
   MobileMenu,
   MobileLink,
+  HangingLightContainer,
+  Wire,
+  LightBulb,
+  LightRays,
 } from "./NavbarStyledComponent";
-import { IoPartlySunnySharp } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/constants";
 import { useTheme } from "styled-components";
@@ -55,20 +58,33 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const currentYear = new Date().getFullYear();
 
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isSwinging, setIsSwinging] = React.useState(false);
 
   const theme = useTheme();
+
+  const handleThemeToggle = () => {
+    setIsSwinging(true);
+    setDarkMode(!darkMode);
+    // Stop swinging animation after 3 seconds
+    setTimeout(() => setIsSwinging(false), 3400);
+  };
+
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo
-          onClick={() => {
-            setDarkMode(!darkMode);
-          }}
-        >
+        <NavLogo>
           <LogoText>
-            <IoPartlySunnySharp size="3rem" /> <Span>Aman's Portfolio</Span>{" "}
+            <Span>Aman's Portfolio</Span>
           </LogoText>
         </NavLogo>
+        
+        <HangingLightContainer onClick={handleThemeToggle} isSwinging={isSwinging}>
+          <Wire />
+          <LightBulb isLight={!darkMode}>
+            <div /> {/* Filament */}
+            <LightRays isLight={!darkMode} />
+          </LightBulb>
+        </HangingLightContainer>
         <MobileIcon>
           <FaBars
             onClick={() => {
