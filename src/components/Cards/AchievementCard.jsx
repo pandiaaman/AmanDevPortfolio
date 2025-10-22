@@ -198,6 +198,24 @@ const AchievementCard = ({ achievement }) => {
           AirForce Recommendation
         </CertificationButton>
       )}
+      {achievement.rolemodel && (
+        <CertificationButton
+          Button
+          href={achievement.rolemodel}
+          target="display"
+        >
+          Role Model Award
+        </CertificationButton>
+      )}
+      {achievement.bestteam && (
+        <CertificationButton
+          Button
+          href={achievement.bestteam}
+          target="display"
+        >
+          Best Team Award
+        </CertificationButton>
+      )}
       {achievement.ielts && (
         <CertificationButton Button href={achievement.ielts} target="display">
           View Scorecard
