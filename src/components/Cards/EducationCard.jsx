@@ -155,7 +155,7 @@ const EducationCard = ({ education }) => {
       )}
       {education.scholarogrades && (
         <WorkButton href={education.scholarogrades} target="display">
-          See Converted Scholaro Grades
+          See Scholaro Grades
         </WorkButton>
       )}
     </Card>
