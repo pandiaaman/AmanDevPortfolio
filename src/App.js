@@ -123,7 +123,6 @@ const MainContent = () => {
                 <Skills />
                 <Experience />
               </Wrapper>
-              <Projects openModal={openModal} setOpenModal={setOpenModal} />
               <Wrapper>
                 <Education />
                 <Patents />
