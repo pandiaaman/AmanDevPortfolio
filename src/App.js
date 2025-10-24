@@ -20,38 +20,12 @@ import styled from "styled-components";
 import TextFlow from "./components/TextFlow/index.js";
 import Certifications from "./components/Certifications";
 import Recommendations from "./components/Recommendations";
+import FlyingBirds from "./components/FlyingBirds";
+import FlyingBats from "./components/FlyingBats";
 // import LoadingScreen from "./components/LoadingScreen/LoadingScreen.js";
 
 //
-import restapi from "./images/restapi.svg";
-import junit from "./images/JUnit.svg";
-import blender from "./images/blender.svg";
-import cardio from "./images/cardio.png";
-import cycle from "./images/cycle.png";
-import got from "./images/got.png";
-import hotelrating from "./images/hotelrating.png";
-import restimage from "./images/restimage.png";
-// import iotvigilant from "../images/iotvigilant.png";
-import ngo from "./images/ngo.jpg";
-import notes from "./images/notes.png";
-import airforce from "./images/airforce.jpg";
-import omnifood from "./images/omnifood.png";
-import ielts from "./images/ielts.png";
-import patent from "./images/patent.png";
-import drivingpatent from "./images/drivingpatent.png";
-import tinder from "./images/tinder.png";
-import tryon from "./images/tryon.png";
-import solarwind from "./images/solarwind.png";
-import carparking from "./images/carparking.png";
-import raj from "./images/recommend_raj.jpeg";
-import puhazoli from "./images/recommend_puhazoli.jpeg";
-import nawin from "./images/recommend_nawin.jpeg";
-import ganesh from "./images/recommend_ganesh.jpeg";
-import vadivu from "./images/recommend_vadivu.jpg";
-import srinivas from "./images/recommend_srinivas.jpg";
-import bravo1 from "./images/bravo1.png";
-import bravo2 from "./images/bravo2.png";
-import heroimage from "./images/HeroImage.jpg";
+// Removed unused image imports
 //
 
 const Body = styled.div`
@@ -90,6 +64,40 @@ function App() {
 const MainContent = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
+  const [showBirds, setShowBirds] = useState(false);
+  const [showBats, setShowBats] = useState(false);
+  const [isDebounced, setIsDebounced] = useState(false);
+
+
+  // Function to handle theme change and trigger bird/bat animation
+  const handleThemeChange = (newDarkMode) => {
+    if (isDebounced) return; // Prevent toggling during animation
+    // If switching from dark to light (sun is coming out), show birds
+    if (darkMode && !newDarkMode) {
+      setShowBirds(true);
+      setIsDebounced(true);
+    }
+    // If switching from light to dark (night is coming), show bats
+    if (!darkMode && newDarkMode) {
+      setShowBats(true);
+      setIsDebounced(true);
+    }
+    setDarkMode(newDarkMode);
+  };
+
+
+  // Handle when bird animation ends
+  const handleBirdsAnimationEnd = () => {
+    setShowBirds(false);
+    setIsDebounced(false);
+  };
+
+  // Handle when bat animation ends
+  const handleBatsAnimationEnd = () => {
+    setShowBats(false);
+    setIsDebounced(false);
+  };
+
   return (
     <HelmetProvider>
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
@@ -112,8 +120,20 @@ const MainContent = () => {
         </Helmet>
         
         <Router>
-          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Navbar 
+            darkMode={darkMode} 
+            setDarkMode={handleThemeChange}
+            isDebounced={isDebounced}
+          />
           <Body>
+            <FlyingBirds 
+              isVisible={showBirds} 
+              onAnimationEnd={handleBirdsAnimationEnd} 
+            />
+            <FlyingBats
+              isVisible={showBats}
+              onAnimationEnd={handleBatsAnimationEnd}
+            />
             {/* {isLoading ? (
               <LoadingScreen />
             ) : ( */}

@@ -226,9 +226,9 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
       },
       {
-        name: "Tenserflow",
+        name: "Tensorflow",
         image:
-          "https://static-00.iconduck.com/assets.00/tensorflow-icon-1911x2048-1m2s54vn.png",
+          "https://images.seeklogo.com/logo-png/43/1/tensorflow-logo-png_seeklogo-435124.png",
       },
       {
         name: "Keras",
@@ -261,7 +261,7 @@ export const skills = [
       {
         name: "Adobe XD",
         image:
-          "https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUZK5gi1clbPagXVx8PLkTK8qhlBCjve9oRw&s",
       },
       {
         name: "Figma",
@@ -309,7 +309,7 @@ export const skills = [
       {
         name: "Postman",
         image:
-          "https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png",
+          "https://images.g2crowd.com/uploads/product/image/fd527e1fc777d9e31b2a28e8d3c959a4/postman.jpg",
       },
       {
         name: "JIRA",
