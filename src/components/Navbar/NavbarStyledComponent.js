@@ -35,8 +35,174 @@ export const NavLogo = styled(LinkR)`
   align-items: center;
   text-decoration: none;
   cursor: pointer;
+  position: relative;
+  z-index: 5;
   @media (max-width: 640px) {
     padding: 0 0px;
+  }
+`;
+
+export const CelestialBackground = styled.div`
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+  overflow: visible;
+  
+  @media (max-width: 768px) {
+    width: 35px;
+    height: 35px;
+    left: -10px;
+  }
+  
+  @media (max-width: 640px) {
+    width: 30px;
+    height: 30px;
+    left: -8px;
+  }
+`;
+
+export const CloudsContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+`;
+
+export const Cloud = styled.div`
+  position: absolute;
+  width: ${({ size }) => size || '14px'};
+  height: ${({ size }) => (size ? `${parseInt(size) * 0.6}px` : '7px')};
+  background: ${({ isDark }) => isDark ? 'rgba(160, 160, 160, 0.8)' : 'rgba(255, 255, 255, 0.9)'};
+  border-radius: 20px;
+  opacity: ${({ isVisible }) => isVisible ? 1 : 0};
+  transform: translateX(${({ isVisible }) => isVisible ? '0' : '-60px'});
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: ${({ size }) => size ? `${parseInt(size) * 0.6}px` : '7px'};
+    height: ${({ size }) => size ? `${parseInt(size) * 0.6}px` : '7px'};
+    background: ${({ isDark }) => isDark ? 'rgba(160, 160, 160, 0.8)' : 'rgba(255, 255, 255, 0.9)'};
+    border-radius: 50%;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: 1px;
+    width: ${({ size }) => size ? `${parseInt(size) * 0.5}px` : '6px'};
+    height: ${({ size }) => size ? `${parseInt(size) * 0.5}px` : '6px'};
+    background: ${({ isDark }) => isDark ? 'rgba(160, 160, 160, 0.8)' : 'rgba(255, 255, 255, 0.9)'};
+    border-radius: 50%;
+  }
+`;
+
+export const Cloud1 = styled(Cloud)`
+  top: 14px;
+  left: 5px;
+`;
+
+export const Cloud2 = styled(Cloud)`
+  top: 20px;
+  right: 12px;
+`;
+
+export const Sun = styled.div`
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, 
+    #FFD700 0%, 
+    #FFA500 40%, 
+    #FF8C00 70%, 
+    #FF6347 100%
+  );
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 
+    0 0 10px rgba(255, 215, 0, 0.3),
+    0 0 20px rgba(255, 165, 0, 0.2),
+    0 0 30px rgba(255, 140, 0, 0.1);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    filter: blur(1px);
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    right: 30%;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    filter: blur(0.5px);
+  }
+`;
+
+export const Moon = styled.div`
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 35% 25%, 
+    #F5F5DC 0%, 
+    #E6E6FA 30%, 
+    #D3D3D3 60%, 
+    #C0C0C0 80%, 
+    #A9A9A9 100%
+  );
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 
+    0 0 8px rgba(245, 245, 220, 0.2),
+    0 0 15px rgba(230, 230, 250, 0.1);
+  
+  /* Moon craters */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 6px;
+    height: 6px;
+    background: rgba(169, 169, 169, 0.4);
+    border-radius: 50%;
+    box-shadow: 
+      8px 10px 0 -2px rgba(169, 169, 169, 0.3),
+      -3px 15px 0 -3px rgba(169, 169, 169, 0.2);
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    width: 4px;
+    height: 4px;
+    background: rgba(169, 169, 169, 0.3);
+    border-radius: 50%;
+    box-shadow: 
+      -6px 8px 0 -1px rgba(169, 169, 169, 0.2);
   }
 `;
 

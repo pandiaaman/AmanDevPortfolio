@@ -16,6 +16,12 @@ import {
   Wire,
   LightBulb,
   LightRays,
+  CelestialBackground,
+  Sun,
+  Moon,
+  CloudsContainer,
+  Cloud1,
+  Cloud2,
 } from "./NavbarStyledComponent";
 import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/constants";
@@ -53,18 +59,30 @@ const Copyright = styled.p`
   text-align: center;
 `;
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = ({ darkMode, setDarkMode, isDebounced }) => {
   // const { toggleDarkMode } = updateTheme();
   const currentYear = new Date().getFullYear();
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [isSwinging, setIsSwinging] = React.useState(false);
+  const [cloudsVisible, setCloudsVisible] = React.useState(true);
 
   const theme = useTheme();
 
   const handleThemeToggle = () => {
+    // Prevent theme changes during bird animation
+    if (isDebounced) return;
+    
     setIsSwinging(true);
-    setDarkMode(!darkMode);
+    
+    // Animate clouds out and then in with new theme
+    setCloudsVisible(false);
+    
+    setTimeout(() => {
+      setDarkMode(!darkMode);
+      setCloudsVisible(true);
+    }, 400);
+    
     // Stop swinging animation after 3 seconds
     setTimeout(() => setIsSwinging(false), 3400);
   };
@@ -73,6 +91,21 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     <Nav>
       <NavbarContainer>
         <NavLogo onClick={handleThemeToggle}>
+          <CelestialBackground>
+            {darkMode ? <Moon /> : <Sun />}
+            <CloudsContainer>
+              <Cloud1 
+                size="12px" 
+                isDark={darkMode} 
+                isVisible={cloudsVisible}
+              />
+              <Cloud2 
+                size="10px" 
+                isDark={darkMode} 
+                isVisible={cloudsVisible}
+              />
+            </CloudsContainer>
+          </CelestialBackground>
           <LogoText>
             <Span>Aman's Portfolio</Span>
           </LogoText>
